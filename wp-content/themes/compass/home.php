@@ -15,6 +15,12 @@
 	<!-- no posts found -->
 	<?php endif; ?>
 	
+	<h1>Upcoming events</h1>
+	<?php echo do_shortcode('[events_list limit="1"]
+								<h3>#_EVENTNAME</h3>
+								<p>#l, #F #j, #Y at #g:#i#a until #@_{l, F j, Y} in #_LOCATIONTOWN, #_LOCATIONSTATE</p>
+							[/events_list]'); ?>
+	
 	<h1>From the Blog</h1>
 	<?php query_posts('showposts=1'); ?>
 	<?php get_template_part( 'loop', 'home' ); ?>

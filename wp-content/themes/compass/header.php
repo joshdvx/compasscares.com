@@ -67,7 +67,7 @@
             			<span class="icon-bar"></span>
             			<span class="icon-bar"></span>
 					</a>
-					<a class="brand" href="<?php bloginfo('url') ?>"><?php bloginfo('name'); ?></a>
+					<a class="brand" href="<?php bloginfo('url') ?>"><?php bloginfo('name'); ?> - <?php bloginfo('description'); ?></a>
 					<div class="nav-collapse">
             			<ul class="nav pull-left">
 						<?php wp_nav_menu( array( 'theme_location' => 'primary', 'container' => false, 'menu_class' => 'nav', 'walker' => new Bootstrap_Menu_Walker ) ); ?>
@@ -81,4 +81,3 @@
     	</div>
     	<div class="container">
 			<div class="row">
-			<h1 class="tagline"><?php bloginfo('description'); ?></h1>

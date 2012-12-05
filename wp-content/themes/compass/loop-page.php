@@ -15,11 +15,11 @@
 <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
 
 				<div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-					<?php if ( is_front_page() ) { ?>
-						<h2 class="entry-title"><?php the_title(); ?></h2>
-					<?php } else { ?>
-						<h1 class="entry-title"><?php the_title(); ?></h1>
-					<?php } ?>
+					<?php if(get_field('subtitle')): ?>
+						<h1><?php the_field('subtitle') ?></h1>
+					<?php else: ?>
+						<h1><?php the_title(); ?></h1>
+					<?php endif; ?>	
 
 					<div class="entry-content">
 						<?php the_content(); ?>

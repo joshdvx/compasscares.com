@@ -69,23 +69,16 @@
 					</a>
 					<a class="brand" href="<?php bloginfo('url') ?>"><?php bloginfo('name'); ?></a>
 					<div class="nav-collapse">
-            			<ul class="nav">
+            			<ul class="nav pull-left">
 						<?php wp_nav_menu( array( 'theme_location' => 'primary', 'container' => false, 'menu_class' => 'nav', 'walker' => new Bootstrap_Menu_Walker ) ); ?>
+            			</ul>
+            			<ul class="nav pull-right">
+						<?php wp_nav_menu( array( 'theme_location' => 'secondary', 'container' => false, 'menu_class' => 'nav', 'walker' => new Bootstrap_Menu_Walker ) ); ?>
             			</ul>
 					</div><!--/.nav-collapse -->
         		</div>
 			</div>
     	</div>
-
-		<!-- Breadcrumbs NavXT-->
-		<div class="breadcrumbs">
-			<?php
-			if(function_exists('bcn_display'))
-			{
-		    	bcn_display();
-			}
-			?>
-		</div>
-
     	<div class="container">
 			<div class="row">
+			<h1 class="tagline"><?php bloginfo('description'); ?></h1>

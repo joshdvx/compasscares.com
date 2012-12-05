@@ -66,6 +66,10 @@ function smm_setup() {
 	register_nav_menus( array(
 		'primary' => __( 'Primary Navigation', 'smm' ),
 	) );
+
+	register_nav_menus( array(
+		'secondary' => __( 'Secondary Navigation', 'smm' ),
+	) );
 }
 endif;
 
@@ -374,7 +378,7 @@ add_filter( 'wp_page_menu', 'bootstrap_menu' );
 
 // Filter wp_nav_menu() to add additional links and other output
 function bootstrap_nav_menu_items($items) {
-    $homelink = '<li class="home"><a href="' . home_url( '/' ) . '">' . __('Home') . '</a></li>';
+    $homelink = '';
     $items = $homelink . $items;
     return $items;
 }

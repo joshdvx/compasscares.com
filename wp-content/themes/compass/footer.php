@@ -1,8 +1,33 @@
     		</div><!-- .row -->
 		</div> <!-- /container -->
 		<footer role="contentinfo">
+		<hr>
 			<div class="container">
-				<div id="site-info">
+			
+			<ul class="unstyled">
+			<?php dynamic_sidebar( 'first-footer-widget-area' ); ?>
+			</ul>
+			
+			<?php dynamic_sidebar( 'second-footer-widget-area' ); ?>
+			
+			<?php dynamic_sidebar( 'third-footer-widget-area' ); ?>
+			
+			<?php dynamic_sidebar( 'fourth-footer-widget-area' ); ?>
+			
+			<ul class="unstyled">
+				<h3>Contact</h3>
+				<address>
+					<?php the_field('corporate_street_address', 'option'); ?><br>
+					<?php the_field('corporate_city_state_zip','option'); ?><br>
+					<?php the_field('corporate_phone_number','option'); ?>
+				</address>
+				<a href="<?php the_field('facebook','option'); ?>"><img src="#" alt="">Facebook</a><br>
+				<a href="<?php the_field('twitter','option'); ?>"><img src="#" alt="">Twitter</a><br>
+				<a href="<?php the_field('twitter','option'); ?>"><img src="#" alt="">Directions</a><br>
+			</ul>
+			
+			
+				<div id="site-info" class="pull-right">
 					&copy;<?php echo date ('Y'); ?><a href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
 					<?php bloginfo( 'name' ); ?></a>
 					 | <a href="http://twitter.github.com/bootstrap" target="_blank">Bootstrap Docs</a><!-- Remove for production -->

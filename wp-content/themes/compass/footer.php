@@ -37,9 +37,7 @@
 					<form action="http://compasscares.us6.list-manage.com/subscribe/post?u=405128a681aba7bee3fc7ca70&amp;id=7a9099056a" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
 						<label for="mce-EMAIL">Stay up-to-date with all our fun!</label>
 						<input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
-						<div class="clear">
-							<input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button">
-						</div>
+						<input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button">
 					</form>
 				</div>
 
@@ -70,6 +68,7 @@
 	    <script src="<?php bloginfo('template_directory'); ?>/js/bootstrap-collapse.js"></script>
 	    <script src="<?php bloginfo('template_directory'); ?>/js/bootstrap-carousel.js"></script>
 	    <script src="<?php bloginfo('template_directory'); ?>/js/bootstrap-typeahead.js"></script>
+	    <script src="<?php bloginfo('template_directory'); ?>/js/slider.js"></script>
 
 		<!-- scripts concatenated and minified via ant build script-->
 		<script src="<?php bloginfo ('template_directory'); ?>/js/plugins.js"></script>

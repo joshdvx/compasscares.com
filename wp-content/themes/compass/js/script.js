@@ -9,6 +9,8 @@ jQuery(document).ready(function($) {
  	$("li.dropdown > a").addClass('dropdown-toggle');
 	$("li.dropdown > a").attr('data-toggle','dropdown');
 	$("a.dropdown-toggle").append('<b class="caret"></b>');
+
+	$(".item:first-child").addClass("active");
 	
 });
 

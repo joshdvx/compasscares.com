@@ -45,7 +45,7 @@
 							<?php endwhile; endif; ?>
 					</div><!-- #contact -->
 					<div class="span8" id="resources">
-						<h2>Friends Who Can Help</h2>
+						<h2>Friends Who Can Help You</h2>
 						<?php if(get_field('friends_who_can_help')): ?>
 							<?php while (has_sub_field('friends_who_can_help')): ?>
 							<a href="<?php the_sub_field('friends_website_url') ?>"><?php the_sub_field('friends_name') ?></a><br>
@@ -53,7 +53,7 @@
 							<?php endwhile; ?>
 						<?php endif; ?>
 					</div><!-- #resources -->
-				</div>f
+				</div>
 			</div>
 		</div><!-- .row -->
 		

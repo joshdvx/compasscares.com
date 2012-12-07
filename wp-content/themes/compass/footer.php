@@ -1,5 +1,6 @@
 			</div><!-- .row -->
 		</div> <!-- /container -->
+		
 		<footer role="contentinfo">
 			<hr>
 			<div class="container">
@@ -69,6 +70,7 @@
 	    <script src="<?php bloginfo('template_directory'); ?>/js/bootstrap-carousel.js"></script>
 	    <script src="<?php bloginfo('template_directory'); ?>/js/bootstrap-typeahead.js"></script>
 	    <script src="<?php bloginfo('template_directory'); ?>/js/slider.js"></script>
+	    <script src="<?php bloginfo('template_directory'); ?>/js/scrollorama.js"></script>
 
 		<!-- scripts concatenated and minified via ant build script-->
 		<script src="<?php bloginfo ('template_directory'); ?>/js/plugins.js"></script>
@@ -76,6 +78,22 @@
 
 		<!-- Remove these before deploying to production -->
 		<script src="<?php bloginfo ('template_directory'); ?>/js/hashgrid.js" type="text/javascript"></script>
+
+		<script>
+			jQuery(document).ready(function($) {		
+				var scrollorama = $.scrollorama({ blocks:'.scrollblock'});
+
+				scrollorama.animate('#unpin',{ duration:500, property:'padding-top', start:400, pin:'true'});
+				scrollorama.animate('#unpin2',{ duration:500, property:'padding-top', start:400, pin:'true'});
+				scrollorama.animate('#unpin3',{ duration:500, property:'padding-top', start:400, pin:'true'});
+				scrollorama.animate('#unpin4',{ duration:500, property:'padding-top', start:400, pin:'true'});
+				scrollorama.animate('#unpin5',{ duration:500, property:'padding-top', start:400, pin:'true'});
+				// scrollorama.animate('#unpin2',{ duration:500, property:'padding-top', start:400});
+				// scrollorama.animate('#unpin3',{ duration:500, property:'padding-top', start:400});
+				// scrollorama.animate('#unpin4',{ duration:500, property:'padding-top', start:400});
+				// scrollorama.animate('#unpin5',{ duration:500, property:'padding-top', start:400});
+			});
+		</script>
 
 	<?php wp_footer(); ?>
 	</body>

@@ -11,6 +11,8 @@ jQuery(document).ready(function($) {
 	$("a.dropdown-toggle").append('<b class="caret"></b>');
 
 	$(".item:first-child").addClass("active");
+
+	
 	
 });
 

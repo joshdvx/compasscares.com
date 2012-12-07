@@ -1,4 +1,4 @@
-			</div><!-- .row -->
+
 		</div> <!-- /container -->
 		
 		<footer role="contentinfo">
@@ -80,19 +80,15 @@
 		<script src="<?php bloginfo ('template_directory'); ?>/js/hashgrid.js" type="text/javascript"></script>
 
 		<script>
-			jQuery(document).ready(function($) {		
-				var scrollorama = $.scrollorama({ blocks:'.scrollblock'});
+			// jQuery(document).ready(function($) {		
+			// 	var scrollorama = $.scrollorama({ blocks:'.scrollblock'});
 
-				scrollorama.animate('#unpin',{ duration:500, property:'padding-top', start:400, pin:'true'});
-				scrollorama.animate('#unpin2',{ duration:500, property:'padding-top', start:400, pin:'true'});
-				scrollorama.animate('#unpin3',{ duration:500, property:'padding-top', start:400, pin:'true'});
-				scrollorama.animate('#unpin4',{ duration:500, property:'padding-top', start:400, pin:'true'});
-				scrollorama.animate('#unpin5',{ duration:500, property:'padding-top', start:400, pin:'true'});
-				// scrollorama.animate('#unpin2',{ duration:500, property:'padding-top', start:400});
-				// scrollorama.animate('#unpin3',{ duration:500, property:'padding-top', start:400});
-				// scrollorama.animate('#unpin4',{ duration:500, property:'padding-top', start:400});
-				// scrollorama.animate('#unpin5',{ duration:500, property:'padding-top', start:400});
-			});
+			// 	scrollorama.animate('#unpin',{ duration:500, property:'padding-top', start:0, pin:'true'});
+			// 	scrollorama.animate('#unpin2',{ duration:500, property:'padding-top', start:0, pin:'true'});
+			// 	scrollorama.animate('#unpin3',{ duration:500, property:'padding-top', start:0, pin:'true'});
+			// 	scrollorama.animate('#unpin4',{ duration:500, property:'padding-top', start:0, pin:'true'});
+			// 	scrollorama.animate('#unpin5',{ duration:500, property:'padding-top', start:0, pin:'true'});
+			// });
 		</script>
 
 	<?php wp_footer(); ?>

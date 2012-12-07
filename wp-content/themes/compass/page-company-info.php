@@ -9,7 +9,11 @@
 			<img src="<?php the_sub_field('leadership_headshot') ?>" width="100" height="100"><br>
 			<?php the_sub_field('leadership_name') ?><br>
 			<?php the_sub_field('leader_position') ?><br>
-			<?php the_sub_field('leadership_bio') ?>
+			<div class="leader-bio">
+				<?php the_sub_field('leadership_bio') ?>
+				<!-- <a href="#">Read More</a> -->
+			</div>
+			
 		<?php endwhile; ?>
 	<?php endif; ?>
 	

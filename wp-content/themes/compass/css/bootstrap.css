@@ -4972,6 +4972,20 @@ a.badge:hover {
 /*
 Project Name: Twitter Bootstrap Framework
 */
+.section-header {
+  margin-top: 0;
+  padding: 20px 0;
+  background-color: #FFF;
+  border-top: 1px solid #000000;
+  text-align: center;
+  -webkit-box-shadow: 1px 1px 5px #333333;
+  -moz-box-shadow: 1px 1px 5px #333333;
+  box-shadow: 1px 1px 5px #333333;
+}
+#page {
+  margin-top: 40px;
+}
+/*..................................the company info page */
 footer li.widget-container {
   margin-left: 0;
   list-style: none;
@@ -5018,18 +5032,29 @@ img.alignright,
 img.aligncenter {
   margin-bottom: 12px;
 }
-.home #page {
-  position: relative;
-  height: 2600px;
+#hero {
+  height: 465px;
+  background-color: #ffc40d;
 }
-.scrollblock {
-  position: relative;
-  margin: 0;
-  width: 100%;
-  height: 600px;
+#services {
+  height: 340px;
+  background-color: #9d261d;
 }
-.scrollblock h2 {
-  padding-top: 100px;
+#success-stories {
+  height: 440px;
+  background-color: #f89406;
+}
+#insta-team {
+  height: 415px;
+  background-color: #049cdb;
+}
+#events {
+  height: 630px;
+  background-color: #c3325f;
+}
+#latest-post {
+  height: 360px;
+  background-color: #7a43b6;
 }
 /*..................................the instagram feed */
 #instagram .item a {

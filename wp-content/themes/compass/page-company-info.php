@@ -9,9 +9,12 @@
 			<img src="<?php the_sub_field('leadership_headshot') ?>" width="100" height="100"><br>
 			<?php the_sub_field('leadership_name') ?><br>
 			<?php the_sub_field('leader_position') ?><br>
-			<div class="leader-bio">
-				<?php the_sub_field('leadership_bio') ?>
-				<!-- <a href="#">Read More</a> -->
+			<div class="bio-intro">
+				<?php the_sub_field('leadership_bio_1') ?>
+			</div>
+			<div class="full-bio">
+				<?php the_sub_field('leadership_bio_2') ?>
+				<button>Read More</button>
 			</div>
 			
 		<?php endwhile; ?>

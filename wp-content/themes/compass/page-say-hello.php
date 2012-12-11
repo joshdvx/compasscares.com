@@ -9,21 +9,32 @@
 			<?php endif; ?>	
 		<?php endwhile; endif; ?>
 		
-		<div class="row">
-			<div class="span12">
-				<h2>Locations</h2>
+		<div class="tabbable tabs-left" id="locations-listing">
+			<ul class="nav nav-tabs span4" id="locations">
 				<?php if(get_field('offices')): ?>
 					<?php while (has_sub_field('offices')): ?>
-						<?php the_sub_field('office_city') ?><br>
-						<?php the_sub_field('office_address') ?><br>
-						<?php the_sub_field('office_phone') ?><br>
-						<img src="http://maps.googleapis.com/maps/api/staticmap?center=<?php the_sub_field('office_address'); ?>,<?php the_sub_field('office_city'); ?> <?php the_sub_field('office_state'); ?>, <?php the_sub_field('office_zip'); ?>&zoom=16&size=330x200&maptype=roadmap&markers=color:red%7Ccolor:red%7Clabel:C%7C<?php the_sub_field('office_address'); ?>,<?php the_sub_field('office_city'); ?> <?php the_sub_field('office_state'); ?>, <?php the_sub_field('office_zip'); ?>&sensor=false" alt="Map" class="map"><br>
-						<a href="http://maps.google.com/maps?saddr=&daddr=<?php the_sub_field('office_address'); ?>,<?php the_sub_field('office_city'); ?> <?php the_sub_field('office_state'); ?>, <?php the_sub_field('office_zip'); ?>">Get Directions</a>
+						<li>
+							<a href="#<?php the_sub_field('office_city') ?>" data-toggle="tab">
+								<?php the_sub_field('office_city') ?><br>
+								<?php the_sub_field('office_address') ?><br>
+								<?php the_sub_field('office_phone') ?><br>
+							</a>
+						</li>
 					<?php endwhile; ?>
 				<?php endif; ?>
-			</div>
-		</div><!-- .row -->
-		
+			</ul>
+			<div class="tab-content span6" id="maps">
+				<?php if(get_field('offices')): ?>
+					<?php while (has_sub_field('offices')): ?>
+						<div id="<?php the_sub_field('office_city') ?>" class="tab-pane">
+							<img src="http://maps.googleapis.com/maps/api/staticmap?center=<?php the_sub_field('office_address'); ?>,<?php the_sub_field('office_city'); ?> <?php the_sub_field('office_state'); ?>, <?php the_sub_field('office_zip'); ?>&zoom=16&size=638x468&maptype=roadmap&markers=color:red%7Ccolor:red%7C<?php the_sub_field('office_address'); ?>,<?php the_sub_field('office_city'); ?> <?php the_sub_field('office_state'); ?>, <?php the_sub_field('office_zip'); ?>&sensor=false" alt="Map" class="map"><br>
+						<a href="http://maps.google.com/maps?saddr=&daddr=<?php the_sub_field('office_address'); ?>,<?php the_sub_field('office_city'); ?> <?php the_sub_field('office_state'); ?>, <?php the_sub_field('office_zip'); ?>">Get Directions</a>
+						</div>
+					<?php endwhile; ?>
+				<?php endif; ?>
+			</div><!-- #maps -->
+		</div><!-- #locations-listing -->
+				
 		<div class="row">
 			<div class="span4" id="team">
 				<h2>Meet the Team</h2>

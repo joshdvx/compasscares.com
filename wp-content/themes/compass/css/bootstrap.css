@@ -4986,6 +4986,9 @@ Project Name: Twitter Bootstrap Framework
   margin-top: 40px;
 }
 /*..................................the company info page */
+.full-bio p {
+  display: none;
+}
 footer li.widget-container {
   margin-left: 0;
   list-style: none;
@@ -5172,6 +5175,75 @@ div.navBulletsWrapper div.active {
   -ms-transform: translate3d(0, 0, 0);
   -moz-transform: translate3d(0, 0, 0);
   -o-transform: translate3d(0, 0, 0);
+}
+/* Reset some list defaults for all lists */
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+/* The main container */
+#sticky-list {
+  height: 100px;
+  overflow: hidden;
+  position: relative;
+}
+/* The main list */
+#sticky-list > ul {
+  height: 100%;
+  overflow: auto;
+}
+/* Section headers, defined through "headlineSelector" */
+#sticky-list > ul > li strong {
+  display: block;
+}
+/* Section headers when "sticky", defined through "stickyClass" */
+#sticky-list > ul > li.sticky strong {
+  position: absolute;
+  top: 0;
+}
+/*..................................the staff success stories slider */
+#staff-slider {
+  width: 620px;
+  margin: 0 auto;
+  position: relative;
+}
+#staff-slider ul.navigation {
+  width: 100%;
+  margin-top: 10px;
+}
+#staff-slider ul.navigation li {
+  display: block;
+  float: left;
+  margin-right: 10px;
+}
+#staff-slider span {
+  position: absolute;
+  top: 150px;
+  cursor: pointer;
+  font-size: 88px;
+}
+#staff-slider span.left {
+  left: -20px;
+}
+#staff-slider span.right {
+  right: -20px;
+}
+.scroll {
+  height: 250px;
+  overflow: auto;
+  position: relative;
+  /* fix for IE to respect overflow */
+
+  clear: left;
+  background: #ffffff url(images/content_pane-gradient.gif) repeat-x scroll left bottom;
+}
+.scrollContainer div.panel {
+  padding: 20px;
+  height: 210px;
+  width: 580px;
+  /* change to 560px if not using JS to remove rh.scroll */
+
 }
 /* =Comments
 -------------------------------------------------------------- */

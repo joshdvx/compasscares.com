@@ -70,7 +70,10 @@
 	    <script src="<?php bloginfo('template_directory'); ?>/js/bootstrap-carousel.js"></script>
 	    <script src="<?php bloginfo('template_directory'); ?>/js/bootstrap-typeahead.js"></script>
 	    <script src="<?php bloginfo('template_directory'); ?>/js/slider.js"></script>
-	    <script src="<?php bloginfo('template_directory'); ?>/js/scrollorama.js"></script>
+	    <script src="<?php bloginfo('template_directory'); ?>/js/stickyheaders.js"></script>
+	    <script src="<?php bloginfo('template_directory'); ?>/js/scrollto.js"></script>
+	    <script src="<?php bloginfo('template_directory'); ?>/js/localscroll.js"></script>
+	    <script src="<?php bloginfo('template_directory'); ?>/js/serialscroll.js"></script>
 
 		<!-- scripts concatenated and minified via ant build script-->
 		<script src="<?php bloginfo ('template_directory'); ?>/js/plugins.js"></script>
@@ -80,15 +83,9 @@
 		<script src="<?php bloginfo ('template_directory'); ?>/js/hashgrid.js" type="text/javascript"></script>
 
 		<script>
-			// jQuery(document).ready(function($) {		
-			// 	var scrollorama = $.scrollorama({ blocks:'.scrollblock'});
-
-			// 	scrollorama.animate('#unpin',{ duration:500, property:'padding-top', start:0, pin:'true'});
-			// 	scrollorama.animate('#unpin2',{ duration:500, property:'padding-top', start:0, pin:'true'});
-			// 	scrollorama.animate('#unpin3',{ duration:500, property:'padding-top', start:0, pin:'true'});
-			// 	scrollorama.animate('#unpin4',{ duration:500, property:'padding-top', start:0, pin:'true'});
-			// 	scrollorama.animate('#unpin5',{ duration:500, property:'padding-top', start:0, pin:'true'});
-			// });
+			jQuery(document).ready(function($) {		
+				$('#sticky-list').stickySectionHeaders();
+			});
 		</script>
 
 	<?php wp_footer(); ?>

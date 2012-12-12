@@ -46,7 +46,7 @@
 	
 	<div id="events" class="span12">
 		<h2 class="section-header">Schedule This.</h2>
-		<?php echo do_shortcode('[events_list limit="1"]
+		<?php echo do_shortcode('[events_list limit="2"]
 									<h3>#_EVENTNAME</h3>
 									<p>#l, #F #j, #Y at #g:#i#a until #@_{l, F j, Y} in #_LOCATIONTOWN, #_LOCATIONSTATE</p>
 								[/events_list]'); ?>

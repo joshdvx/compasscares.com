@@ -8,7 +8,6 @@
 			<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
 			<?php
 				$images = get_field('select_photos');
-			 
 				if( $images ): ?>
 				    <div id="carousel" class="flexslider">
 				        <ul class="slides">
@@ -19,8 +18,7 @@
 				            <?php endforeach; ?>
 				        </ul>
 				    </div>
-				<?php endif; 
-			?>
+				<?php endif; ?>
 		</div>
 		<?php endwhile; ?>
 		<!-- post navigation -->

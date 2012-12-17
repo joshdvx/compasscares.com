@@ -54,6 +54,23 @@
 	<div id="latest-photos" class="span12">
 		<h2 class="section-header">We Look Good.</h2>
 		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia nobis accusamus natus laudantium officia odit unde rem doloribus consectetur nesciunt! Quis soluta iste at adipisci mollitia facilis atque dicta possimus odio ab quidem eligendi maxime in aperiam perspiciatis totam eveniet explicabo consequuntur? Perferendis quaerat odio reiciendis dolor eos dolore alias.</p>
+		
+		<div id="gallery" class="carousel slide" data-interval="false">
+			<div class="carousel-inner">
+				<?php query_posts('post_type=photo_galleries&orderby=rand'); ?>
+				<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+					<?php
+						$images = get_field('select_photos');
+						if( $images ): ?>
+			            <?php foreach( $images as $image ): ?>
+			                <img src="<?php echo $image['sizes']['thumbnail']; ?>" alt="<?php echo $image['alt']; ?>" />
+			            <?php endforeach; ?>
+					<?php endif; ?>
+				<?php endwhile; endif; ?>
+			</div><!-- .carousel-inner -->
+				<a class="carousel-control left" href="#instagram" data-slide="prev">&lsaquo;</a>
+				<a class="carousel-control right" href="#instagram" data-slide="next">&rsaquo;</a>
+		</div><!-- #gallery .carousel-->
 	</div>
 	<div id="latest-post" class="span12">
 		<h2 class="section-header">As We Were Saying</h2>

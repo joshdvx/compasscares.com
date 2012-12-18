@@ -53,8 +53,6 @@
 	</div><!-- #events -->
 	<div id="latest-photos" class="span12">
 		<h2 class="section-header">We Look Good.</h2>
-		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia nobis accusamus natus laudantium officia odit unde rem doloribus consectetur nesciunt! Quis soluta iste at adipisci mollitia facilis atque dicta possimus odio ab quidem eligendi maxime in aperiam perspiciatis totam eveniet explicabo consequuntur? Perferendis quaerat odio reiciendis dolor eos dolore alias.</p>
-		
 		<div id="gallery" class="carousel slide" data-interval="false">
 			<div class="carousel-inner">
 				<?php query_posts('post_type=photo_galleries&orderby=rand'); ?>

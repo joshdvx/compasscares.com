@@ -4972,6 +4972,9 @@ a.badge:hover {
 /*
 Project Name: Twitter Bootstrap Framework
 */
+#wrapper {
+  border: 1px #999999 solid;
+}
 .section-header {
   margin-top: 0;
   padding: 20px 0;

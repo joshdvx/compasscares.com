@@ -1,6 +1,3 @@
-
-		</div> <!-- /container -->
-		
 		<footer role="contentinfo">
 			<hr>
 			<div class="container">
@@ -19,16 +16,16 @@
 					</div>
 					<div class="span2">
 						<ul class="unstyled">
-					<h3>Contact</h3>
-					<address>
-						<?php the_field('corporate_street_address', 'option'); ?><br>
-						<?php the_field('corporate_city_state_zip','option'); ?><br>
-						<?php the_field('corporate_phone_number','option'); ?>
-					</address>
-					<a href="<?php the_field('facebook','option'); ?>"><img src="#" alt="">Facebook</a><br>
-					<a href="<?php the_field('twitter','option'); ?>"><img src="#" alt="">Twitter</a><br>
-					<a href="<?php the_field('twitter','option'); ?>"><img src="#" alt="">Directions</a><br>
-				</ul>
+							<h3>Contact</h3>
+							<address>
+								<?php the_field('corporate_street_address', 'option'); ?><br>
+								<?php the_field('corporate_city_state_zip','option'); ?><br>
+								<?php the_field('corporate_phone_number','option'); ?>
+							</address>
+							<a href="<?php the_field('facebook','option'); ?>"><img src="#" alt="">Facebook</a><br>
+							<a href="<?php the_field('twitter','option'); ?>"><img src="#" alt="">Twitter</a><br>
+							<a href="<?php the_field('twitter','option'); ?>"><img src="#" alt="">Directions</a>
+						</ul>
 					</div>
 				</div>
 			
@@ -53,6 +50,7 @@
 				</div><!-- #site-info -->
 			</div>
 		</footer>
+	</div> <!-- /container -->
 
 	    <!-- Le javascript
 	    ================================================== -->

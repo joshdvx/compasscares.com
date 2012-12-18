@@ -1,4 +1,4 @@
-				<section id="sidebar" class="span4">
+				<section id="sidebar" class="span3">
 					
 					<ul>
 	
@@ -15,9 +15,9 @@
 						</li>
 	
 						<li id="archives" class="widget-container">
-							<h3 class="widget-title"><?php _e( 'Archives', 'smm' ); ?></h3>
+							<h3 class="widget-title"><?php _e('Archives', 'smm'); ?></h3>
 							<ul>
-								<?php wp_get_archives( 'type=monthly' ); ?>
+								<?php wp_get_archives('type=monthly'); ?>
 							</ul>
 						</li>
 	

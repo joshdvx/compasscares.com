@@ -20,7 +20,7 @@
 					$link_code = $feed[$x];
 					preg_match($imgpattern, $link_code, $links);
 					echo '<a href="'.$links[1].'" rel="lightbox"><img src="'.$links[1].'"/></a>';					
-					if( $i == 4 ) {
+					if( $i == 3 ) {
 						echo '</div>';
 						$i = 0;
 

@@ -12,7 +12,8 @@
 		
 			            <?php foreach( $images as $image ): ?>
 			            	<div class="span4">
-			                	<img src="<?php echo $image['sizes']['thumbnail']; ?>" alt="<?php echo $image['alt']; ?>" />
+			                	<a href="<?php echo $image['sizes']['large']; ?>" rel="lightbox"><img src="<?php echo $image['sizes']['thumbnail']; ?>" alt="<?php echo $image['title']; ?>" /></a>
+			                	<p><?php echo $image['caption']; ?></p>
 			            	</div>
 			            <?php endforeach; ?>
 

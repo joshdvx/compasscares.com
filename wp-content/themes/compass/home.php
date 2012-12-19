@@ -55,19 +55,10 @@
 		<h2 class="section-header">We Look Good.</h2>
 		<div id="gallery" class="carousel slide" data-interval="false">
 			<div class="carousel-inner">
-				<?php query_posts('post_type=photo_galleries&orderby=rand'); ?>
-				<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-					<?php
-						$images = get_field('select_photos');
-						if( $images ): ?>
-			            <?php foreach( $images as $image ): ?>
-			                <img src="<?php echo $image['sizes']['thumbnail']; ?>" alt="<?php echo $image['alt']; ?>" />
-			            <?php endforeach; ?>
-					<?php endif; ?>
-				<?php endwhile; endif; ?>
+				<?php get_template_part('home-gallery'); ?>
 			</div><!-- .carousel-inner -->
-				<a class="carousel-control left" href="#instagram" data-slide="prev">&lsaquo;</a>
-				<a class="carousel-control right" href="#instagram" data-slide="next">&rsaquo;</a>
+				<a class="carousel-control left" href="#gallery" data-slide="prev">&lsaquo;</a>
+				<a class="carousel-control right" href="#gallery" data-slide="next">&rsaquo;</a>
 		</div><!-- #gallery .carousel-->
 	</div>
 	<div id="latest-post" class="span12">

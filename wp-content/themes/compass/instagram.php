@@ -9,7 +9,8 @@
 				}
 
 				$i = 0;
-				$display_count = 20;
+				
+				$display_count = min(count($feed), 20);
 
 				$imgpattern = '/src="(.*?)"/i';
 				for($x = 0; $x < $display_count; $x++) {
@@ -20,7 +21,7 @@
 					$link_code = $feed[$x];
 					preg_match($imgpattern, $link_code, $links);
 					echo '<a href="'.$links[1].'" rel="lightbox"><img src="'.$links[1].'"/></a>';					
-					if( $i == 3 ) {
+					if( $i == 3 || $x == $display_count - 1 ) {
 						echo '</div>';
 						$i = 0;
 

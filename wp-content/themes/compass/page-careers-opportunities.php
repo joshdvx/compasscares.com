@@ -1,9 +1,12 @@
 <?php get_header(); ?>
 
-<section id="page" class="span12">
-	<?php get_template_part( 'loop', 'page' ); ?>	
-	
-	
+<section id="page">
+	<div class="row">
+		<div class="span12">
+			<?php get_template_part( 'loop', 'page' ); ?>
+		</div>
+	</div>
+		
 	<div class="span12" id="staff-stories">
 		<h2>Career Success Stories</h2>
 		<div id="staff-slider">

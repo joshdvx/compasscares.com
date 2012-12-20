@@ -46,6 +46,8 @@
     	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../assets/ico/apple-touch-icon-114-precomposed.png">
     	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../assets/ico/apple-touch-icon-72-precomposed.png">
     	<link rel="apple-touch-icon-precomposed" href="../assets/ico/apple-touch-icon-57-precomposed.png">
+    	
+    	
 
 		<script src="<?php bloginfo('template_directory'); ?>/js/modernizr-1.7.min.js"></script>
 		<!--[if lte IE 8]><script src="<?php bloginfo('template_directory'); ?>/js/selectivizr-min.js"></script><![endif]-->
@@ -54,7 +56,12 @@
 			if ( is_singular() && get_option( 'thread_comments' ) )
 				wp_enqueue_script( 'comment-reply' );
 			wp_head();
-			?>
+		?>
+		
+		<?php if (is_home()): ?>
+			<script src="http://code.jquery.com/jquery.min.js"></script>
+			<script src="<?php bloginfo('template_directory'); ?>/js/stickyheaders.js"></script>
+		<?php endif; ?>
 	</head>
 
 	<body <?php body_class(); ?>>

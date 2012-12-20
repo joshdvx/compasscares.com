@@ -2,17 +2,15 @@
 
 <section id="page">
 	
-	<div>
-		<div id="sliderFrame">
-		    <div id="slider">	       	
-		       	<?php if(get_field('hero_unit_banners','option')): ?>
-					<?php while (has_sub_field('hero_unit_banners','option')): ?>
-						<img src="<?php the_sub_field('hero_banner_image','option') ?>" alt="<?php the_sub_field('hero_caption','option') ?>">
-			      	<?php endwhile; ?>
-				<?php endif; ?>
-		    </div>
-		</div><!-- #sliderFrame -->
-	</div>
+	<div id="sliderFrame">
+	    <div id="slider">	       	
+	       	<?php if(get_field('hero_unit_banners','option')): ?>
+				<?php while (has_sub_field('hero_unit_banners','option')): ?>
+					<img src="<?php the_sub_field('hero_banner_image','option') ?>" alt="<?php the_sub_field('hero_caption','option') ?>">
+		      	<?php endwhile; ?>
+			<?php endif; ?>
+	    </div>
+	</div><!-- #sliderFrame -->
 	
 	<div id="services">
 		<h2 class="section-header">We Do Amazing Things.</h2>

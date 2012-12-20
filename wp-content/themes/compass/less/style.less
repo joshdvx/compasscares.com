@@ -3,6 +3,10 @@ Project Name: Twitter Bootstrap Framework
 */
 
 /*..................................the font families */
+.lato-light {
+	font-family: 'Lato', sans-serif;
+	font-weight: 300;
+}
 .lato-regular {
 	font-family: 'Lato', sans-serif;
 	font-weight: 400;
@@ -18,8 +22,20 @@ Project Name: Twitter Bootstrap Framework
 	font-weight: 900;
 }
 
+.row {
+	margin-left: -10px;
+	padding-right: 10px;
+}
+
 #wrapper {
+	width: 960px;
+	margin-left: auto;
+	margin-right: auto;
 	border: 1px @grayLight solid;
+}
+
+body {
+	// font-weight: 400;
 }
 
 h1.tagline {
@@ -69,6 +85,107 @@ header {
 	text-align: center;
 	.box-shadow(1px 1px 5px @grayDark)
 }
+
+/*..................................the footer */
+footer {
+	padding-bottom: 10px;
+	background-color: @blueDark;
+	color: @white;
+	font-size: 10px;
+	font-weight: 300;
+	clear: both;
+
+	h3 {
+		color: @white;
+		font-size: 16px;
+		.lato-bold;
+		line-height: 1;
+	}
+
+	a {
+		color: @white;
+		font-size: 12px;
+
+	}
+
+	#site-info {
+		margin-right: 10px;
+	}
+
+	label {
+		font-size: 10px;
+	}
+
+	#col1 {
+		width: 120px;
+	}
+
+	#col2 {
+		width: 160px;
+		margin-left: 77px;
+	}
+
+	#col3 {
+		width: 130px;
+		margin-left: 77px;
+	}
+
+	#col4 {
+		width: 125px;
+		margin-left: 69px;
+	}
+
+	#col5 {
+		width: 100px;
+		margin-left: 61px;
+
+		a {
+			display: block;
+			float: left;
+			margin-right: 25px;
+
+			&:last-child {
+				margin-right: 0;
+			}
+		}
+	}
+
+	form {
+		margin: 0;
+	}
+
+	label {
+		margin-left: 2px;
+	}
+
+	input[type="email"] {
+		position: relative;
+		left: 2px;
+		height: 22px;
+		border: 1px solid #676767;
+		.border-left-radius(3px);
+	}
+
+	input[type="submit"] {
+		position: relative;
+		top: -5px;
+		height: 32px;
+		border-left: none;
+		.border-left-radius(0); 
+	}
+}
+
+/*..................................the forms */
+input[type="submit"] {
+	border: 1px solid @grayDark;
+	#gradient > .vertical(@grayLighter, @grayLight);
+	.border-radius(3px);
+	font-weight: 700;
+	color: #58595b;
+	font-size: 13px;
+}
+
+
 
 #page {
 	margin-top: 40px;

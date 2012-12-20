@@ -31,7 +31,7 @@
 	
 		<link rel="profile" href="http://gmpg.org/xfn/11" />
     	<!-- Le styles -->
-    	<link href='http://fonts.googleapis.com/css?family=Lato:400,700,900' rel='stylesheet' type='text/css'>
+    	<link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,900' rel='stylesheet' type='text/css'>
     	<link href="<?php bloginfo('template_directory'); ?>/css/bootstrap.css" rel="stylesheet">
     	<style>
       	body {
@@ -84,4 +84,4 @@
 				</div>
 	    	</div>
     	</header>
-    	<div class="container" id="wrapper">
+    	<div id="wrapper">

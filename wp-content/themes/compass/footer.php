@@ -80,11 +80,11 @@
 		<!-- Remove these before deploying to production -->
 		<script src="<?php bloginfo ('template_directory'); ?>/js/hashgrid.js" type="text/javascript"></script>
 
-		<script>
-			jQuery(document).ready(function($) {		
-				$('#sticky-list').stickySectionHeaders();
-			});
-		</script>
+		 <script>
+		    jQuery(function(){
+		      jQuery('#sticky-list').stickySectionHeaders();
+		    });
+  		</script>
 
 	<?php wp_footer(); ?>
 	</body>

@@ -1,0 +1,139 @@
+
+<!doctype html>
+<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
+<!-- Consider adding a manifest.appcache: h5bp.com/d/Offline -->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>jQuery.stickysectionheaders plugin</title>
+
+  <style>
+
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    #sticky-list  {
+      height: 300px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    #sticky-list > ul {
+      height: 100%;
+      overflow: auto;
+    }
+
+    #sticky-list > ul > li strong {
+      font-size: 1.5em;
+      color: #222;
+      background: #ccc;
+      display: block;
+      padding: 0.5em 10px;
+      color: #fff;
+      text-shadow: 0px -1px 0px #000;
+      opacity: .75;
+      background-image: -webkit-gradient(
+        linear,
+        left top,
+        left bottom,
+        color-stop(0, #646262),
+        color-stop(0.5, #484848),
+        color-stop(0.5, #3D3D3D),
+        color-stop(1, #4C4C4C)
+      );
+      background-image: -moz-linear-gradient(
+        center top,
+        #646262 0%,
+        #484848 50%,
+        #3D3D3D 50%,
+        #4C4C4C 100%
+      );
+      background-image: linear-gradient(
+        center top,
+        #646262 0%,
+        #484848 50%,
+        #3D3D3D 50%,
+        #4C4C4C 100%
+      );
+    }
+
+    #sticky-list > ul > li.sticky strong {
+      position: absolute;
+      top: 0;
+    }
+
+    #sticky-list > ul ul li {
+      padding: 1em 10px;
+      border-bottom: 1px solid #ccc;
+    }
+
+  </style>
+
+</head>
+
+<body>
+  <div class="container">
+
+        <h3><strong>Demo</strong></h3>
+        <div id="sticky-list">
+          <ul>
+            <li>
+              <strong>Section Headline 1</strong>
+              <ul>
+                <li>Content line</li>
+                <li>Content line</li>
+                <li>Content line</li>
+                <li>Content line</li>
+              </ul>
+            </li>
+            <li>
+              <strong>Section Headline 2</strong>
+              <ul>
+                <li>Content line</li>
+                <li>Content line</li>
+              </ul>
+            </li>
+            <li>
+              <strong>Section Headline 3</strong>
+              <ul>
+                <li>Content line</li>
+                <li>Content line</li>
+                <li>Content line</li>
+                <li>Content line</li>
+                <li>Content line</li>
+                <li>Content line</li>
+                <li>Content line</li>
+              </ul>
+            </li>
+            <li>
+              <strong>Section Headline 4</strong>
+              <ul>
+                <li>Content line</li>
+                <li>Content line</li>
+                <li>Content line</li>
+                <li>Content line</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+  </div>
+
+
+  <script src="http://code.jquery.com/jquery.min.js"></script>
+  <script src="https://github.com/polarblau/stickySectionHeaders/raw/master/src/jquery.stickysectionheaders.js"></script>
+  <script>
+    $(function(){
+      $('#sticky-list').stickySectionHeaders();
+    });
+  </script>
+
+
+
+</body>
+</html>

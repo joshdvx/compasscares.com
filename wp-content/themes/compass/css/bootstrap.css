@@ -5063,27 +5063,30 @@ Project Name: Twitter Bootstrap Framework
   font-family: 'Lato', sans-serif;
   font-weight: 900;
 }
+/*..................................the foundation */
+#wrapper {
+  width: 958px;
+  margin-right: auto;
+  margin-left: auto;
+  border-right: 1px #20445d solid;
+  border-left: 1px #20445d solid;
+}
 .row {
   margin-left: -10px;
   padding-right: 10px;
 }
-#wrapper {
-  width: 960px;
-  margin-left: auto;
-  margin-right: auto;
-  border: 1px #999999 solid;
-}
+/*..................................the typography */
 h1.tagline {
   margin: 0;
-  font-family: 'Lato', sans-serif;
-  font-weight: 400;
-  font-size: 12px;
   color: #232020;
   line-height: 1;
+  font-size: 12px;
+  font-weight: 400;
   text-align: right;
 }
+/*..................................the header */
 header {
-  height: 113px;
+  height: 111px;
 }
 .nav-primary {
   padding-top: 64px;
@@ -5108,38 +5111,39 @@ header {
 .section-header {
   margin-top: 0;
   padding: 20px 0;
+  text-align: center;
   background-color: #FFF;
   border-top: 1px solid #000000;
-  text-align: center;
   -webkit-box-shadow: 1px 1px 5px #676767;
   -moz-box-shadow: 1px 1px 5px #676767;
   box-shadow: 1px 1px 5px #676767;
 }
 /*..................................the footer */
 footer {
+  clear: both;
   padding-bottom: 10px;
-  background-color: #20445d;
   color: #ffffff;
   font-size: 10px;
   font-weight: 300;
-  clear: both;
+  background-color: #20445d;
+}
+footer li.widget-container {
+  margin-left: 0;
+  list-style: none;
+}
+footer li.widget-container ul {
+  margin-left: 0;
+  list-style: none;
 }
 footer h3 {
   color: #ffffff;
-  font-size: 16px;
-  font-family: 'Lato', sans-serif;
-  font-weight: 700;
   line-height: 1;
+  font-size: 16px;
+  font-weight: 700;
 }
 footer a {
   color: #ffffff;
   font-size: 12px;
-}
-footer #site-info {
-  margin-right: 10px;
-}
-footer label {
-  font-size: 10px;
 }
 footer #col1 {
   width: 120px;
@@ -5173,6 +5177,7 @@ footer form {
 }
 footer label {
   margin-left: 2px;
+  font-size: 10px;
 }
 footer input[type="email"] {
   position: relative;
@@ -5198,8 +5203,14 @@ footer input[type="submit"] {
   -moz-border-radius-bottomleft: 0;
   border-bottom-left-radius: 0;
 }
+footer #site-info {
+  margin-right: 10px;
+}
 /*..................................the forms */
 input[type="submit"] {
+  color: #58595b;
+  font-size: 13px;
+  font-weight: 700;
   border: 1px solid #676767;
   background-color: #cccccc;
   background-image: -moz-linear-gradient(top, #eeeeee, #999999);
@@ -5212,25 +5223,12 @@ input[type="submit"] {
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   border-radius: 3px;
-  font-weight: 700;
-  color: #58595b;
-  font-size: 13px;
-}
-#page {
-  margin-top: 40px;
 }
 /*..................................the company info page */
 .full-bio p {
   display: none;
 }
-footer li.widget-container {
-  margin-left: 0;
-  list-style: none;
-}
-footer li.widget-container ul {
-  margin-left: 0;
-  list-style: none;
-}
+/*..................................the image utilites */
 img.size-auto,
 img.size-full,
 img.size-large,
@@ -5269,6 +5267,8 @@ img.alignright,
 img.aligncenter {
   margin-bottom: 12px;
 }
+/*..................................the blog */
+/*..................................the homepage */
 #hero {
   height: 465px;
   background-color: #ffc40d;

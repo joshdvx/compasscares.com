@@ -22,36 +22,36 @@ Project Name: Twitter Bootstrap Framework
 	font-weight: 900;
 }
 
+/*..................................the foundation */
+#wrapper {
+	width: 958px;
+	margin-right: auto;
+	margin-left: auto;
+	border-right: 1px @blueDark solid;
+	border-left: 1px @blueDark solid;
+}
+
 .row {
 	margin-left: -10px;
 	padding-right: 10px;
 }
 
-#wrapper {
-	width: 960px;
-	margin-left: auto;
-	margin-right: auto;
-	border: 1px @grayLight solid;
-}
-
-body {
-	// font-weight: 400;
-}
-
+/*..................................the typography */
 h1.tagline {
 	margin: 0;
-	.lato-regular;
-	font-size: 12px;
 	color: @grayDarker;
 	line-height: 1;
+	font-size: 12px;
+	font-weight: 400;
 	text-align: right;
 }
 
+/*..................................the header */
 header {
-	height: 113px;
-	// border-bottom: 1px solid @blueDark;
+	height: 111px;
 }
 
+// THE NAV
 .nav-primary {
 	padding-top: 64px;
 	font-size: 15px;
@@ -77,45 +77,49 @@ header {
 	text-transform: lowercase;
 }
 
+
+// Move later
 .section-header {
 	margin-top: 0;
 	padding: 20px 0;
+	text-align: center;
 	background-color: #FFF;
 	border-top: 1px solid @black;
-	text-align: center;
 	.box-shadow(1px 1px 5px @grayDark)
 }
 
 /*..................................the footer */
 footer {
+	clear: both;
 	padding-bottom: 10px;
-	background-color: @blueDark;
 	color: @white;
 	font-size: 10px;
 	font-weight: 300;
-	clear: both;
+	background-color: @blueDark;
+
+	li.widget-container {
+		margin-left: 0;
+		list-style:none;
+
+		ul {
+			margin-left: 0;
+			list-style: none;
+		}
+	}
 
 	h3 {
 		color: @white;
-		font-size: 16px;
-		.lato-bold;
 		line-height: 1;
+		font-size: 16px;
+		font-weight: 700;
 	}
 
 	a {
 		color: @white;
 		font-size: 12px;
+ 	}
 
-	}
-
-	#site-info {
-		margin-right: 10px;
-	}
-
-	label {
-		font-size: 10px;
-	}
-
+	// COLUMNS
 	#col1 {
 		width: 120px;
 	}
@@ -150,12 +154,14 @@ footer {
 		}
 	}
 
+	// NEWSLETTER SIGNUP
 	form {
 		margin: 0;
 	}
 
 	label {
 		margin-left: 2px;
+		font-size: 10px;
 	}
 
 	input[type="email"] {
@@ -173,51 +179,31 @@ footer {
 		border-left: none;
 		.border-left-radius(0); 
 	}
+
+	// LEGAL
+	#site-info {
+		margin-right: 10px;
+	}
 }
 
 /*..................................the forms */
 input[type="submit"] {
+	color: #58595b;
+	font-size: 13px;
+	font-weight: 700;
 	border: 1px solid @grayDark;
 	#gradient > .vertical(@grayLighter, @grayLight);
 	.border-radius(3px);
-	font-weight: 700;
-	color: #58595b;
-	font-size: 13px;
-}
-
-
-
-#page {
-	margin-top: 40px;
 }
 
 /*..................................the company info page */
-// .leader-bio {
-// 	p:not(:first-child) {
-// 		display: none;
-// 	}
-// }
-
 .full-bio {
 	p {
 		display: none;
 	}
 }
 
-
-
-footer {
-	li.widget-container {
-		margin-left: 0;
-		list-style:none;
-
-		ul {
-			margin-left: 0;
-			list-style: none;
-		}
-	}
-}
-
+/*..................................the image utilites */
 img.size-auto,
 img.size-full,
 img.size-large,
@@ -253,15 +239,7 @@ img.aligncenter {
 	margin-bottom: 12px;
 }
 
-
-
-
-
-
-
-
-
-
+/*..................................the blog */
 .entry-title {
 	
 }
@@ -282,11 +260,7 @@ img.aligncenter {
 	
 }
 
-// .home #page {
-// 	position: relative;
-// 	height: 3600px;
-// }
-
+/*..................................the homepage */
 #hero {
 	height: 465px;
 	background-color: @yellow;

@@ -71,13 +71,13 @@
 	    <script src="<?php bloginfo('template_directory'); ?>/js/scrollto.js"></script>
 	    <script src="<?php bloginfo('template_directory'); ?>/js/localscroll.js"></script>
 	    <script src="<?php bloginfo('template_directory'); ?>/js/serialscroll.js"></script>
-	    
+	    <!-- Remove these before deploying to production -->
+		<script src="<?php bloginfo ('template_directory'); ?>/js/hashgrid.js" type="text/javascript"></script>g
 		<!-- scripts concatenated and minified via ant build script-->
 		<script src="<?php bloginfo ('template_directory'); ?>/js/plugins.js"></script>
 		<script src="<?php bloginfo ('template_directory'); ?>/js/script.js"></script>
 
-		<!-- Remove these before deploying to production -->
-		<script src="<?php bloginfo ('template_directory'); ?>/js/hashgrid.js" type="text/javascript"></script>
+		
 
 	<?php wp_footer(); ?>
 	</body>

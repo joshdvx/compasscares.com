@@ -2,8 +2,63 @@
 Project Name: Twitter Bootstrap Framework
 */
 
+/*..................................the font families */
+.lato-regular {
+	font-family: 'Lato', sans-serif;
+	font-weight: 400;
+}
+
+.lato-bold {
+	font-family: 'Lato', sans-serif;
+	font-weight: 700;	
+}
+
+.lato-black {
+	font-family: 'Lato', sans-serif;
+	font-weight: 900;
+}
+
 #wrapper {
 	border: 1px @grayLight solid;
+}
+
+h1.tagline {
+	margin: 0;
+	.lato-regular;
+	font-size: 12px;
+	color: @grayDarker;
+	line-height: 1;
+	text-align: right;
+}
+
+header {
+	height: 113px;
+	// border-bottom: 1px solid @blueDark;
+}
+
+.nav-primary {
+	padding-top: 64px;
+	font-size: 15px;
+	text-transform: uppercase;
+
+	li {
+		line-height: 0;
+		border-right: 1px solid #C4CDD3;
+
+		&:last-child {
+			border-right: none;
+		}
+	}
+}
+
+.navbar .nav-primary > li > a {
+	padding: 10px 19px 10px;
+}
+
+.nav-secondary {
+	padding-top: 48px;
+	font-size: 12px;
+	text-transform: lowercase;
 }
 
 .section-header {

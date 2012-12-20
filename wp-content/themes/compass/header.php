@@ -31,6 +31,7 @@
 	
 		<link rel="profile" href="http://gmpg.org/xfn/11" />
     	<!-- Le styles -->
+    	<link href='http://fonts.googleapis.com/css?family=Lato:400,700,900' rel='stylesheet' type='text/css'>
     	<link href="<?php bloginfo('template_directory'); ?>/css/bootstrap.css" rel="stylesheet">
     	<style>
       	body {
@@ -65,25 +66,22 @@
 	</head>
 
 	<body <?php body_class(); ?>>
-
-		<div class="navbar navbar-fixed-top">
-			<div class="navbar-inner">
-				<div class="container">
-					<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-            			<span class="icon-bar"></span>
-            			<span class="icon-bar"></span>
-            			<span class="icon-bar"></span>
-					</a>
-					<a class="brand" href="<?php bloginfo('url') ?>"><?php bloginfo('name'); ?> - <?php bloginfo('description'); ?></a>
-					<div class="nav-collapse">
-            			<ul class="nav pull-left">
-						<?php wp_nav_menu( array( 'theme_location' => 'primary', 'container' => false, 'menu_class' => 'nav', 'walker' => new Bootstrap_Menu_Walker ) ); ?>
-            			</ul>
-            			<ul class="nav pull-right">
-						<?php wp_nav_menu( array( 'theme_location' => 'secondary', 'container' => false, 'menu_class' => 'nav', 'walker' => new Bootstrap_Menu_Walker ) ); ?>
-            			</ul>
-					</div><!--/.nav-collapse -->
-        		</div>
-			</div>
-    	</div>
+		<header>
+			<div class="navbar navbar-fixed-top">
+				<div class="navbar-inner">
+					<div class="container">
+						<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+	            			<span class="icon-bar"></span>
+	            			<span class="icon-bar"></span>
+	            			<span class="icon-bar"></span>
+						</a>
+						<a class="brand" href="<?php bloginfo('url') ?>"><img src="<?php bloginfo('template_directory'); ?>/img/logo.png" alt="Logo"><h1 class="tagline"><?php bloginfo('description'); ?></h1></a>
+						<div class="nav-collapse">
+							<?php wp_nav_menu( array( 'theme_location' => 'primary', 'container' => false, 'menu_class' => 'nav nav-primary', 'walker' => new Bootstrap_Menu_Walker ) ); ?>
+							<?php wp_nav_menu( array( 'theme_location' => 'secondary', 'container' => false, 'menu_class' => 'nav nav-secondary pull-right', 'walker' => new Bootstrap_Menu_Walker ) ); ?>
+						</div><!--/.nav-collapse -->
+	        		</div>
+				</div>
+	    	</div>
+    	</header>
     	<div class="container" id="wrapper">

@@ -10,7 +10,7 @@
 // Grays
 // -------------------------
 @black:                 #000;
-@grayDarker:            #222;
+@grayDarker:            #232020;
 @grayDark:              #333;
 @gray:                  #555;
 @grayLight:             #999;
@@ -21,7 +21,7 @@
 // Accent colors
 // -------------------------
 @blue:                  #049cdb;
-@blueDark:              #0064cd;
+@blueDark:              #20445D;
 @green:                 #46a546;
 @red:                   #9d261d;
 @yellow:                #ffc40d;
@@ -44,7 +44,7 @@
 
 // Typography
 // -------------------------
-@sansFontFamily:        "Helvetica Neue", Helvetica, Arial, sans-serif;
+@sansFontFamily:        'Lato', Helvetica, Arial, sans-serif;
 @serifFontFamily:       Georgia, "Times New Roman", Times, serif;
 @monoFontFamily:        Monaco, Menlo, Consolas, "Courier New", monospace;
 
@@ -180,13 +180,13 @@
 @navbarCollapseWidth:             979px;
 @navbarCollapseDesktopWidth:      @navbarCollapseWidth + 1;
 
-@navbarHeight:                    40px;
+@navbarHeight:                    50px;
 @navbarBackgroundHighlight:       #ffffff;
 @navbarBackground:                darken(@navbarBackgroundHighlight, 5%);
-@navbarBorder:                    darken(@navbarBackground, 12%);
+@navbarBorder:                    @blueDark;
 
 @navbarText:                      #777;
-@navbarLinkColor:                 #777;
+@navbarLinkColor:                 @blueDark;
 @navbarLinkColorHover:            @grayDark;
 @navbarLinkColorActive:           @gray;
 @navbarLinkBackgroundHover:       transparent;
@@ -200,7 +200,7 @@
 @navbarInverseBorder:                    #252525;
 
 @navbarInverseText:                      @grayLight;
-@navbarInverseLinkColor:                 @grayLight;
+@navbarInverseLinkColor:                 @blueDark;
 @navbarInverseLinkColorHover:            @white;
 @navbarInverseLinkColorActive:           @navbarInverseLinkColorHover;
 @navbarInverseLinkBackgroundHover:       transparent;
@@ -271,8 +271,8 @@
 
 // Default 940px grid
 // -------------------------
-@gridColumns:             12;
-@gridColumnWidth:         60px;
+@gridColumns:             16;
+@gridColumnWidth:         40px;
 @gridGutterWidth:         20px;
 @gridRowWidth:            (@gridColumns * @gridColumnWidth) + (@gridGutterWidth * (@gridColumns - 1));
 

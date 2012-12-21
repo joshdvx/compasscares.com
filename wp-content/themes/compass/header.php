@@ -59,10 +59,10 @@
 			wp_head();
 		?>
 		
-		<?php if (is_home()): ?>
+		<!--<?php if (is_home()): ?>
 			<script src="http://code.jquery.com/jquery.min.js"></script>
 			<script src="<?php bloginfo('template_directory'); ?>/js/stickyheaders.js"></script>
-		<?php endif; ?>
+		<?php endif; ?>-->
 	</head>
 
 	<body <?php body_class(); ?>>

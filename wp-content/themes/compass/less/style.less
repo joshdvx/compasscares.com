@@ -33,7 +33,8 @@ Project Name: Twitter Bootstrap Framework
 
 .row {
 	margin-left: -10px;
-	padding-right: 10px;
+	// padding-right: 10px;
+	width: 960px;
 }
 
 /*..................................the typography */
@@ -79,13 +80,45 @@ header {
 
 
 // Move later
+
+.heading {
+	position: relative;
+	z-index: 10;
+	margin-bottom: -21px;
+	background: transparent;
+
+	.heading-arrow {
+		position: relative;
+		top: -1px;
+		height: 21px;
+		background: url(../img/heading-arrow.png) no-repeat center bottom;
+	}
+}
+
 .section-header {
-	margin-top: 0;
+	height: 60px;
+	margin: 0;
 	padding: 20px 0;
+	color: @blueDark;
+	font-weight: 300;
+	letter-spacing: 4px;
+	line-height: 1;
 	text-align: center;
-	background-color: #FFF;
-	border-top: 1px solid @black;
-	.box-shadow(1px 1px 5px @grayDark);
+	background: @white;
+	border-top: 1px solid @blueDark;
+	.box-shadow(0 8px 20px -6px @black);
+
+	.bold {
+		font-weight: 700;
+	}
+
+	.subtitle {
+		display: block;
+		padding-top: 12px;
+		font-size: 14px;
+		font-weight: 400;
+		text-transform: uppercase;
+	}
 }
 
 /*..................................the footer */
@@ -157,6 +190,7 @@ footer {
 	// NEWSLETTER SIGNUP
 	form {
 		margin: 0;
+		padding-right: 10px;
 	}
 
 	label {
@@ -268,7 +302,7 @@ img.aligncenter {
 
 #services {
 	height: 340px;
-	background-color: @red;
+	background-color: @teal;
 }
 
 #success-stories {
@@ -277,8 +311,20 @@ img.aligncenter {
 }
 
 #insta-team {
-	height: 415px;
-	background-color: @blue;
+	padding: 30px 0 5px 0;
+	background-color: @blueLight;
+
+	.carousel-control {
+		top: 50%;
+	}
+
+	.carousel-control.left {
+		left: 20px;
+	}
+
+	.carousel-control.right {
+		right: 20px;
+	}
 }
 
 #events {
@@ -291,15 +337,20 @@ img.aligncenter {
 	background-color: @purple;
 }
 
-
 /*..................................the instagram feed */
 #instagram .item {
 
 	a {
-	display: block;
-	float: left;
-	.square(160px);
-	margin-right: 10px;
+		.square(211px);
+		margin-top: 5px;
+		margin-bottom: 5px;
+		border: 2px solid @white;
+		.border-radius(50%);
+		.box-shadow(0 0 5px @black);
+
+		img {
+			.border-radius(50%); 
+		}
 	}
 }
 
@@ -307,6 +358,7 @@ img.aligncenter {
 /* http://www.menucool.com */
 #sliderFrame {
 	position:relative;
+	border-bottom: 1px solid @blue;
 }
         
 #slider {
@@ -502,4 +554,6 @@ div.navBulletsWrapper div.active {
   width: 580px; /* change to 560px if not using JS to remove rh.scroll */
 }
 
-
+.span4 {
+	width: 215px;
+}

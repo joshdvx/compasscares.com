@@ -5073,7 +5073,7 @@ Project Name: Twitter Bootstrap Framework
 }
 .row {
   margin-left: -10px;
-  padding-right: 10px;
+  width: 960px;
 }
 /*..................................the typography */
 h1.tagline {
@@ -5108,15 +5108,42 @@ header {
   font-size: 12px;
   text-transform: lowercase;
 }
+.heading {
+  position: relative;
+  z-index: 10;
+  margin-bottom: -21px;
+  background: transparent;
+}
+.heading .heading-arrow {
+  position: relative;
+  top: -1px;
+  height: 21px;
+  background: url(../img/heading-arrow.png) no-repeat center bottom;
+}
 .section-header {
-  margin-top: 0;
+  height: 60px;
+  margin: 0;
   padding: 20px 0;
+  color: #20445d;
+  font-weight: 300;
+  letter-spacing: 4px;
+  line-height: 1;
   text-align: center;
-  background-color: #FFF;
-  border-top: 1px solid #000000;
-  -webkit-box-shadow: 1px 1px 5px #676767;
-  -moz-box-shadow: 1px 1px 5px #676767;
-  box-shadow: 1px 1px 5px #676767;
+  background: #ffffff;
+  border-top: 1px solid #20445d;
+  -webkit-box-shadow: 0 8px 20px -6px #000000;
+  -moz-box-shadow: 0 8px 20px -6px #000000;
+  box-shadow: 0 8px 20px -6px #000000;
+}
+.section-header .bold {
+  font-weight: 700;
+}
+.section-header .subtitle {
+  display: block;
+  padding-top: 12px;
+  font-size: 14px;
+  font-weight: 400;
+  text-transform: uppercase;
 }
 /*..................................the footer */
 footer {
@@ -5174,6 +5201,7 @@ footer #col5 a:last-child {
 }
 footer form {
   margin: 0;
+  padding-right: 10px;
 }
 footer label {
   margin-left: 2px;
@@ -5275,15 +5303,24 @@ img.aligncenter {
 }
 #services {
   height: 340px;
-  background-color: #a64533;
+  background-color: #15a89c;
 }
 #success-stories {
   height: 440px;
   background-color: #f89406;
 }
 #insta-team {
-  height: 415px;
-  background-color: #049cdb;
+  padding: 30px 0 5px 0;
+  background-color: #87acd8;
+}
+#insta-team .carousel-control {
+  top: 50%;
+}
+#insta-team .carousel-control.left {
+  left: 20px;
+}
+#insta-team .carousel-control.right {
+  right: 20px;
 }
 #events {
   height: 630px;
@@ -5295,16 +5332,28 @@ img.aligncenter {
 }
 /*..................................the instagram feed */
 #instagram .item a {
-  display: block;
-  float: left;
-  width: 160px;
-  height: 160px;
-  margin-right: 10px;
+  width: 211px;
+  height: 211px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  border: 2px solid #ffffff;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  -webkit-box-shadow: 0 0 5px #000000;
+  -moz-box-shadow: 0 0 5px #000000;
+  box-shadow: 0 0 5px #000000;
+}
+#instagram .item a img {
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
 }
 /*..................................the homepage slider */
 /* http://www.menucool.com */
 #sliderFrame {
   position: relative;
+  border-bottom: 1px solid #182834;
 }
 #slider {
   position: relative;
@@ -5467,6 +5516,9 @@ div.navBulletsWrapper div.active {
   width: 580px;
   /* change to 560px if not using JS to remove rh.scroll */
 
+}
+.span4 {
+  width: 215px;
 }
 #entry-author-info {
   clear: both;

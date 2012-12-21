@@ -136,7 +136,7 @@
 	<?php endif; ?>
 		</div><!-- #post-## -->
 
-		<?php comments_template( '', true ); ?>
+	
 
 	<?php endif; // This was the if statement that broke the loop into three parts based on categories. ?>
 

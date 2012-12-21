@@ -5474,6 +5474,22 @@ img.aligncenter {
 #latest-post .entry-meta .author {
   display: none;
 }
+#latest-photos img {
+  display: block;
+  float: left;
+}
+#latest-photos .carousel {
+  margin-bottom: 0;
+}
+#latest-photos .carousel-control {
+  top: 50%;
+}
+#latest-photos .carousel-control.left {
+  left: 20px;
+}
+#latest-photos .carousel-control.right {
+  right: 20px;
+}
 /*..................................the instagram feed */
 #instagram .item a {
   width: 211px;

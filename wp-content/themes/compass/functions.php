@@ -39,6 +39,8 @@ if ( ! function_exists( 'smm_setup' ) ):
  */
 remove_action('wp_head', 'wp_generator');  
 
+add_image_size( 'home_photos', 320, 265, true );
+
 function smm_setup() {
 
 	// This theme styles the visual editor with editor-style.css to match the theme style.

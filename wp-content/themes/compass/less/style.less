@@ -53,6 +53,23 @@ header {
 }
 
 // THE NAV
+
+.navbar .nav-primary {
+	li.current_page_item,
+	li.current-menu-item {
+		padding-bottom: 24px;
+		border-bottom: 5px solid @blueDark;
+	}
+}
+
+.navbar .nav-secondary {
+	li.current_page_item,
+	li.current-menu-item {
+		padding-bottom: 10px;
+		border-bottom: 5px solid @blueDark;
+	}
+}
+
 .nav-primary {
 	padding-top: 64px;
 	font-size: 15px;
@@ -60,16 +77,16 @@ header {
 
 	li {
 		line-height: 0;
-		border-right: 1px solid #C4CDD3;
-
-		&:last-child {
-			border-right: none;
-		}
 	}
 }
 
 .navbar .nav-primary > li > a {
 	padding: 10px 19px 10px;
+	border-right: 1px solid #C4CDD3;
+}
+
+.navbar .nav-primary li:last-child a {
+	border-right: 0;
 }
 
 .nav-secondary {
@@ -190,7 +207,7 @@ footer {
 	// NEWSLETTER SIGNUP
 	form {
 		margin: 0;
-		padding-right: 10px;
+		padding-right: 20px;
 	}
 
 	label {
@@ -557,3 +574,5 @@ div.navBulletsWrapper div.active {
 .span4 {
 	width: 215px;
 }
+
+

@@ -5088,6 +5088,16 @@ h1.tagline {
 header {
   height: 111px;
 }
+.navbar .nav-primary li.current_page_item,
+.navbar .nav-primary li.current-menu-item {
+  padding-bottom: 24px;
+  border-bottom: 5px solid #20445d;
+}
+.navbar .nav-secondary li.current_page_item,
+.navbar .nav-secondary li.current-menu-item {
+  padding-bottom: 10px;
+  border-bottom: 5px solid #20445d;
+}
 .nav-primary {
   padding-top: 64px;
   font-size: 15px;
@@ -5095,13 +5105,13 @@ header {
 }
 .nav-primary li {
   line-height: 0;
-  border-right: 1px solid #C4CDD3;
-}
-.nav-primary li:last-child {
-  border-right: none;
 }
 .navbar .nav-primary > li > a {
   padding: 10px 19px 10px;
+  border-right: 1px solid #C4CDD3;
+}
+.navbar .nav-primary li:last-child a {
+  border-right: 0;
 }
 .nav-secondary {
   padding-top: 48px;
@@ -5201,7 +5211,7 @@ footer #col5 a:last-child {
 }
 footer form {
   margin: 0;
-  padding-right: 10px;
+  padding-right: 20px;
 }
 footer label {
   margin-left: 2px;

@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-	<section id="page" class="span12">
+	<section id="page" class="span16">
 		<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 			<?php if(get_field('subtitle')): ?>
 				<h1><?php the_field('subtitle') ?></h1>
@@ -10,7 +10,7 @@
 		<?php endwhile; endif; ?>
 		
 		<div class="tabbable tabs-left" id="locations-listing">
-			<ul class="nav nav-tabs span4" id="locations">
+			<ul class="nav nav-tabs span6" id="locations">
 				<?php if(get_field('offices')): ?>
 					<?php while (has_sub_field('offices')): ?>
 						<li>
@@ -23,7 +23,7 @@
 					<?php endwhile; ?>
 				<?php endif; ?>
 			</ul>
-			<div class="tab-content span6" id="maps">
+			<div class="tab-content span9" id="maps">
 				<?php if(get_field('offices')): ?>
 					<?php while (has_sub_field('offices')): ?>
 						<div id="<?php the_sub_field('office_city') ?>" class="tab-pane">
@@ -36,7 +36,7 @@
 		</div><!-- #locations-listing -->
 				
 		<div class="row">
-			<div class="span4" id="team">
+			<div class="span6" id="team">
 				<h2>Meet the Team</h2>
 				<?php if(get_field('team_members')): ?>
 					<?php while (has_sub_field('team_members')): ?>
@@ -47,15 +47,15 @@
 					<?php endwhile; ?>
 				<?php endif; ?>
 			</div><!-- #team -->
-			<div class="span8">
+			<div class="span10">
 				<div class="row">
-					<div class="span8" id="contact">
+					<div class="span10" id="contact">
 						<h2>Drop Us A Line</h2>
 							<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 								<?php the_content(); ?>
 							<?php endwhile; endif; ?>
 					</div><!-- #contact -->
-					<div class="span8" id="resources">
+					<div class="span10" id="resources">
 						<h2>Friends Who Can Help You</h2>
 						<?php if(get_field('friends_who_can_help')): ?>
 							<?php while (has_sub_field('friends_who_can_help')): ?>

@@ -15,9 +15,6 @@ jQuery(document).ready(function($) {
 	$("#locations li:first-child").addClass("active");
 	$(".tab-pane:first-child").addClass("active");
 
-	// Sticky headings for homepage
-	$('#sticky-list').stickySectionHeaders();
-
 	// Company Info Bio
 	$(".full-bio button").click(function(){
 		$(this).parent(".full-bio").find("p").slideToggle('fast', function (){
@@ -134,6 +131,9 @@ jQuery(document).ready(function($) {
 	  // the positioning is absolutely spot on when the pages loads.
 	  scrollOptions.duration = 1;
 	  $.localScroll.hash(scrollOptions);
+
+	// Sticky headings for homepage
+	$('#sticky-list').stickySectionHeaders();
 
 });
 

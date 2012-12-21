@@ -5063,6 +5063,7 @@ Project Name: Twitter Bootstrap Framework
   font-family: 'Lato', sans-serif;
   font-weight: 900;
 }
+/*..................................the colors */
 /*..................................the foundation */
 #wrapper {
   width: 960px;
@@ -5158,7 +5159,7 @@ header {
 /*..................................the footer */
 footer {
   clear: both;
-  padding-bottom: 10px;
+  padding: 20px 0 10px 0;
   color: #ffffff;
   font-size: 10px;
   font-weight: 300;
@@ -5316,8 +5317,75 @@ img.aligncenter {
   background-color: #15a89c;
 }
 #success-stories {
-  height: 440px;
+  height: 340px;
   background-color: #f89406;
+}
+#success-stories a.ss-hover {
+  display: block;
+  float: left;
+  position: relative;
+  width: 320px;
+  height: 340px;
+  color: #ffffff;
+  font-size: 23px;
+  text-align: center;
+}
+#success-stories a.ss-hover:hover .content {
+  display: block;
+  -webkit-transition: ease 1s;
+  -moz-transition: ease 1s;
+  -o-transition: ease 1s;
+  transition: ease 1s;
+}
+#success-stories .ss-hover-img span {
+  display: block;
+  position: absolute;
+  bottom: 0;
+  z-index: 1;
+  width: 100%;
+  line-height: 2;
+  font-size: 23px;
+  text-align: center;
+}
+#success-stories .ss-hover-img span.sls {
+  background-color: rgba(21, 158, 156, 0.8);
+}
+#success-stories .ss-hover-img span.ils {
+  background-color: rgba(32, 68, 95, 0.8);
+}
+#success-stories .ss-hover-img span.all {
+  background-color: rgba(135, 172, 216, 0.8);
+}
+#success-stories .content {
+  display: none;
+  position: absolute;
+  top: 0;
+  z-index: 2;
+  width: 320px;
+  height: 340px;
+  font-size: 42px;
+  line-height: 1;
+  background: url(../img/thumbs-up.png) no-repeat center 60px transparent;
+  -webkit-transition: ease 1s;
+  -moz-transition: ease 1s;
+  -o-transition: ease 1s;
+  transition: ease 1s;
+}
+#success-stories .content .inner {
+  position: relative;
+  top: 150px;
+}
+#success-stories .content .inner span {
+  font-weight: 300;
+}
+#success-stories .sls {
+  background-color: #15a89c;
+}
+#success-stories .ils {
+  background-color: #20445d;
+}
+#success-stories .all {
+  background-color: #87acd8;
 }
 #insta-team {
   padding: 30px 0 5px 0;

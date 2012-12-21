@@ -30,11 +30,36 @@
 	</div>
 	
 	<div id="success-stories">
-		<?php query_posts("post_type=success_stories&showposts=3"); ?>
-			<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-				<h3><?php the_title(); ?></h3>
-				<?php the_excerpt(); ?>
-		<?php endwhile; endif; ?>
+		<a href="<?php bloginfo('url'); ?>/success-stories/sls" class="ss-hover">
+			<div class="ss-hover-img">
+				<img src="<?php the_field('home_sls_photo', 'option') ?>" alt="SLS">
+				<span class="sls">- Read SLS Stories -</span>
+			</div>
+			<div class="content sls">
+				<div class="inner"><span>- SLS -</span><br>Success<br>Stories</div>
+			</div>
+		</a>
+		
+		<a href="<?php bloginfo('url'); ?>/success-stories/ils" class="ss-hover">
+			<div class="ss-hover-img">
+				<img src="<?php the_field('home_ils_photo', 'option') ?>" alt="ILS">
+				<span class="ils">- Read ILS Stories -</span>
+			</div>
+			<div class="content ils">
+				<div class="inner"><span>- ILS -</span><br>Success<br>Stories</div>
+			</div>
+		</a>
+		
+		<a href="<?php bloginfo('url'); ?>/success-stories" class="ss-hover">
+			<div class="ss-hover-img">
+				<img src="<?php the_field('home_all_stories_photo', 'option') ?>" alt="SLS and ILS">
+				<span class="sls">- Read ALL Stories -</span>
+			</div>
+			<div class="content all">
+				<div class="inner"><span>- All -</span><br>Success<br>Stories</div>
+			</div>
+		</a>
+		
 	</div><!-- #success-stories -->
 	
 	<div class="heading">

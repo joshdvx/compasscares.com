@@ -1,5 +1,4 @@
 		<footer role="contentinfo">
-			<hr>
 			<div class="container">
 				<div class="row">
 					<div class="span3" id="col1">

@@ -27,6 +27,20 @@ jQuery(document).ready(function($) {
 	    });
 	});
 
+	$("#sls span, #ils span").click(function(){
+		$(".service-copy").slideToggle();
+		$("#ils").html("<span class='poop'>Back</span>");
+	});
+
+	// $(".poop").click(function(){
+	// 	$(".service-copy").slideToggle();
+	// 	// $("#ils").html("<span class='poop'>Back</span>");
+	// });
+
+	// $("#sls span").hover(function(){
+	// 	$("#ils").html("poop");
+	// });
+
 	//Staff Success Stories Slider
 	var $panels = $('#staff-slider .scrollContainer > div');
 	  var $container = $('#staff-slider .scrollContainer');

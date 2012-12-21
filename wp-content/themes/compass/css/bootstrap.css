@@ -5313,12 +5313,51 @@ img.aligncenter {
   background-color: #ffc40d;
 }
 #services {
-  height: 340px;
+  color: #ffffff;
   background-color: #15a89c;
+}
+#services #sls-ils {
+  height: 230px;
+}
+#services #sls,
+#services #ils {
+  float: left;
+  height: 160px;
+  margin-top: 35px;
+  text-align: center;
+}
+#services #sls span,
+#services #ils span {
+  display: block;
+  margin-top: 65px;
+  letter-spacing: 3px;
+  font-size: 84px;
+  cursor: pointer;
+}
+#services #sls {
+  width: 480px;
+  border-right: 2px solid #ffffff;
+}
+#services #sls span {
+  padding-left: 200px;
+}
+#services #ils {
+  width: 478px;
+}
+#services #ils span {
+  padding-right: 200px;
+}
+#services .service-copy {
+  display: none;
+  padding-bottom: 20px;
+}
+#services p {
+  width: 410px;
+  margin: 0 auto 20px auto;
+  text-align: justify;
 }
 #success-stories {
   height: 340px;
-  background-color: #f89406;
 }
 #success-stories a.ss-hover {
   display: block;

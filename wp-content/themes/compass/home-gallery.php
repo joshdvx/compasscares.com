@@ -1,4 +1,4 @@
-<?php query_posts('post_type=photo_galleries&orderby=date'); ?>
+<?php query_posts('post_type=photo_galleries'); ?>
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 	<?php $images = get_field('select_photos'); if( $images ): ?>
 	     <?php      

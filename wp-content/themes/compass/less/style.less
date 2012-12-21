@@ -320,13 +320,67 @@ img.aligncenter {
 }
 
 #services {
-	height: 340px;
+	// padding-bottom: 20px;
+	color: @white;
 	background-color: @teal;
+	// min-height: 230px;
+
+	#sls-ils {
+		height: 230px;
+	}
+
+	#sls,
+	#ils {
+		float: left;
+		height: 160px;
+		margin-top: 35px;
+		text-align: center;
+
+		span {
+			display: block;
+			margin-top: 65px;
+			letter-spacing: 3px;
+			font-size: 84px;
+			cursor: pointer;
+		}
+	}
+
+	#sls {
+		width: 480px;
+		border-right: 2px solid @white;
+
+		span {
+			padding-left: 200px;
+		}
+	}
+
+	#ils {
+		width: 478px;
+
+		span {
+			padding-right: 200px;
+		}
+	}
+
+	.service-copy {
+		display: none;
+		padding-bottom: 20px;
+	}
+
+	p {
+		width: 410px;
+		margin: 0 auto 20px auto;
+		text-align: justify;
+	}
+
+	// .poop {
+	// 	font-size: 34px !important;
+	// 	text-transform: uppercase;
+	// }
 }
 
 #success-stories {
 	height: 340px;
-	background-color: @orange;
 
 	a.ss-hover {
 		display: block;

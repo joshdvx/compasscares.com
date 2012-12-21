@@ -18,9 +18,20 @@
 	</div>
 	
 	<div id="services">
-		<div class="row">
-			<div class="span6">ILS</div>
-			<div class="span6">SLS</div>
+		<div id="sls-ils">
+			<div id="sls">
+				<span>SLS</span>
+			</div>
+			<div id="ils">
+				<span>ILS</span>
+			</div>
+		</div>
+		<div class="service-copy">
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam neque obcaecati perspiciatis sint nobis? Pariatur tenetur error ab explicabo unde animi sunt dignissimos nesciunt natus quia ipsam mollitia ducimus odio vero voluptatibus perferendis qui maiores excepturi quas autem. Quis numquam soluta repudiandae eveniet! Ducimus facilis maiores natus quis illo voluptatibus.</p>
+			
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam neque obcaecati perspiciatis sint nobis? Pariatur tenetur error ab explicabo unde animi sunt dignissimos nesciunt natus quia ipsam mollitia ducimus odio vero voluptatibus perferendis qui maiores excepturi quas autem. Quis numquam soluta repudiandae eveniet! Ducimus facilis maiores natus quis illo voluptatibus.</p>
+			
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam neque obcaecati perspiciatis sint nobis? Pariatur tenetur error ab explicabo unde animi sunt dignissimos nesciunt natus quia ipsam mollitia ducimus odio vero voluptatibus perferendis qui maiores excepturi quas autem. Quis numquam soluta repudiandae eveniet! Ducimus facilis maiores natus quis illo voluptatibus.</p>
 		</div>
 	</div><!-- #services -->
 	

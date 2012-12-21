@@ -90,9 +90,17 @@
 	
 	<div id="events">
 		<?php echo do_shortcode('[events_list limit="2"]
-									<h3>#_EVENTNAME</h3>
-									<p>#l, #F #j, #Y at #g:#i#a until #@_{l, F j, Y} in #_LOCATIONTOWN, #_LOCATIONSTATE</p>
-								[/events_list]'); ?>
+			<div class="single-event">
+				<div class="single-event-details">
+					<h3 class="event-title">#_EVENTNAME</h3>
+					<span class="event-date">#_EVENTDATES</span>
+					<p class="event-description">#_EVENTEXCERPT</p>
+					<a href="#_EVENTURL">More Info...</a>
+				</div>
+				#_EVENTIMAGE
+			</div>
+		[/events_list]'); ?>
+		
 	</div><!-- #events -->
 	
 	<div class="heading">

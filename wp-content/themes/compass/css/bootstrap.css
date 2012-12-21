@@ -5400,13 +5400,79 @@ img.aligncenter {
 #insta-team .carousel-control.right {
   right: 20px;
 }
-#events {
-  height: 630px;
-  background-color: #c3325f;
+.single-event {
+  height: 255px;
+  color: #ffffff;
+  background-color: #20445d;
+}
+.single-event .single-event-details {
+  width: 310px;
+  padding: 35px 30px;
+}
+.single-event .single-event-details a {
+  font-size: 20px;
+  font-weight: 300;
+  text-decoration: underline;
+  text-transform: lowercase;
+}
+.single-event img {
+  display: block;
+  width: 590px;
+}
+.single-event:nth-child(even) .single-event-details,
+.single-event:nth-child(even) img {
+  float: right;
+}
+.single-event:nth-child(odd) .single-event-details,
+.single-event:nth-child(odd) img {
+  float: left;
+}
+.event-title {
+  margin-bottom: 5px;
+}
+.event-date {
+  display: block;
+  margin-bottom: 20px;
+  font-size: 26px;
+  font-weight: 300;
+}
+.event-description {
+  overflow: hidden;
+  height: 54px;
+  line-height: 1.5;
+  font-size: 18px;
 }
 #latest-post {
-  height: 360px;
-  background-color: #7a43b6;
+  height: 255px;
+  color: #ffffff;
+  background-color: #87acd8;
+}
+#latest-post h3 a {
+  color: #ffffff;
+}
+#latest-post .post {
+  float: left;
+  width: 430px;
+  padding: 25px 60px;
+}
+#latest-post img {
+  display: block;
+  float: left;
+}
+#latest-post p a {
+  display: block;
+  margin-top: 10px;
+  font-size: 22px;
+  font-weight: 700;
+  text-decoration: underline;
+}
+#latest-post .entry-meta {
+  margin-bottom: 5px;
+  font-weight: 300;
+}
+#latest-post .entry-meta .meta-sep,
+#latest-post .entry-meta .author {
+  display: none;
 }
 /*..................................the instagram feed */
 #instagram .item a {

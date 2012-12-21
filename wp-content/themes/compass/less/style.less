@@ -426,13 +426,111 @@ img.aligncenter {
 }
 
 #events {
-	height: 630px;
-	background-color: @pink;
+	// height: 500px;
+	// background-color: @blueDark;
+}
+
+.single-event {
+	height: 255px;
+	color: @white;
+	background-color: @blueDark;
+
+	.single-event-details {
+		// float: left;
+		width: 310px;
+		padding: 35px 30px;
+
+		a {
+			font-size: 20px;
+			font-weight: 300;
+			text-decoration: underline;
+			text-transform: lowercase;
+		}
+
+	}
+
+	img {
+		display: block;
+		// float: left;
+		width: 590px;
+	}
+
+	&:nth-child(even) {
+		.single-event-details,
+		img {
+			float: right;
+		}
+	}
+
+	&:nth-child(odd) {
+		.single-event-details,
+		img {
+			float: left;
+		}
+	}
+}
+
+.event-title {
+	margin-bottom: 5px;
+}
+
+.event-date {
+	display: block;
+	margin-bottom: 20px;
+	font-size: 26px;
+	font-weight: 300;
+}
+
+.event-description {
+	overflow: hidden;
+	height: 54px;
+	line-height: 1.5;
+	font-size: 18px;
 }
 
 #latest-post {
-	height: 360px;
-	background-color: @purple;
+	height: 255px;
+
+	color: @white;
+	background-color: @blueLight;
+
+	h3 {
+
+		a {
+			color: @white;
+		}
+	}
+
+	.post {
+		float: left;
+		width: 430px;
+		padding: 25px 60px;
+	}
+
+	img {
+		display: block;
+		float: left;
+	}
+
+	p {
+		a {
+			display: block;
+			margin-top: 10px;
+			font-size: 22px;
+			font-weight: 700;
+			text-decoration: underline;
+		}
+	}
+
+	.entry-meta {
+		margin-bottom: 5px;
+		font-weight: 300;
+
+		.meta-sep,
+		.author {
+			display: none;
+		}
+	}
 }
 
 /*..................................the instagram feed */

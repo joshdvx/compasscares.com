@@ -71,6 +71,8 @@
 	    <script src="<?php bloginfo('template_directory'); ?>/js/scrollto.js"></script>
 	    <script src="<?php bloginfo('template_directory'); ?>/js/localscroll.js"></script>
 	    <script src="<?php bloginfo('template_directory'); ?>/js/serialscroll.js"></script>
+	    <script src="<?php bloginfo('template_directory'); ?>/js/lettering.js"></script>
+
 	    <!-- Remove these before deploying to production -->
 		<script src="<?php bloginfo ('template_directory'); ?>/js/hashgrid.js" type="text/javascript"></script>
 		<!-- scripts concatenated and minified via ant build script-->

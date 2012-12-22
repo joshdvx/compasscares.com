@@ -1,12 +1,16 @@
 <?php get_header(); ?>
 
-<section id="page" class="span12">
+<section id="page">
 
 	<?php get_template_part( 'loop', 'page' ); ?>
 	
 	<?php if(get_field('compass_leadership')): ?>
 		<?php while (has_sub_field('compass_leadership')): ?>
-			<img src="<?php the_sub_field('leadership_headshot') ?>" width="100" height="100"><br>
+		
+			<div class="leader-photo roundy">
+				<img src="<?php the_sub_field('leadership_headshot') ?>" width="155" height="155"><br>
+			</div>
+			
 			<?php the_sub_field('leadership_name') ?><br>
 			<?php the_sub_field('leader_position') ?><br>
 			<div class="bio-intro">

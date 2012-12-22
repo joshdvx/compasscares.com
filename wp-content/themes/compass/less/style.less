@@ -124,7 +124,7 @@ header {
 	line-height: 1;
 	text-align: center;
 	background: @white;
-	border-top: 1px solid @blueDark;
+	// border-top: 1px solid @blueDark;
 	.box-shadow(0 8px 20px -6px @black);
 
 	.bold {
@@ -140,6 +140,71 @@ header {
 	}
 }
 
+/*..................................the contact page */
+.contact-page {
+	background-color: @blueLight;
+
+	h2 {
+		color: @blueDark;
+	}
+}
+
+#team {
+	width: 450px;
+	padding-left: 10px;
+	border-right: 1px solid @blueDark;
+}
+
+.team-member {
+	height: 155px;
+	margin-bottom: 20px;
+
+	.team-pic {
+		float: left;
+		.square(155px);
+		margin-right: 20px;
+	}
+
+	.team-details {
+		float: left;
+		width: 265px;
+		padding-top: 45px;
+	}
+
+	span {
+		display: block;
+	}
+}
+
+.team-name {
+	color: @blueDark;
+	font-size: 22px;
+}
+
+.team-postion {
+	padding: 10px 0 5px 0;
+	color: @white;
+	font-size: 22px;
+}
+
+.team-email {
+	font-size: 16px;
+}
+
+
+#right-col {
+	width: 450px;
+}
+
+.roundy {
+	border: 2px solid @white;
+	.border-radius(50%);
+	.box-shadow(0 0 5px @black);
+
+	img {
+		.border-radius(50%);
+	}
+}
 /*..................................the footer */
 footer {
 	clear: both;
@@ -306,7 +371,8 @@ img.aligncenter {
 }
 
 .entry-content {
-	
+	margin-top: -31px;
+	margin-bottom: -8px;
 }
 
 .entry-summary {
@@ -618,14 +684,12 @@ img.aligncenter {
 		.square(211px);
 		margin-top: 5px;
 		margin-bottom: 5px;
-		border: 2px solid @white;
-		.border-radius(50%);
-		.box-shadow(0 0 5px @black);
-
-		img {
-			.border-radius(50%); 
-		}
 	}
+}
+
+/*..................................the company info page */
+.leader-photo {
+	.square(155px);
 }
 
 /*..................................the homepage slider */

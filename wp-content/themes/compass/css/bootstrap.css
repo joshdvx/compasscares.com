@@ -5141,7 +5141,6 @@ header {
   line-height: 1;
   text-align: center;
   background: #ffffff;
-  border-top: 1px solid #20445d;
   -webkit-box-shadow: 0 8px 20px -6px #000000;
   -moz-box-shadow: 0 8px 20px -6px #000000;
   box-shadow: 0 8px 20px -6px #000000;
@@ -5155,6 +5154,65 @@ header {
   font-size: 14px;
   font-weight: 400;
   text-transform: uppercase;
+}
+/*..................................the contact page */
+.contact-page {
+  background-color: #87acd8;
+}
+.contact-page h2 {
+  color: #20445d;
+}
+#team {
+  width: 450px;
+  padding-left: 10px;
+  border-right: 1px solid #20445d;
+}
+.team-member {
+  height: 155px;
+  margin-bottom: 20px;
+}
+.team-member .team-pic {
+  float: left;
+  width: 155px;
+  height: 155px;
+  margin-right: 20px;
+}
+.team-member .team-details {
+  float: left;
+  width: 265px;
+  padding-top: 45px;
+}
+.team-member span {
+  display: block;
+}
+.team-name {
+  color: #20445d;
+  font-size: 22px;
+}
+.team-postion {
+  padding: 10px 0 5px 0;
+  color: #ffffff;
+  font-size: 22px;
+}
+.team-email {
+  font-size: 16px;
+}
+#right-col {
+  width: 450px;
+}
+.roundy {
+  border: 2px solid #ffffff;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  -webkit-box-shadow: 0 0 5px #000000;
+  -moz-box-shadow: 0 0 5px #000000;
+  box-shadow: 0 0 5px #000000;
+}
+.roundy img {
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
 }
 /*..................................the footer */
 footer {
@@ -5307,6 +5365,10 @@ img.aligncenter {
   margin-bottom: 12px;
 }
 /*..................................the blog */
+.entry-content {
+  margin-top: -31px;
+  margin-bottom: -8px;
+}
 /*..................................the homepage */
 #hero {
   height: 465px;
@@ -5535,18 +5597,11 @@ img.aligncenter {
   height: 211px;
   margin-top: 5px;
   margin-bottom: 5px;
-  border: 2px solid #ffffff;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  border-radius: 50%;
-  -webkit-box-shadow: 0 0 5px #000000;
-  -moz-box-shadow: 0 0 5px #000000;
-  box-shadow: 0 0 5px #000000;
 }
-#instagram .item a img {
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  border-radius: 50%;
+/*..................................the company info page */
+.leader-photo {
+  width: 155px;
+  height: 155px;
 }
 /*..................................the homepage slider */
 /* http://www.menucool.com */

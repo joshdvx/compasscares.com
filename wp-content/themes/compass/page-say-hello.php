@@ -1,12 +1,11 @@
 <?php get_header(); ?>
 
-	<section id="page" class="span16">
+	<section id="page" class="contact-page">
 		<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-			<?php if(get_field('subtitle')): ?>
-				<h1><?php the_field('subtitle') ?></h1>
-			<?php else: ?>
-				<h1><?php the_title(); ?></h1>
-			<?php endif; ?>	
+			<div class="heading">
+				<h1 class="section-header"><?php the_title(); ?><span class="subtitle"><?php the_field('subtitle') ?></span></h1>
+				<div class="heading-arrow"></div>
+			</div>
 		<?php endwhile; endif; ?>
 		
 		<div class="tabbable tabs-left" id="locations-listing">
@@ -36,18 +35,26 @@
 		</div><!-- #locations-listing -->
 				
 		<div class="row">
+		
 			<div class="span6" id="team">
 				<h2>Meet the Team</h2>
 				<?php if(get_field('team_members')): ?>
 					<?php while (has_sub_field('team_members')): ?>
-						<img src="<?php the_sub_field('team_headshot') ?>" alt="<?php the_sub_field('team_name') ?>" width="100" height="100"><br>
-						<?php the_sub_field('team_name') ?><br>
-						<?php the_sub_field('team_position') ?><br>
-						<a href="mailto:<?php the_sub_field('team_email') ?>"><?php the_sub_field('team_email') ?></a>
+						<div class="team-member">
+							<div class="team-pic roundy">
+								<img src="<?php the_sub_field('team_headshot') ?>" alt="<?php the_sub_field('team_name') ?>" width="155" height="155">
+							</div>
+							<div class="team-details">
+								<span class="team-name"><?php the_sub_field('team_name') ?></span>
+								<span class="team-postion"><?php the_sub_field('team_position') ?></span>
+								<span class="team-email"><a href="mailto:<?php the_sub_field('team_email') ?>"><?php the_sub_field('team_email') ?></a></span>
+							</div>
+						</div><!-- .team-member -->
 					<?php endwhile; ?>
 				<?php endif; ?>
 			</div><!-- #team -->
-			<div class="span10">
+			
+			<div class="span10" id="right-col">
 				<div class="row">
 					<div class="span10" id="contact">
 						<h2>Drop Us A Line</h2>
@@ -56,7 +63,7 @@
 							<?php endwhile; endif; ?>
 					</div><!-- #contact -->
 					<div class="span10" id="resources">
-						<h2>Friends Who Can Help You</h2>
+						<h2>Friends who can help</h2>
 						<?php if(get_field('friends_who_can_help')): ?>
 							<?php while (has_sub_field('friends_who_can_help')): ?>
 							<a href="<?php the_sub_field('friends_website_url') ?>"><?php the_sub_field('friends_name') ?></a><br>

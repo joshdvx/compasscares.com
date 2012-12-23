@@ -5366,7 +5366,6 @@ img.aligncenter {
 }
 /*..................................the blog */
 .entry-content {
-  margin-top: -31px;
   margin-bottom: -8px;
 }
 /*..................................the homepage */
@@ -5501,32 +5500,121 @@ img.aligncenter {
 #insta-team .carousel-control.right {
   right: 20px;
 }
-.single-event {
-  height: 255px;
-  color: #ffffff;
+.bg-blueDark {
   background-color: #20445d;
 }
-.single-event .single-event-details {
+.page-id-10 #page,
+.page-id-10 .half-circle {
+  background-color: #20445d;
+}
+.page-id-8 #page,
+.page-id-8 .half-circle {
+  background-color: #15a89c;
+}
+/*..................................the sls & ils pages */
+.service-descriptions {
+  display: table;
+  height: 100%;
+  font-size: 16px;
+}
+.service-descriptions .inner-service-descriptions {
+  display: table-cell;
+  vertical-align: middle;
+}
+.service-descriptions .inner-service-descriptions p {
+  margin-bottom: 0;
+  line-height: 1.5;
+}
+.info-block:nth-child(even) .service-descriptions {
+  width: 245px;
+  padding: 0 45px 0 80px;
+}
+.info-block:nth-child(odd) .service-descriptions {
+  width: 265px;
+  padding: 0 45px 0 60px;
+}
+.page-id-10 .info-block:last-child,
+.page-id-8 .info-block:last-child {
+  border-bottom: 2px solid #ffffff;
+}
+.pull-quote {
+  position: relative;
+  height: 200px;
+  padding: 30px 60px;
+  border-bottom: 2px solid #ffffff;
+}
+.pull-quote a {
+  display: block;
+  margin-top: 25px;
+  font-size: 18px;
+  text-decoration: underline;
+}
+.half-circle {
+  position: relative;
+  top: -25px;
+  left: 35px;
+  float: left;
+  width: 205px;
+  height: 205px;
+  margin-left: -220px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+}
+.client-testimony {
+  width: 100%;
+  height: 155px;
+}
+.testimony-headshot {
+  position: relative;
+  z-index: 9;
+  float: left;
+  width: 150px;
+  height: 150px;
+}
+.client-quote {
+  float: left;
+  width: 425px;
+  height: 95px;
+  padding: 30px 40px 30px 75px;
+  margin-left: -15px;
+  color: #20445d;
+  background-color: rgba(255, 255, 255, 0.7);
+}
+.client-quote .client-quote-name {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 22px;
+}
+.client-quote p {
+  font-size: 16px;
+}
+/*..................................the events section */
+.info-block {
+  height: 255px;
+  color: #ffffff;
+}
+.info-block img {
+  display: block;
+  width: 590px;
+}
+.info-block:nth-child(even) .info-block-details,
+.info-block:nth-child(even) img {
+  float: right;
+}
+.info-block:nth-child(odd) .info-block-details,
+.info-block:nth-child(odd) img {
+  float: left;
+}
+.event-details {
   width: 310px;
   padding: 35px 30px;
 }
-.single-event .single-event-details a {
+.event-details a {
   font-size: 20px;
   font-weight: 300;
   text-decoration: underline;
   text-transform: lowercase;
-}
-.single-event img {
-  display: block;
-  width: 590px;
-}
-.single-event:nth-child(even) .single-event-details,
-.single-event:nth-child(even) img {
-  float: right;
-}
-.single-event:nth-child(odd) .single-event-details,
-.single-event:nth-child(odd) img {
-  float: left;
 }
 .event-title {
   margin-bottom: 5px;

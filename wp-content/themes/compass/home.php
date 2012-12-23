@@ -99,10 +99,10 @@
 		<div class="heading-arrow"></div>
 	</div>
 	
-	<div id="events">
+	<div id="events" class="bg-blueDark">
 		<?php echo do_shortcode('[events_list limit="2"]
-			<div class="single-event">
-				<div class="single-event-details">
+			<div class="info-block">
+				<div class="info-block-details event-details">
 					<h3 class="event-title">#_EVENTNAME</h3>
 					<span class="event-date">#_EVENTDATES</span>
 					<p class="event-description">#_EVENTEXCERPT</p>

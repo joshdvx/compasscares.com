@@ -5076,6 +5076,9 @@ Project Name: Twitter Bootstrap Framework
   margin-left: -10px;
   width: 960px;
 }
+.span4 {
+  width: 215px;
+}
 /*..................................the typography */
 h1.tagline {
   margin: 0;
@@ -5365,9 +5368,6 @@ img.aligncenter {
   margin-bottom: 12px;
 }
 /*..................................the blog */
-.entry-content {
-  margin-bottom: -8px;
-}
 /*..................................the homepage */
 #hero {
   height: 465px;
@@ -5631,6 +5631,13 @@ img.aligncenter {
   line-height: 1.5;
   font-size: 18px;
 }
+#em-wrapper p:first-child,
+#em-wrapper p:last-child {
+  margin: 0;
+}
+#events-landing {
+  border-bottom: 2px solid #ffffff;
+}
 #latest-post {
   height: 255px;
   color: #ffffff;
@@ -5685,6 +5692,80 @@ img.aligncenter {
   height: 211px;
   margin-top: 5px;
   margin-bottom: 5px;
+}
+/*..................................the photo gallery */
+.photo-gallery {
+  color: #ffffff;
+  background-color: #20445d;
+  border-bottom: 2px solid #ffffff;
+}
+.photo-gallery a {
+  color: #ffffff;
+}
+.photo-gallery .row {
+  margin-left: -20px;
+  padding: 15px 0 15px 0;
+}
+.single-photos {
+  width: 280px;
+  min-height: 300px;
+  max-height: 335px;
+  margin-left: 40px;
+  padding-bottom: 15px;
+}
+.single-photos h3 {
+  margin-bottom: 0;
+  font-weight: 400;
+  text-align: center;
+}
+.single-photos p {
+  font-size: 16px;
+  font-weight: 300;
+  text-align: center;
+}
+.single-photos img {
+  width: 280px;
+  height: 240px;
+}
+p.photo-caption {
+  margin-top: 10px;
+}
+.gallery-filters {
+  color: #20445d;
+  font-size: 23px;
+  font-weight: 300;
+  background-color: #ffffff;
+}
+.gallery-filters > li {
+  margin-bottom: -3px;
+  border-right: 1px solid #20445d;
+}
+.gallery-filters > li > a {
+  padding: 10px 30px;
+  color: #20445d;
+}
+.gallery-filters > li > a:hover {
+  border-color: transparent;
+  background-color: transparent;
+}
+.gallery-filters .active > a,
+.gallery-filters .active > a:hover {
+  margin-right: 0;
+  color: #20445d;
+  border: 0;
+  -webkit-box-shadow: inset 0 0 20px #999999;
+  -moz-box-shadow: inset 0 0 20px #999999;
+  box-shadow: inset 0 0 20px #999999;
+  cursor: pointer;
+}
+.gallery-filters li.filters {
+  line-height: 40px;
+  padding: 0 30px;
+  font-style: italic;
+}
+#jquery-overlay,
+#jquery-lightbox {
+  z-index: 9999 !important;
 }
 /*..................................the company info page */
 .leader-photo {
@@ -5858,9 +5939,6 @@ div.navBulletsWrapper div.active {
   width: 580px;
   /* change to 560px if not using JS to remove rh.scroll */
 
-}
-.span4 {
-  width: 215px;
 }
 #entry-author-info {
   clear: both;

@@ -1,42 +1,47 @@
 <?php get_header(); ?>
 
-		<section id="page" class="span12">
-<?php
-	/* Queue the first post, that way we know
-	 * what date we're dealing with (if that is the case).
-	 *
-	 * We reset this later so we can run the loop
-	 * properly with a call to rewind_posts().
-	 */
-	if ( have_posts() )
-		the_post();
-?>
+<section id="page" class="photo-gallery">
 
-		<h1 class="page-title">
-<?php if ( is_day() ) : ?>
-			<?php printf( __( 'Daily Archives: <span>%s</span>', 'smm' ), get_the_date() ); ?>
-<?php elseif ( is_month() ) : ?>
-			<?php printf( __( 'Monthly Archives: <span>%s</span>', 'smm' ), get_the_date( 'F Y' ) ); ?>
-<?php elseif ( is_year() ) : ?>
-			<?php printf( __( 'Yearly Archives: <span>%s</span>', 'smm' ), get_the_date( 'Y' ) ); ?>
-<?php else : ?>
-			<?php _e( 'Blog Archives', 'smm' ); ?>
-<?php endif; ?>
+	<div class="heading">
+		<h1 class="section-header">
+			We Look Good and We Know It
+			<span class="subtitle">Photo Gallery</span>
 		</h1>
-
-<?php
-	/* Since we called the_post() above, we need to
-	 * rewind the loop back to the beginning that way
-	 * we can run the loop properly, in full.
-	 */
-	rewind_posts();
-
-	/* Run the loop for the archives page to output the posts.
-	 * If you want to overload this in a child theme then include a file
-	 * called loop-archive.php and that will be used instead.
-	 */
-	 get_template_part( 'loop', 'archive' );
-?>
-
-		</section><!-- #page -->
+		<div class="heading-arrow"></div>
+	</div><!-- .heading -->
+	
+	<ul class="nav nav-tabs gallery-filters">
+		<li class="filters">Filters:</li>
+		<li>
+			<a href="<?php bloginfo('url') ?>/photo-gallery">ALL</a>
+		</li>
+		<li <?php if (is_tax('regions', 'fnrc')): ?>class="active" <?php endif; ?>>
+			<a href="<?php bloginfo('url') ?>/regions/fnrc">FNRC</a>
+		</li>
+		<li <?php if (is_tax('regions', 'rceb')): ?>class="active" <?php endif; ?>>
+			<a href="<?php bloginfo('url') ?>/regions/rceb">RCEB</a>
+		</li>
+		<li <?php if (is_tax('regions', 'sarc')): ?>class="active" <?php endif; ?>>
+			<a href="<?php bloginfo('url') ?>/regions/sarc">SARC</a>
+		</li>
+	</ul><!-- .gallery-filters -->
+	
+	<div class="row">
+		<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+			<div class="span4 single-photos">
+				<?php
+					$images = get_field('select_photos');
+					if( $images ): ?>
+		            <?php foreach( $images as $image ): ?>
+		                <a href="<?php the_permalink(); ?>"><img src="<?php echo $image['sizes']['photo_gallery']; ?>" alt="<?php echo $image['alt']; ?>" width="280" height="240" /></a>
+	                	<?php break; ?>
+	            	<?php endforeach; ?>
+				    <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+				    <p><?php echo get_the_term_list( $post->ID, 'regions', '', ', ', '' ); ?> - <?php echo count($images); ?> photos</p>
+				<?php endif; ?>
+			</div><!-- .single-photos -->
+		<?php endwhile; endif; ?>
+	</div><!-- .row -->
+	
+</section><!-- #page -->
 <?php get_footer(); ?>

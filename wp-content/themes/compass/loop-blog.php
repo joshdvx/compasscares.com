@@ -16,7 +16,7 @@
 		<div class="post-date"><?php the_date(); ?></div>
 		
 		<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail( array (530, 260) ); ?></a>
-
+		
 		<div class="entry-utility">
 		<?php if ( count( get_the_category() ) ) : ?>
 			<span class="cat-links">

@@ -4,8 +4,8 @@
 */
 get_header(); ?>
 
-<section id="page">
-	<div class="blog-posts">
+<section id="page" class="row">
+	<div class="blog-posts span10">
 		<?php get_template_part( 'loop', 'blog' ); ?>	
 		
 	</div>

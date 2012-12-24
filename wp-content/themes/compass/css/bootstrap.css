@@ -5777,14 +5777,20 @@ p.photo-caption {
 .blog-posts {
   float: left;
   width: 570px;
-  padding-left: 60px;
+  margin-top: 30px;
+  padding-left: 50px;
   color: #20445d;
   font-size: 16px;
+  border-right: 1px solid #20445d;
 }
 .blog-posts .post {
   margin-right: 40px;
   padding: 20px 0;
   border-bottom: 1px solid #20445d;
+}
+.blog-posts .post:first-child {
+  margin-top: -15px;
+  padding-top: 0;
 }
 .blog-posts h2.entry-title,
 .blog-posts h1.entry-title {
@@ -5812,10 +5818,52 @@ p.photo-caption {
 }
 #sidebar {
   float: left;
-  width: 315px;
+  width: 240px;
   height: 100%;
+  margin-left: 39px;
   margin-top: 30px;
-  border-left: 1px solid #20445d;
+}
+#sidebar h3 {
+  margin-top: 20px;
+  margin-bottom: 0;
+  color: #20445d;
+  font-weight: 400;
+}
+#sidebar ul {
+  list-style: none;
+  margin: 0;
+  font-size: 16px;
+}
+#sidebar .widget_twitter {
+  margin: 25px 0;
+}
+#sidebar .widget_twitter h3 {
+  padding-left: 60px;
+  font-size: 20px;
+  background: url(../img/sidebar-twitter.png) no-repeat;
+}
+#sidebar .widget_twitter h3 a {
+  color: #20445d;
+}
+#sidebar .widget_twitter .tweets {
+  margin: 10px 0 20px 0;
+  color: #20445d;
+  font-style: italic;
+  font-weight: 300;
+}
+#sidebar .rss a {
+  font-size: 18px;
+}
+#sidebar .rss a img {
+  position: relative;
+  top: -4px;
+  padding-right: 10px;
+}
+form#searchform input[type="text"] {
+  width: 170px;
+}
+form#searchform input[type="submit"] {
+  content: "shit";
 }
 .show-comments {
   display: inline-block;
@@ -5824,11 +5872,8 @@ p.photo-caption {
   cursor: pointer;
 }
 #disqus_thread {
+  width: 530px;
   display: none;
-}
-#disqus_thread #global-nav li,
-#disqus_thread #global-nav h4 {
-  display: none !important;
 }
 .single-post .post {
   border-bottom: 0;

@@ -55,11 +55,6 @@
 						<div id="author-description">
 							<h3><?php printf( esc_attr__( 'About %s', 'smm' ), get_the_author() ); ?></h3>
 							<?php the_author_meta( 'description' ); ?>
-							<div id="author-link">
-								<a href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ) ); ?>" rel="author">
-									<?php printf( __( 'View all posts by %s <span class="meta-nav">&rarr;</span>', 'smm' ), get_the_author() ); ?>
-								</a>
-							</div><!-- #author-link	-->
 						</div><!-- #author-description -->
 					</div><!-- #entry-author-info -->
 <?php endif; ?>

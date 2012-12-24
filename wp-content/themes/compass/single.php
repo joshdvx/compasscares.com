@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
-		<section id="page">
-			<div class="blog-posts single-post">
+		<section id="page" class="row">
+			<div class="blog-posts single-post span10">
 
 				<?php get_template_part( 'loop', 'single' ); ?>
 			</div>

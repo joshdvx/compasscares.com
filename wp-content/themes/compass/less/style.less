@@ -921,15 +921,22 @@ p.photo-caption {
 .blog-posts {
 	float: left;
 	width: 570px;
-	padding-left: 60px;
+	margin-top: 30px;
+	padding-left: 50px;
 	color: @blueDark;
 	font-size: 16px;
+	border-right: 1px solid @blueDark;
 
 	.post {
 		// margin-left: 60px;
 		margin-right: 40px;
 		padding: 20px 0;
 		border-bottom: 1px solid @blueDark;
+
+		&:first-child {
+			margin-top: -15px;
+			padding-top: 0;
+		}
 	}
 
 	h2.entry-title,
@@ -971,10 +978,69 @@ p.photo-caption {
 
 #sidebar {
 	float: left;
-	width: 315px;
+	width: 240px;
 	height: 100%;
+	margin-left: 39px;
 	margin-top: 30px;
-	border-left: 1px solid @blueDark;
+
+	h3 {
+		margin-top: 20px;
+		margin-bottom: 0;
+		color: @blueDark;
+		font-weight: 400;
+	}
+
+	ul {
+		list-style: none;
+		margin: 0;
+		font-size: 16px;
+
+		// ul {
+		// 	margin-top: 20px;
+		// }
+	}
+
+	.widget_twitter {
+		margin: 25px 0;
+		h3 {
+			padding-left: 60px;
+			font-size: 20px;
+			background: url(../img/sidebar-twitter.png) no-repeat;
+
+			a {
+				color: @blueDark;
+			}
+		}
+
+		.tweets {
+			margin: 10px 0 20px 0;
+			color: @blueDark;
+			font-style: italic;
+			font-weight: 300;
+		}
+	}
+
+	.rss {
+		a {
+			font-size: 18px;
+
+			img {
+				position: relative;
+				top: -4px;
+				padding-right: 10px;
+			}
+		}
+	}
+}
+
+form#searchform {
+	input[type="text"] {
+		width: 170px;
+	}
+
+	input[type="submit"] {
+		content: "shit";
+	}		
 }
 // BLOG LANDING 
 .show-comments {
@@ -984,11 +1050,8 @@ p.photo-caption {
 	cursor: pointer;
 }
 #disqus_thread {
+	width: 530px;
 	display: none;
-
-	#global-nav li, #global-nav h4 {
-		display: none !important;
-	}
 }
 
 .single-post .post{

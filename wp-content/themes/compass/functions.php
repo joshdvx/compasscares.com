@@ -474,3 +474,8 @@ function my_new_contactmethods( $contactmethods ) {
     return $contactmethods;
 }
 add_filter('user_contactmethods','my_new_contactmethods',10,1);
+
+if ( function_exists( 'add_theme_support' ) ) {
+	add_theme_support( 'post-thumbnails' );
+        set_post_thumbnail_size( 530, 260, true );
+}

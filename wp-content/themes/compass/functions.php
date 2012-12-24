@@ -47,9 +47,6 @@ function smm_setup() {
 	// This theme styles the visual editor with editor-style.css to match the theme style.
 	add_editor_style();
 
-	// Post Format support. You can also use the legacy "gallery" or "asides" (note the plural) categories.
-	add_theme_support( 'post-formats', array( 'aside', 'gallery' ) );
-
 	// This theme uses post thumbnails
 	add_theme_support( 'post-thumbnails' );
 
@@ -111,7 +108,7 @@ add_filter( 'excerpt_length', 'smm_excerpt_length' );
  * @return string "Continue Reading" link
  */
 function smm_continue_reading_link() {
-	return ' <br><a class="pull-right" href="'. get_permalink() . '">' . __( 'Read more', 'smm' ) . '</a>';
+	return ' <br><a class="read-more" href="'. get_permalink() . '">' . __( 'Read more', 'smm' ) . '</a>';
 }
 
 /**
@@ -436,8 +433,8 @@ function bootstrap_pagination(){
 	      'format' => 'page/%#%',
 	      'current' => $current_page,
 	      'total' => $total_pages,
-	      'prev_text' => 'Prev',
-	      'next_text' => 'Next',
+	      'prev_text' => 'prev',
+	      'next_text' => 'next',
 		  'type' => 'list'
 	    ));
 	  echo '</div>';
@@ -469,3 +466,11 @@ function hide_editor() {
     	remove_post_type_support('page', 'editor');
     }
 }
+
+function my_new_contactmethods( $contactmethods ) {
+    // Add Twitter
+    $contactmethods['twitter'] = 'Twitter';
+ 
+    return $contactmethods;
+}
+add_filter('user_contactmethods','my_new_contactmethods',10,1);

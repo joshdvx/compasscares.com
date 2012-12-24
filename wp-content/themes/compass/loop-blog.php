@@ -11,30 +11,32 @@
 		<h2 class="entry-title">
 			<a href="<?php the_permalink(); ?>"><?php the_title();  ?></a>
 		</h2>
-		<div><?php smm_posted_on(); ?></div>
-		<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail( array (100, 100) ); ?></a>
-
-		<?php the_excerpt(); ?>
+		<div class="post-author">By <?php the_author(); ?> <a href="http://twitter.com/<?php the_author_meta( 'twitter' ); ?>">@<?php the_author_meta( 'twitter' ); ?></a>
+		</div>
+		<div class="post-date"><?php the_date(); ?></div>
+		
+		<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail( array (530, 260) ); ?></a>
 
 		<div class="entry-utility">
 		<?php if ( count( get_the_category() ) ) : ?>
 			<span class="cat-links">
 				<?php printf( __( '<span class="%1$s">Posted in</span> %2$s', 'smm' ), 'entry-utility-prep entry-utility-prep-cat-links', get_the_category_list( ', ' ) ); ?>
 			</span>
-			<span class="meta-sep">|</span>
+			
 		<?php endif; ?>
 		<?php
 			$tags_list = get_the_tag_list( '', ', ' );
 			if ( $tags_list ):
 		?>
+			<span class="meta-sep">&nbsp;&nbsp;&nbsp;</span>
 			<span class="tag-links">
 				<?php printf( __( '<span class="%1$s">Tagged</span> %2$s', 'smm' ), 'entry-utility-prep entry-utility-prep-tag-links', $tags_list ); ?>
 			</span>
-			<span class="meta-sep">|</span>
+			
 		<?php endif; ?>
-			<span class="comments-link"><?php comments_popup_link( __( 'Leave a comment', 'smm' ), __( '1 Comment', 'smm' ), __( '% Comments', 'smm' ) ); ?></span>
-			<?php edit_post_link( __( 'Edit', 'smm' ), '<span class="meta-sep">|</span> <span class="edit-link">', '</span>' ); ?>
+			
 		</div><!-- .entry-utility -->
+		<?php the_excerpt(); ?>
 	</article><!-- #post -->
 
 	<?php endwhile; ?>

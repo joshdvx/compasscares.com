@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-		<section id="page" class="span8">
+<section id="page">
 
 
 <?php
@@ -28,7 +28,8 @@ if ( get_the_author_meta( 'description' ) ) : ?>
 	rewind_posts();
 	 get_template_part( 'loop', 'author' );
 ?>
+<?php get_sidebar(); ?>
 		</section><!-- #page -->
 
-<?php get_sidebar(); ?>
+
 <?php get_footer(); ?>

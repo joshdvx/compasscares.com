@@ -5657,6 +5657,7 @@ img.aligncenter {
 }
 #latest-post p a {
   display: block;
+  float: right;
   margin-top: 10px;
   font-size: 22px;
   font-weight: 700;
@@ -5771,6 +5772,66 @@ p.photo-caption {
 .leader-photo {
   width: 155px;
   height: 155px;
+}
+/*..................................the blog */
+.blog-posts {
+  float: left;
+  width: 570px;
+  padding-left: 60px;
+  color: #20445d;
+  font-size: 16px;
+}
+.blog-posts .post {
+  margin-right: 40px;
+  padding: 20px 0;
+  border-bottom: 1px solid #20445d;
+}
+.blog-posts h2.entry-title,
+.blog-posts h1.entry-title {
+  margin-bottom: 0;
+  line-height: 1;
+  font-size: 22px;
+  font-weight: 400;
+}
+.blog-posts .post-date {
+  margin-bottom: 20px;
+  font-size: 18px;
+  font-weight: 300;
+}
+.blog-posts .entry-utility {
+  margin: 5px 0 10px 0;
+  font-size: 14px;
+}
+.blog-posts a.read-more {
+  display: block;
+  margin-top: 20px;
+}
+.pagination a.next,
+.pagination a.prev {
+  font-style: italic;
+}
+#sidebar {
+  float: left;
+  width: 315px;
+  height: 100%;
+  margin-top: 30px;
+  border-left: 1px solid #20445d;
+}
+.show-comments {
+  display: inline-block;
+  color: #a64533;
+  font-style: italic;
+  cursor: pointer;
+}
+#disqus_thread {
+  display: none;
+}
+#disqus_thread #global-nav li,
+#disqus_thread #global-nav h4 {
+  display: none !important;
+}
+.single-post .post {
+  border-bottom: 0;
 }
 /*..................................the homepage slider */
 /* http://www.menucool.com */
@@ -5942,19 +6003,30 @@ div.navBulletsWrapper div.active {
 }
 #entry-author-info {
   clear: both;
-  margin: 24px 0;
+  margin: 40px 0 20px 0;
   overflow: hidden;
-  padding: 18px 20px;
+  padding: 25px 2px;
+  border-bottom: 1px solid #20445d;
+  border-top: 1px solid #20445d;
 }
 #entry-author-info #author-avatar {
   float: left;
-  height: 60px;
+  width: 155px;
+  height: 155px;
   margin: 0 -104px 0 0;
-  padding: 11px;
 }
 #entry-author-info #author-description {
   float: left;
-  margin: 0 0 0 104px;
+  width: 345px;
+  margin-left: 125px;
+}
+#entry-author-info h3 {
+  margin: 0 0 5px 0;
+  line-height: 1;
+  font-weight: 400;
+}
+#entry-author-info #author-link {
+  margin-top: 10px;
 }
 .pull-right {
   float: right;

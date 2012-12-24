@@ -766,6 +766,7 @@ img.aligncenter {
 	p {
 		a {
 			display: block;
+			float: right;
 			margin-top: 10px;
 			font-size: 22px;
 			font-weight: 700;
@@ -914,6 +915,84 @@ p.photo-caption {
 /*..................................the company info page */
 .leader-photo {
 	.square(155px);
+}
+
+/*..................................the blog */
+.blog-posts {
+	float: left;
+	width: 570px;
+	padding-left: 60px;
+	color: @blueDark;
+	font-size: 16px;
+
+	.post {
+		// margin-left: 60px;
+		margin-right: 40px;
+		padding: 20px 0;
+		border-bottom: 1px solid @blueDark;
+	}
+
+	h2.entry-title,
+	h1.entry-title {
+		margin-bottom: 0;
+		line-height: 1;
+		font-size: 22px;
+		font-weight: 400;
+	}
+
+	.post-author {
+
+	}
+
+	.post-date {
+		margin-bottom: 20px;
+		font-size: 18px;
+		font-weight: 300;
+	}
+
+	.entry-utility {
+		margin: 5px 0 10px 0;
+		font-size: 14px;
+	}
+
+	a.read-more {
+		display: block;
+		margin-top: 20px;
+	}
+	
+}
+
+.pagination {
+	a.next,
+	a.prev {
+		font-style: italic;
+	}
+}
+
+#sidebar {
+	float: left;
+	width: 315px;
+	height: 100%;
+	margin-top: 30px;
+	border-left: 1px solid @blueDark;
+}
+// BLOG LANDING 
+.show-comments {
+	display: inline-block;
+	color: @red;
+	font-style: italic;
+	cursor: pointer;
+}
+#disqus_thread {
+	display: none;
+
+	#global-nav li, #global-nav h4 {
+		display: none !important;
+	}
+}
+
+.single-post .post{
+	border-bottom: 0;
 }
 
 /*..................................the homepage slider */

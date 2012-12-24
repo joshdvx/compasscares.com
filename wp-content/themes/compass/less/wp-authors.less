@@ -3,21 +3,29 @@
 
 #entry-author-info {
 	clear: both;
-	margin: 24px 0;
+	margin: 40px 0 20px 0;
 	overflow: hidden;
-	padding: 18px 20px;
-	
+	padding: 25px 2px;
+	border-bottom: 1px solid @blueDark;
+	border-top: 1px solid @blueDark;
+
 	#author-avatar {
 		float: left;
-		height: 60px;
+		.square(155px);
 		margin: 0 -104px 0 0;
-		padding: 11px;
 	}
 	#author-description {
 		float: left;
-		margin: 0 0 0 104px;
+		width: 345px;
+		margin-left: 125px;
 	}
-	h2 {
+	h3 {
+		margin: 0 0 5px 0;
+		line-height: 1;
+		font-weight: 400;
+	}
 
+	#author-link {
+		margin-top: 10px;
 	}
 }

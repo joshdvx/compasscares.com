@@ -1,4 +1,4 @@
-				<section id="sidebar" class="span3">
+				<section id="sidebar">
 					
 					<ul>
 	
@@ -46,4 +46,6 @@
 	
 				<?php endif; ?>
 				
+				
+					
 				</section><!-- #sidebar -->

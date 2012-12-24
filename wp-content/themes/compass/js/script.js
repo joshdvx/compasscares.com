@@ -32,6 +32,10 @@ jQuery(document).ready(function($) {
 		$("#ils").html("<span class='poop'>Back</span>");
 	});
 
+	// Show Comments 
+	$(".show-comments").click(function(){
+		$("#disqus_thread").slideToggle();
+	});
 	// $(".poop").click(function(){
 	// 	$(".service-copy").slideToggle();
 	// 	// $("#ils").html("<span class='poop'>Back</span>");
@@ -40,6 +44,8 @@ jQuery(document).ready(function($) {
 	// $("#sls span").hover(function(){
 	// 	$("#ils").html("poop");
 	// });
+
+	
 
 	//Staff Success Stories Slider
 	var $panels = $('#staff-slider .scrollContainer > div');

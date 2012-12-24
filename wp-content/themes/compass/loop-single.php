@@ -17,9 +17,30 @@
 				<div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 					<h1 class="entry-title"><?php the_title(); ?></h1>
 
-					<div class="entry-meta">
-						<?php smm_posted_on(); ?>
-					</div><!-- .entry-meta -->
+					<div class="post-author">By <?php the_author(); ?> <a href="http://twitter.com/<?php the_author_meta( 'twitter' ); ?>">@<?php the_author_meta( 'twitter' ); ?></a>
+					</div>
+					<div class="post-date"><?php the_date(); ?></div>
+					<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail( array (530, 260) ); ?></a>
+					
+					<div class="entry-utility">
+		<?php if ( count( get_the_category() ) ) : ?>
+			<span class="cat-links">
+				<?php printf( __( '<span class="%1$s">Posted in</span> %2$s', 'smm' ), 'entry-utility-prep entry-utility-prep-cat-links', get_the_category_list( ', ' ) ); ?>
+			</span>
+			
+		<?php endif; ?>
+		<?php
+			$tags_list = get_the_tag_list( '', ', ' );
+			if ( $tags_list ):
+		?>
+			<span class="meta-sep">&nbsp;&nbsp;&nbsp;</span>
+			<span class="tag-links">
+				<?php printf( __( '<span class="%1$s">Tagged</span> %2$s', 'smm' ), 'entry-utility-prep entry-utility-prep-tag-links', $tags_list ); ?>
+			</span>
+			
+		<?php endif; ?>
+			
+		</div><!-- .entry-utility -->
 
 					<div class="entry-content">
 						<?php the_content(); ?>
@@ -28,11 +49,11 @@
 
 <?php if ( get_the_author_meta( 'description' ) ) : // If a user has filled out their description, show a bio on their entries  ?>
 					<div id="entry-author-info">
-						<div id="author-avatar">
-							<?php echo get_avatar( get_the_author_meta( 'user_email' ), apply_filters( 'smm_author_bio_avatar_size', 60 ) ); ?>
+						<div id="author-avatar" class="roundy">
+							<?php echo get_avatar( get_the_author_meta( 'user_email' ), apply_filters( 'smm_author_bio_avatar_size', 155 ) ); ?>
 						</div><!-- #author-avatar -->
 						<div id="author-description">
-							<h2><?php printf( esc_attr__( 'About %s', 'smm' ), get_the_author() ); ?></h2>
+							<h3><?php printf( esc_attr__( 'About %s', 'smm' ), get_the_author() ); ?></h3>
 							<?php the_author_meta( 'description' ); ?>
 							<div id="author-link">
 								<a href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ) ); ?>" rel="author">
@@ -42,12 +63,9 @@
 						</div><!-- #author-description -->
 					</div><!-- #entry-author-info -->
 <?php endif; ?>
-
-					<div class="entry-utility">
-						<?php smm_posted_in(); ?>
-					</div><!-- .entry-utility -->
+					<?php comments_number(); ?> | <span class="show-comments">Hide/Show Comments</span>
 				</div><!-- #post-## -->
-
+				
 
 				<?php comments_template( '', true ); ?>
 

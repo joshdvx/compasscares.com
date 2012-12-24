@@ -5860,10 +5860,17 @@ p.photo-caption {
   padding-right: 10px;
 }
 form#searchform input[type="text"] {
-  width: 170px;
+  width: 183px;
 }
 form#searchform input[type="submit"] {
-  content: "shit";
+  position: relative;
+  top: -5px;
+  width: 45px;
+  height: 30px;
+  margin-left: -5px;
+  background: url(../img/search-icon.png) no-repeat center center #eeeeee;
+  border-color: #CCC;
+  border-left: none;
 }
 .show-comments {
   display: inline-block;

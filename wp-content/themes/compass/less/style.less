@@ -1255,6 +1255,156 @@ table.em-tickets {
 	}
 }
 
+/*..................................the careers & opportunities page */
+.careers-opps {
+	.entry-content {
+		padding: 40px 20px;
+		color: @white;
+		background-color: @teal;
+
+		a.btn {
+			margin-top: 30px;
+		}
+	}
+}
+
+// Staff Stories Slider
+#staff-stories {
+	height: 635px;
+	padding: 20px 0;
+	background-color: @blueLight;
+	border-top: 2px solid @white;
+
+	h2 {
+		margin-top: 0;
+		font-weight: 400;
+	}
+}
+
+#staff-slider {
+	// width: 620px;
+	width: 880px;
+	margin: 0 auto;
+	position: relative;
+
+  	ul.navigation {
+	  	width: 100%;
+	  	width: auto;
+	  	margin-top: 90px;
+	  	padding-left: 33%;
+
+	  	li {
+	  		display: block;
+	  		float: left;
+	  		.square(110px);
+	  		margin-right: 15px;
+
+	  		a {
+	  			display: block;
+	  			font-size: 20px;
+	  			text-align: center;
+	  			color: @blueDark;
+
+	  			img {
+	  				margin-bottom: 20px;
+	  			}
+	  		}
+	  	}
+  	}
+
+  	span {
+		position: absolute;
+		top: 500px;
+		cursor: pointer;
+		font-size: 100px;
+		font-weight: 300;
+	}
+
+	span.left {
+		left: 30%;
+	}
+
+	span.right {
+		right: 30%;
+	}
+}
+
+.staff-info {
+	float: left;
+	width: 500px;
+	margin-left: 45px;
+	// overflow: scroll;
+	// padding-top: 50px;
+
+	b {
+		font-size: 18px;
+	}
+}
+
+.staff-name {
+	margin-bottom: 30px;
+	font-size: 30px;
+	font-weight: 300;
+}
+
+.staff-headshot {
+	float: left;
+	.square(265px);
+}
+
+.scroll {
+	position: relative; /* fix for IE to respect overflow */
+	clear: left;
+	overflow: auto;
+	height: 375px;
+	background: @blueLight url(images/content_pane-gradient.gif) repeat-x scroll left bottom;
+
+	::-webkit-scrollbar {
+		-webkit-appearance: none;
+		width: 7px;
+	}
+
+	::-webkit-scrollbar-thumb {
+		border-radius: 4px;
+		background-color: rgba(0,0,0,.5);
+		-webkit-box-shadow: 0 0 1px rgba(255,255,255,.5);
+	}
+}
+
+
+
+.scrollContainer div.panel {
+	padding: 20px;
+	// width: 580px; /* change to 560px if not using JS to remove rh.scroll */
+	width: 840px;
+	// height: 210px;
+	height: 375px;
+	// margin-bottom: 20px;
+	overflow: auto;
+	background-color: @blueLight;
+}
+
+// Training
+.training {
+	padding: 20px;
+
+	a.btn {
+		margin-top: -15px;
+	}
+}
+
+.training-manuals {
+	float: left;
+	width: 600px;
+	height: auto;
+	padding-bottom: 30px;
+
+	a {
+		// display: block;
+		// float: left;
+		margin-right: 10px;
+	}
+}
 
 /*..................................the blog */
 .blog-posts {
@@ -1560,50 +1710,7 @@ div.navBulletsWrapper div.active {
     }
 
 /*..................................the staff success stories slider */
-#staff-slider {
-  width: 620px;
-  margin: 0 auto;
-  position: relative;
 
-  ul.navigation {
-  	width: 100%;
-  	margin-top: 10px;
-
-  	li {
-  		display: block;
-  		float: left;
-  		margin-right: 10px;
-  	}
-  }
-  span {
-	  position: absolute;
-	  top: 150px;
-	  cursor: pointer;
-	  font-size: 88px;
-	}
-
-	span.left {
-	  left: -20px;
-	}
-
-	span.right {
-	  right: -20px;
-	}
-}
-
-.scroll {
-  height: 250px;
-  overflow: auto;
-  position: relative; /* fix for IE to respect overflow */
-  clear: left;
-  background: #FFFFFF url(images/content_pane-gradient.gif) repeat-x scroll left bottom;
-}
-
-.scrollContainer div.panel {
-  padding: 20px;
-  height: 210px;
-  width: 580px; /* change to 560px if not using JS to remove rh.scroll */
-}
 
 
 

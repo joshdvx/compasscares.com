@@ -147,7 +147,7 @@ body {
   font-family: 'Lato', Helvetica, Arial, sans-serif;
   font-size: 14px;
   line-height: 20px;
-  color: #676767;
+  color: #20445d;
   background-color: #ffffff;
 }
 a {
@@ -1362,7 +1362,7 @@ select:focus:required:invalid:focus {
 }
 .help-block,
 .help-inline {
-  color: #8d8d8d;
+  color: #346e96;
 }
 .help-block {
   display: block;
@@ -5514,6 +5514,7 @@ img.aligncenter {
   right: 20px;
 }
 .bg-blueDark {
+  color: #ffffff;
   background-color: #20445d;
 }
 .page-id-10 #page,
@@ -6004,6 +6005,11 @@ table.em-tickets select {
   z-index: 9999 !important;
 }
 /*..................................the company info page */
+.company-info-top,
+.company-info-bottom,
+#leadership {
+  padding: 20px;
+}
 .leader-photo {
   width: 155px;
   height: 155px;

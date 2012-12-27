@@ -5167,17 +5167,84 @@ header {
   font-weight: 400;
   text-transform: uppercase;
 }
-/*..................................the contact page */
+/*..................................the say hello page */
 .contact-page {
   background-color: #87acd8;
+  border-bottom: 2px solid #ffffff;
 }
 .contact-page h2 {
   color: #20445d;
 }
+#locations-listing {
+  height: 460px;
+  overflow: hidden;
+  border-bottom: 2px solid #ffffff;
+}
+#locations-listing .nav-tabs {
+  width: 322px;
+  margin-right: 0;
+  background-color: #15a89c;
+  border: none;
+}
+#locations-listing .nav-tabs > li {
+  height: 115px;
+  background-color: #20445d;
+  border-bottom: 2px solid #6D6E71;
+}
+#locations-listing .nav-tabs > li:last-child {
+  border-bottom: none;
+}
+#locations-listing .nav-tabs > li > a {
+  height: 87px;
+  padding-top: 20px;
+  padding-left: 80px;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 300;
+  background: url(../img/star.png) no-repeat 20px center;
+}
+#locations-listing .nav-tabs > li > a:hover {
+  margin-bottom: 0;
+  background-color: #9ab9de;
+  border: none;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+}
+#locations-listing .nav-tabs .active > a,
+#locations-listing .nav-tabs .active > a:hover {
+  margin-bottom: 0;
+  background-color: #87acd8;
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+  border-bottom: 2px solid #6D6E71;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+}
+#locations-listing .office-city {
+  font-size: 32px;
+  font-weight: 400;
+}
+#locations-listing .tab-content {
+  width: 638px;
+  margin-left: 0;
+}
+#locations-listing a.btn {
+  margin-top: -110px;
+  margin-left: 480px;
+}
+.say-hello-bottom {
+  padding: 55px 0 40px 0;
+}
 #team {
-  width: 450px;
+  width: 470px;
   padding-left: 10px;
   border-right: 1px solid #20445d;
+}
+#team h2 {
+  margin-bottom: 20px;
 }
 .team-member {
   height: 155px;
@@ -5205,12 +5272,17 @@ header {
   padding: 10px 0 5px 0;
   color: #ffffff;
   font-size: 22px;
+  font-weight: 300;
 }
 .team-email {
   font-size: 16px;
 }
 #right-col {
-  width: 450px;
+  width: 409px;
+  margin-left: 30px;
+}
+#right-col .row {
+  width: 100%;
 }
 .roundy {
   border: 2px solid #ffffff;
@@ -5225,6 +5297,42 @@ header {
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   border-radius: 50%;
+}
+#contact {
+  width: 409px;
+  border-bottom: 1px solid #20445d;
+}
+#contact form {
+  width: 290px;
+  margin-bottom: 0;
+}
+#contact input[type="text"],
+#contact textarea {
+  width: 276px;
+  margin-bottom: 0;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}
+#contact input[type="submit"] {
+  float: right;
+  margin-bottom: 25px;
+}
+#resources {
+  width: 409px;
+  padding-top: 35px;
+}
+#resources h2 {
+  margin-bottom: 20px;
+}
+.resource-name {
+  margin-bottom: 3px;
+  font-size: 20px;
+}
+.resource-phone {
+  margin-bottom: 25px;
+  font-size: 16px;
+  font-weight: 300;
 }
 /*..................................the footer */
 footer {
@@ -6113,6 +6221,7 @@ table.em-tickets select {
   float: left;
   width: 500px;
   margin-left: 45px;
+  padding-bottom: 20px;
 }
 .staff-info b {
   font-size: 18px;
@@ -6254,14 +6363,17 @@ table.em-tickets select {
   padding-right: 10px;
 }
 form#searchform input[type="text"] {
-  width: 183px;
+  width: 185px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
 }
 form#searchform input[type="submit"] {
   position: relative;
   top: -5px;
   width: 45px;
   height: 30px;
-  margin-left: -5px;
+  margin-left: -7px;
   background: url(../img/search-icon.png) no-repeat center center #eeeeee;
   border-color: #CCC;
   border-left: none;

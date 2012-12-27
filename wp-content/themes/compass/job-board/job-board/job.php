@@ -18,6 +18,7 @@
 
     <?php $job = wpjb_view("job") ?>
     <table class="wpjb-info">
+    BALLS of the SHIT
         <tbody>
             <?php if($job->company_name): ?>
             <tr>

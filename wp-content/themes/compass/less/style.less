@@ -154,19 +154,98 @@ header {
 	}
 }
 
-/*..................................the contact page */
+/*..................................the say hello page */
 .contact-page {
 	background-color: @blueLight;
+	border-bottom: 2px solid @white;
 
 	h2 {
 		color: @blueDark;
 	}
 }
 
+// Locations
+#locations-listing {
+	height: 460px;
+	overflow: hidden;
+	border-bottom: 2px solid @white;
+
+	.nav-tabs {
+		width: 322px;
+		margin-right: 0;
+		background-color: @teal;
+		border: none;
+
+		& > li {
+			height: 115px;
+			background-color: @blueDark;
+			border-bottom: 2px solid #6D6E71;
+
+			&:last-child {
+				border-bottom: none;
+			}
+
+			& > a {
+				height: 87px;
+				padding-top: 20px;
+				padding-left: 80px;
+				color: @white;
+				font-size: 16px;
+				font-weight: 300;
+				background: url(../img/star.png) no-repeat 20px center;
+
+				&:hover {
+					margin-bottom: 0;
+					background-color: lighten(@blueLight, 5%);
+					border: none;
+					.border-radius(0);
+				}
+			}
+		}
+
+		.active > a,
+		.active > a:hover {
+				margin-bottom: 0;
+				background-color: @blueLight;
+				border-top: 0;
+				border-left: 0;
+				border-right: 0;
+				border-bottom: 2px solid #6D6E71;
+				.border-radius(0);
+			
+		}
+	}
+
+	.office-city {
+		font-size: 32px;
+		font-weight: 400;
+	}
+
+	.tab-content {
+		// width: 520px;
+		width: 638px;
+		margin-left: 0;
+	}
+
+	a.btn {
+		// display: block;
+		margin-top: -110px;
+		margin-left: 480px;
+	}
+}
+
+.say-hello-bottom {
+	padding: 55px 0 40px 0;
+}
+// Meet the Team
 #team {
-	width: 450px;
+	width: 470px;
 	padding-left: 10px;
 	border-right: 1px solid @blueDark;
+
+	h2 {
+		margin-bottom: 20px;
+	}
 }
 
 .team-member {
@@ -199,6 +278,7 @@ header {
 	padding: 10px 0 5px 0;
 	color: @white;
 	font-size: 22px;
+	font-weight: 300;
 }
 
 .team-email {
@@ -207,7 +287,12 @@ header {
 
 
 #right-col {
-	width: 450px;
+	width: 409px;
+	margin-left: 30px;
+
+	.row {
+		width: 100%;
+	}
 }
 
 .roundy {
@@ -218,6 +303,48 @@ header {
 	img {
 		.border-radius(50%);
 	}
+}
+
+#contact {
+	width: 409px;
+	border-bottom: 1px solid @blueDark;
+
+	form {
+		width: 290px;
+		margin-bottom: 0;
+	}
+
+	input[type="text"],
+	textarea {
+		width: 276px;
+		margin-bottom: 0;
+		.border-radius(3px);
+	}
+
+	input[type="submit"] {
+		float: right;
+		margin-bottom: 25px;
+	}
+}
+
+#resources {
+	width: 409px;
+	padding-top: 35px;
+
+	h2 {
+		margin-bottom: 20px;
+	}
+}
+
+.resource-name {
+	margin-bottom: 3px;
+	font-size: 20px;
+}
+
+.resource-phone {
+	margin-bottom: 25px;
+	font-size: 16px;
+	font-weight: 300;
 }
 /*..................................the footer */
 footer {
@@ -1333,8 +1460,7 @@ table.em-tickets {
 	float: left;
 	width: 500px;
 	margin-left: 45px;
-	// overflow: scroll;
-	// padding-top: 50px;
+	padding-bottom: 20px;
 
 	b {
 		font-size: 18px;
@@ -1524,7 +1650,8 @@ table.em-tickets {
 
 form#searchform {
 	input[type="text"] {
-		width: 183px;
+		width: 185px;
+		.border-radius(3px);
 	}
 
 	input[type="submit"] {
@@ -1532,7 +1659,7 @@ form#searchform {
 		top: -5px;
 		width: 45px;
 		height: 30px;
-		margin-left: -5px;
+		margin-left: -7px;
 		background: url(../img/search-icon.png) no-repeat center center @grayLighter;
 		border-color: #CCC;
 		border-left: none;

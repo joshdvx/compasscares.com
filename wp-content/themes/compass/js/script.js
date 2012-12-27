@@ -16,13 +16,13 @@ jQuery(document).ready(function($) {
 	$(".tab-pane:first-child").addClass("active");
 
 	// Company Info Bio
-	$(".full-bio button").click(function(){
+	$(".full-bio span").click(function(){
 		$(this).parent(".full-bio").find("p").slideToggle('fast', function (){
 	      if ($(this).is(":visible")) {
-	        $(this).siblings("button").text("Read Less");
+	        $(this).siblings("span").text("Read Less");
 	      } 
 	      else {
-	        $(this).siblings("button").text("Read More");     
+	        $(this).siblings("span").text("Read More");     
 	      }
 	    });
 	});

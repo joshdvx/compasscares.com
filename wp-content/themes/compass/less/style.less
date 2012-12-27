@@ -1205,11 +1205,56 @@ table.em-tickets {
 .company-info-bottom,
 #leadership {
 	padding: 20px;
+
+	a.call-to-action {
+		display: block;
+		line-height: 65px;
+	}
+}
+
+.leader {
+	padding: 30px 0;
+	border-bottom: 1px solid @blueDark;
+}
+
+.leader-name {
+	margin-bottom: 5px;
+	font-size: 22px;
+	font-weight: 700;
+}
+
+.leader-position {
+	font-size: 16px;
 }
 
 .leader-photo {
+	float: left;
 	.square(155px);
 }
+
+.leader-bio {
+	float: left;
+	width: 665px;
+	margin-left: 40px;
+}
+
+.bio-intro {
+	margin-top: 15px;
+}
+
+.full-bio {
+	span {
+		display: inline-block;
+		color: @red;
+		font-size: 16px;
+		cursor: pointer;
+
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+}
+
 
 /*..................................the blog */
 .blog-posts {

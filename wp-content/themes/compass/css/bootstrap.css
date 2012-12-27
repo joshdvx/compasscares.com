@@ -6010,9 +6010,45 @@ table.em-tickets select {
 #leadership {
   padding: 20px;
 }
+.company-info-top a.call-to-action,
+.company-info-bottom a.call-to-action,
+#leadership a.call-to-action {
+  display: block;
+  line-height: 65px;
+}
+.leader {
+  padding: 30px 0;
+  border-bottom: 1px solid #20445d;
+}
+.leader-name {
+  margin-bottom: 5px;
+  font-size: 22px;
+  font-weight: 700;
+}
+.leader-position {
+  font-size: 16px;
+}
 .leader-photo {
+  float: left;
   width: 155px;
   height: 155px;
+}
+.leader-bio {
+  float: left;
+  width: 665px;
+  margin-left: 40px;
+}
+.bio-intro {
+  margin-top: 15px;
+}
+.full-bio span {
+  display: inline-block;
+  color: #a64533;
+  font-size: 16px;
+  cursor: pointer;
+}
+.full-bio span:hover {
+  text-decoration: underline;
 }
 /*..................................the blog */
 .blog-posts {

@@ -1,16 +1,33 @@
 <?php get_header(); ?>
 
-<section id="page" class="span12">
+<section id="page">
 
-	<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-	<h1><?php the_title(); ?></h1>
-	<a href="<?php the_field('newsletter_upload') ?>">Download</a>
+	<div class="heading">
+		<h1 class="section-header">
+			Newsletter Archive
+		</h1>
+		<div class="heading-arrow"></div>
+	</div><!-- .heading -->
 	
-	<?php endwhile; ?>
-	<!-- post navigation -->
-	<?php else: ?>
-	<!-- no posts found -->
-	<?php endif; ?>
+	<div class="newsletter-archive">
+		<table class="table table-striped table-hover">
+			<thead>
+				<tr>
+					<th>Month</th>
+				</tr>
+			</thead>
+			<tbody>
+				<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+				<tr>
+					<td><?php the_title(); ?></td>
+					<td><a href="<?php the_field('newsletter_upload') ?>">Download Now</a></td>
+				</tr>
+				<?php endwhile; else: ?>
+					<p>Sorry, no newsletters to download at this time.</p>
+				<?php endif; ?>
+			</tbody>
+		</table>
+	</div><!-- .newsletter-archive -->
 
 </section><!-- #page -->
 

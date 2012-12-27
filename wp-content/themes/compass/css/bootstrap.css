@@ -5868,6 +5868,15 @@ table.em-tickets select {
 .story p {
   margin-right: 0;
 }
+/*..................................the newsletter archive */
+.newsletter-archive {
+  padding: 30px 20px;
+  color: #20445d;
+}
+.newsletter-archive th {
+  font-size: 18px;
+  font-weight: 400;
+}
 /*..................................the latest post section */
 #latest-post {
   height: 255px;

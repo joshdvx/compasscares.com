@@ -27,6 +27,17 @@ Project Name: Twitter Bootstrap Framework
 @ils: @blueDark;
 @all: @blueLight;
 
+.bg-SLS {
+	background-color: @sls;
+}
+
+.bg-ILS {
+	background-color: @ils;
+}
+
+.bg-all {
+	background-color: @all;
+}
 /*..................................the foundation */
 #wrapper {
 	width: 960px;
@@ -481,11 +492,13 @@ img.aligncenter {
 			font-size: 23px;
 			text-align: center;
 
-			&.sls {
+			&.sls,
+			&.SLS {
 				background-color: rgba(21, 158, 156, 0.8);
 			}
 
-			&.ils {
+			&.ils,
+			&.ILS {
 				background-color: rgba(32, 68, 95, 0.8);
 			}
 
@@ -517,11 +530,13 @@ img.aligncenter {
 		}
 	}
 
-	.sls {
+	.sls,
+	.SLS {
 	background-color: @sls;
 	}
 
-	.ils {
+	.ils,
+	.ILS {
 		background-color: @ils;
 	}
 
@@ -739,6 +754,271 @@ img.aligncenter {
 	border-bottom: 2px solid @white;
 }
 
+//Single Event
+.single-event {
+	color: @white;
+	border-bottom: 2px solid @white;
+}
+
+.single-event-details {
+	width: 331px;
+	padding-left: 10px;
+	padding-right: 40px;
+
+	h2 {
+		margin: 30px 0;
+		font-weight: 400;
+	}
+
+	h4 {
+		margin-bottom: 5px;
+		font-size: 22px;
+		// font-weight: 300
+	}
+
+	a {
+		display: inline-block;
+		margin-top: 20px;
+		font-size: 18px;
+	}
+
+	.when {
+		margin-bottom: 30px;
+	}
+
+	.single-event-date,
+	.venue-name {
+		line-height: 1.5;
+		font-size: 23px;
+		font-weight: 300;
+	}
+
+	.single-event-time,
+	.venue-street-address,
+	.venue-city-state-zip {
+		line-height: 1.5;
+		font-size: 18px;
+		font-weight: 300;
+	}
+
+	.single-event-description {
+		margin-top: 40px;
+	}
+
+	.single-event-map {
+		width: 550px;
+	}
+
+}
+.em-location-map, 
+.em-locations-map { 
+	width: 550px !important; 
+	height: 685px !important; 
+}
+
+.event-registration {
+	// width: 900px;
+	margin-left: 40px;
+	padding-right: 40px;
+
+	// p {
+	// 	float: right;
+	// }
+}
+
+.event-main-photo {
+	width: 960px;
+	height: 260px;
+}
+
+table.em-tickets {
+	width: 295px;
+	float: left;
+	font-size: 22px;
+	font-weight: 300;
+
+	th {
+		padding-bottom: 20px;
+		font-weight: 300;
+		text-align: left;
+	}
+
+	tr {
+		// padding: 20px 0;
+		border-bottom: 1px solid @white;
+	}
+
+	td {
+		padding: 10px 0;
+	}
+
+	select {
+		width: 50px;
+		margin-top: 10px;
+	}
+}
+
+.em-booking-form-details {
+	float: left;
+	width: 295px;
+	margin-left: 195px;
+}
+
+/*..................................the success stories */
+.all-success-stories {
+
+	#success-stories {
+		height: 100%;
+	}
+
+	.gallery-filters {
+		height: 39px;
+		margin-bottom: 15px;
+
+		li {
+			height: 40px;
+			border: none;
+
+			&.all,
+			&.all a {
+				background-color: @all;
+			}
+
+			&.sls,
+			&.sls a {
+				background-color: @sls;
+			}
+
+			&.ils,
+			&.ils a {
+				background-color: @ils;
+			}
+
+			a {
+				padding: 8px 30px;
+				color: @white;
+			}
+		}
+
+		.active > a {
+			.box-shadow(none);
+
+			&:hover {
+				color: @white;
+				.box-shadow(none);
+			}
+		}
+	}
+}
+
+.cta {
+	height: 50px;
+	padding: 0 20px;
+	border-top: 2px solid @white;
+	border-bottom: 2px solid @white;
+
+	.pagi-navi {
+		float: left;
+		width: 390px;
+		padding: 15px 0;
+		color: @white;
+	}
+
+	.nav-previous,
+	.nav-next,
+	.back-to-all {
+		float: left;
+	}
+
+	.nav-previous,
+	.nav-next {
+		font-style: italic;
+
+		span {
+			font-style: normal;
+		}
+	}
+
+	.nav-previous {
+		a span {
+			display: inline-block;
+			.rotate(180deg);
+		}
+	}
+
+	.pagination {
+		float: left;
+		width: 300px;
+		margin: 0;
+
+		ul {
+			padding: 11px 0;
+			.box-shadow(none);
+
+			& > li > a,
+			& > li > span {
+				padding: 1px 12px;
+				background-color: transparent;
+				.border-radius(0);
+				border-color: @blueDark;
+				border-top: 0;
+				border-bottom: 0;
+				border-left: 0;
+			}
+
+			& > li > a.next {
+				border-right: 0;
+			}
+
+			& > li > span.current {
+				color: @blueDark;
+			}
+		}
+	}
+
+	.cta-links {
+		float: right;
+		width: 530px;
+		line-height: 50px;
+
+		a {
+			display: block;
+			float: right;
+			margin-left: 30px;
+		}
+	}
+}
+
+.story-unit {
+	height: 300px;
+	border-bottom: 2px solid @white;
+
+	img {
+		display: block;
+		// float: left;
+		width: 640px;
+		height: 300px;
+		margin: 0 auto;
+	}
+}
+
+.story {
+	padding: 25px 20px;
+	color: @white;
+	font-size: 16px;
+	font-weight: 300;
+
+	h2 {
+		margin-bottom: 20px;
+		font-weight: 300;
+	}
+
+	p {
+		margin-right: 0;
+	}
+}
+
+/*..................................the latest post section */
 #latest-post {
 	height: 255px;
 
@@ -837,16 +1117,16 @@ img.aligncenter {
 
 	.row {
 		margin-left: -20px;
-		padding: 15px 0 15px 0;
+		padding: 15px 0 0 0;
 	}
 }
 
+
+
 .single-photos {
 	width: 280px;
-	min-height: 300px;
-	max-height: 335px;
 	margin-left: 40px;
-	padding-bottom: 15px;
+	padding-bottom: 40px;
 	
 
 	h3 {
@@ -865,10 +1145,6 @@ img.aligncenter {
 		width: 280px;
 		height: 240px;
 	}
-}
-
-p.photo-caption {
-	margin-top: 10px
 }
 
 .gallery-filters {
@@ -1056,9 +1332,10 @@ form#searchform {
 	font-style: italic;
 	cursor: pointer;
 }
+
 #disqus_thread {
-	width: 530px;
 	display: none;
+	width: 530px;
 }
 
 .single-post .post{

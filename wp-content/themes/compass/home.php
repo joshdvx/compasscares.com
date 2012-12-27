@@ -108,10 +108,9 @@
 					<p class="event-description">#_EVENTEXCERPT</p>
 					<a href="#_EVENTURL">More Info...</a>
 				</div>
-				#_EVENTIMAGE
+				#_EVENTIMAGE{590,255}
 			</div>
 		[/events_list]'); ?>
-		
 	</div><!-- #events -->
 	
 	<div class="heading">

@@ -34,7 +34,6 @@
 		            <?php foreach( $images as $image ): ?>
 		            <div class="span4 single-photos">
 		                <a href="<?php echo $image['sizes']['large']; ?>" rel="lightbox" title="<?php echo $image['alt']; ?>"><img src="<?php echo $image['sizes']['photo_gallery']; ?>" alt="<?php echo $image['alt']; ?>" width="280" height="240" /></a>
-		                <p class="photo-caption"><?php echo $image['alt']; ?></p>
 	             	</div>
 	           		 <?php endforeach; ?>
 			<?php endif; ?>

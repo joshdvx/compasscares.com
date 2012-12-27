@@ -36,6 +36,7 @@ jQuery(document).ready(function($) {
 	$(".show-comments").click(function(){
 		$("#disqus_thread").slideToggle();
 	});
+	
 	// $(".poop").click(function(){
 	// 	$(".service-copy").slideToggle();
 	// 	// $("#ils").html("<span class='poop'>Back</span>");

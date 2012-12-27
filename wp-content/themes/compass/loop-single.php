@@ -61,7 +61,8 @@
 					<?php comments_number(); ?> | <span class="show-comments">Hide/Show Comments</span>
 				</div><!-- #post-## -->
 				
-
-				<?php comments_template( '', true ); ?>
+				
+					<?php comments_template( '', true ); ?>
+			
 
 <?php endwhile; // end of the loop. ?>

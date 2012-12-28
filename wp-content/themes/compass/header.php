@@ -47,14 +47,14 @@
 			wp_head();
 		?>
 		
-		<script src="http://code.jquery.com/jquery.min.js"></script>
+		<!--<script src="http://code.jquery.com/jquery.min.js"></script>
 	    <script src="<?php bloginfo('template_directory'); ?>/js/stickyheaders.js"></script>
 	    <script>
 			jQuery(document).ready(function($) {
 			    // Sticky headings for homepage
 				$('#sticky-list').stickySectionHeaders();
 			});
-	    </script>
+	    </script>-->
 	</head>
 
 	<body <?php body_class(); ?>>

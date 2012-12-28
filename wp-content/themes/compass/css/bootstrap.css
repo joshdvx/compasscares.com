@@ -5719,6 +5719,7 @@ img.aligncenter {
 .info-block img {
   display: block;
   width: 590px;
+  height: 255px;
 }
 .info-block:nth-child(even) .info-block-details,
 .info-block:nth-child(even) img {

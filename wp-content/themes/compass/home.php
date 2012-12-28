@@ -1,8 +1,8 @@
 <?php get_header(); ?>
 
-<section id="page">
+<section id="page" class="homepage">
 	
-	<div id="sliderFrame">
+	<article id="sliderFrame">
 	    <div id="slider">	       	
 	       	<?php if(get_field('hero_unit_banners','option')): ?>
 				<?php while (has_sub_field('hero_unit_banners','option')): ?>
@@ -10,14 +10,14 @@
 		      	<?php endwhile; ?>
 			<?php endif; ?>
 	    </div>
-	</div><!-- #sliderFrame -->
+	</article><!-- #sliderFrame -->
 	
 	<div class="heading">
 		<h2 class="section-header">We Do Amazing <span class="bold">Things</span><span class="subtitle">Our Services</span></h2>
 		<div class="heading-arrow"></div>
 	</div>
 	
-	<div id="services">
+	<article id="services">
 		<div id="sls-ils">
 			<div id="sls">
 				<span>SLS</span>
@@ -33,14 +33,14 @@
 			
 			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam neque obcaecati perspiciatis sint nobis? Pariatur tenetur error ab explicabo unde animi sunt dignissimos nesciunt natus quia ipsam mollitia ducimus odio vero voluptatibus perferendis qui maiores excepturi quas autem. Quis numquam soluta repudiandae eveniet! Ducimus facilis maiores natus quis illo voluptatibus.</p>
 		</div>
-	</div><!-- #services -->
+	</article><!-- #services -->
 	
 	<div class="heading">
 		<h2 class="section-header">We Are <span class="bold">Amazing</span><span class="subtitle">Success Stories</span></h2>
 		<div class="heading-arrow"></div>
 	</div>
 	
-	<div id="success-stories">
+	<article id="success-stories">
 		<a href="<?php bloginfo('url'); ?>/success-stories/sls" class="ss-hover">
 			<div class="ss-hover-img">
 				<img src="<?php the_field('home_sls_photo', 'option') ?>" alt="SLS">
@@ -71,14 +71,14 @@
 			</div>
 		</a>
 		
-	</div><!-- #success-stories -->
+	</article><!-- #success-stories -->
 	
 	<div class="heading">
 		<h2 class="section-header">This is <span class="bold">Us</span><span class="subtitle">Our Team Having Fun</span></h2>
 		<div class="heading-arrow"></div>
 	</div>
 	
-	<div id="insta-team">
+	<article id="insta-team">
 		<div class="container">
 			<div class="row">
 				<div id="instagram" class="carousel slide" data-interval="false">
@@ -92,14 +92,14 @@
 				</div><!-- #carousel -->
 			</div>
 		</div><!-- .container -->
-	</div><!-- #insta-team -->
+	</article><!-- #insta-team -->
 	
 	<div class="heading">
 		<h2 class="section-header">Schedule <span class="bold">This</span><span class="subtitle">Upcoming Events</span></h2>
 		<div class="heading-arrow"></div>
 	</div>
 	
-	<div id="events" class="bg-blueDark">
+	<article id="events" class="bg-blueDark">
 		<?php echo do_shortcode('[events_list limit="2"]
 			<div class="info-block">
 				<div class="info-block-details event-details">
@@ -111,14 +111,14 @@
 				#_EVENTIMAGE{590,255}
 			</div>
 		[/events_list]'); ?>
-	</div><!-- #events -->
+	</article><!-- #events -->
 	
 	<div class="heading">
 		<h2 class="section-header">We Look <span class="bold">Good</span><span class="subtitle">Latest Photos</span></h2>
 		<div class="heading-arrow"></div>
 	</div>
 	
-	<div id="latest-photos">
+	<article id="latest-photos">
 		<div id="gallery" class="carousel slide" data-interval="false">
 			<div class="carousel-inner">
 				<?php get_template_part('home-gallery'); ?>
@@ -126,17 +126,17 @@
 				<a class="carousel-control left" href="#gallery" data-slide="prev">&lsaquo;</a>
 				<a class="carousel-control right" href="#gallery" data-slide="next">&rsaquo;</a>
 		</div><!-- #gallery .carousel-->
-	</div>
+	</article>
 	
 	<div class="heading">
 		<h2 class="section-header">As We Were <span class="bold">Saying...</span><span class="subtitle">Latest From the Blog</span></h2>
 		<div class="heading-arrow"></div>
 	</div>
 	
-	<div id="latest-post">
+	<article id="latest-post">
 		<?php query_posts('showposts=1'); ?>
 		<?php get_template_part( 'loop', 'home' ); ?>
-	</div>
+	</article>
 	
 </section><!-- #page -->
 <?php get_footer(); ?>

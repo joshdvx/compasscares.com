@@ -6008,9 +6008,8 @@ table.em-tickets select {
   display: block;
   float: right;
   margin-top: 10px;
-  font-size: 22px;
+  font-size: 20px;
   font-weight: 700;
-  text-decoration: underline;
 }
 #latest-post .entry-meta {
   margin-bottom: 5px;
@@ -6391,11 +6390,20 @@ form#searchform input[type="submit"] {
 .single-post .post {
   border-bottom: 0;
 }
+/*..................................the hompage */
+.homepage article {
+  border-bottom: 1px solid #20445d;
+}
+.homepage article:last-child {
+  border-bottom: 0;
+}
+.homepage .heading {
+  border-top: 1px solid #213D50;
+}
 /*..................................the homepage slider */
 /* http://www.menucool.com */
 #sliderFrame {
   position: relative;
-  border-bottom: 1px solid #182834;
 }
 #slider {
   position: relative;

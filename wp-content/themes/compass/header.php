@@ -25,7 +25,7 @@
 			if ( $paged >= 2 || $page >= 2 )
 				echo ' | ' . sprintf( __( 'Page %s', 'smm' ), max( $paged, $page ) );
 			?></title>
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
     	<meta name="description" content="">
     	<meta name="author" content="Sharp Machine Media">
 	
@@ -33,22 +33,10 @@
     	<!-- Le styles -->
     	<link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,900' rel='stylesheet' type='text/css'>
     	<link href="<?php bloginfo('template_directory'); ?>/css/bootstrap.css" rel="stylesheet">
-    	<style>
-      	body {
-        	/*padding-top: 60px;*/ /* 60px to make the container go all the way to the bottom of the topbar */
-      	}
-    	</style>
-    	<link href="<?php bloginfo('template_directory'); ?>/css/responsive.css" rel="stylesheet">
 		<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 
     	<!-- Le fav and touch icons -->
-    	<link rel="shortcut icon" href="../assets/ico/favicon.ico">
-    	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../assets/ico/apple-touch-icon-144-precomposed.png">
-    	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../assets/ico/apple-touch-icon-114-precomposed.png">
-    	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../assets/ico/apple-touch-icon-72-precomposed.png">
-    	<link rel="apple-touch-icon-precomposed" href="../assets/ico/apple-touch-icon-57-precomposed.png">
-    	
-    	
+    	<link rel="shortcut icon" href="<?php bloginfo('template_directory'); ?>/img/favicon.ico">
 
 		<script src="<?php bloginfo('template_directory'); ?>/js/modernizr-1.7.min.js"></script>
 		<!--[if lte IE 8]><script src="<?php bloginfo('template_directory'); ?>/js/selectivizr-min.js"></script><![endif]-->
@@ -59,10 +47,14 @@
 			wp_head();
 		?>
 		
-		<!--<?php if (is_home()): ?>
-			<script src="http://code.jquery.com/jquery.min.js"></script>
-			<script src="<?php bloginfo('template_directory'); ?>/js/stickyheaders.js"></script>
-		<?php endif; ?>-->
+		<script src="http://code.jquery.com/jquery.min.js"></script>
+	    <script src="<?php bloginfo('template_directory'); ?>/js/stickyheaders.js"></script>
+	    <script>
+			jQuery(document).ready(function($) {
+			    // Sticky headings for homepage
+				$('#sticky-list').stickySectionHeaders();
+			});
+	    </script>
 	</head>
 
 	<body <?php body_class(); ?>>

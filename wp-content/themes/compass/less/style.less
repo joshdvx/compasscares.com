@@ -1187,9 +1187,8 @@ table.em-tickets {
 			display: block;
 			float: right;
 			margin-top: 10px;
-			font-size: 22px;
+			font-size: 20px;
 			font-weight: 700;
-			text-decoration: underline;
 		}
 	}
 
@@ -1678,15 +1677,29 @@ form#searchform {
 	width: 530px;
 }
 
-.single-post .post{
+.single-post .post {
 	border-bottom: 0;
+}
+
+/*..................................the hompage */
+.homepage {
+	article {
+		border-bottom: 1px solid @blueDark;
+
+		&:last-child {
+			border-bottom: 0;
+		}
+	}
+
+	.heading {
+		border-top: 1px solid #213D50;
+	}
 }
 
 /*..................................the homepage slider */
 /* http://www.menucool.com */
 #sliderFrame {
 	position:relative;
-	border-bottom: 1px solid @blue;
 }
         
 #slider {

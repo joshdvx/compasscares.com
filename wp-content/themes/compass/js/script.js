@@ -46,6 +46,19 @@ jQuery(document).ready(function($) {
 	// 	$("#ils").html("poop");
 	// });
 
+	// Job Listing Filters
+	 $('input[type="checkbox"]').click(function() {
+        if ($('input[type="checkbox"]:checked').length > 0) {
+            $('table#wpjb-job-list tr.wpjb-new').hide();
+            $('input[type="checkbox"]:checked').each(function() {
+                $('table#wpjb-job-list tr.wpjb-new[data-category=' + this.id + ']').show();
+                $('table#wpjb-job-list tr.wpjb-new[data-county=' + this.id + ']').show();
+            });
+        } else {
+            $('table#wpjb-job-list tr.wpjb-new').show();
+        }
+    })
+
 	
 
 	//Staff Success Stories Slider
@@ -153,8 +166,22 @@ jQuery(document).ready(function($) {
 	  scrollOptions.duration = 1;
 	  $.localScroll.hash(scrollOptions);
 
-	// Sticky headings for homepage
-	$('#sticky-list').stickySectionHeaders();
+	  // Filters
+	   // $("#filters :checkbox").click(function() {
+
+    //    var re = new RegExp($("#filters :checkbox:checked").map(function() {
+    //                           return this.value;
+    //                        }).get().join("|") );
+    //    $("div").each(function() {
+    //       var $this = $(this);
+    //       $this[re.source!="" && re.test($this.attr("class")) ? "show" : "hide"]();
+    //    });
+    // });
+
+
+
+
+
 
 });
 

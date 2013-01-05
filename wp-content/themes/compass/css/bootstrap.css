@@ -6526,7 +6526,13 @@ div.navBulletsWrapper div.active {
   padding: 1em 10px;
   border-bottom: 1px solid #ccc;
 }
-/*..................................the staff success stories slider */
+/*..................................the job listings */
+#wpjb-main .wpjb-table tbody tr td {
+  border-bottom: none !important;
+}
+#wpjb-main .wpjb-table tbody {
+  border-top: 1px solid #D9D9D9 !important;
+}
 #entry-author-info {
   clear: both;
   margin: 40px 0 20px 0;

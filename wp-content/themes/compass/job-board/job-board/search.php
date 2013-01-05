@@ -16,7 +16,7 @@
 ?>
 
 <div id="<?php echo (isset($shortcode)) ? "wpjb-shortcode-search" : "wpjb-main" ?>" class="wpjb-page-search">
-
+SHIT BALLS
     <form action="<?php echo wpjb_link_to("search") ?>" method="get" class="wpjb-form">
         <?php wpjb_form_render_hidden($form) ?>
         <?php foreach($form->getNonEmptyGroups() as $group): ?>

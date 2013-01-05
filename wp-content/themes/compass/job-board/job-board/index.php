@@ -69,7 +69,7 @@ $jcounties = $query->execute();
                 <th><?php _e("Position", WPJB_DOMAIN) ?> </th>
                 <th><?php _e("PT/FT", WPJB_DOMAIN) ?></th>
                 <th><?php _e("Location", WPJB_DOMAIN) ?></th>
-                <th class="wpjb-last"><?php _e("Date Posted", WPJB_DOMAIN) ?></th>
+                <th class=""><?php _e("Date Posted", WPJB_DOMAIN) ?></th>
             </tr>
         </thead>
         <tbody>
@@ -77,27 +77,33 @@ $jcounties = $query->execute();
         <?php if (!empty($jobList)) : foreach($jobList as $job): ?>
         <?php /* @var $job Wpjb_Model_Job */ ?>
             <tr class="<?php wpjb_job_features($job); ?>" data-category="jcat-<?php echo $job->job_category; ?>" data-county="<?php echo $job->getFieldValue('2')?>">
-                <td class="wpjb-column-title">
-                    <a href="<?php echo wpjb_link_to("job", $job) ?>"><?php esc_html_e($job->job_title) ?></a>
+                <td class="wpjb-column-title" colspan="1">
+                    <a class="jd"><?php esc_html_e($job->job_title) ?></a>
                     <?php if($job->isNew()): ?><img src="<?php wpjb_new_img() ?>" alt="" class="wpjb-inline-img" /><?php endif; ?>
                 </td>
-                <td class="wpjb-column-ft_pt">
+                <td class="wpjb-column-ft_pt" colspan="1">
                    <?php esc_html_e($job->getType()->title) ?>
                 </td>
-                <td class="wpjb-column-location">
+                <td class="wpjb-column-location" colspan="1">
                     <?php esc_html_e($job->locationToString()) ?>
                 </td>
-                <td class="wpjb-column-date wpjb-last">
+                <td class="wpjb-column-date" colspan="1">
                     <?php echo wpjb_job_created_at("M, d", $job); ?>
                 </td>
                 
              </tr>
+            
              <thead class="job-description">
                 <tr>
-                    <th colspan="3"><?php esc_html_e($job->job_description) ?></th>
+                    <th colspan="4">
+                        <div>
+                            <?php esc_html_e($job->job_description) ?>
+                            <a href="<?php echo wpjb_link_to("job", $job) ?>" class="pull-right">More Info</a>
+                        </div>
+                    </th>
                 </tr>
             </thead>
-          
+          </div>
                   
                       
                   

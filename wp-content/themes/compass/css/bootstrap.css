@@ -6533,6 +6533,13 @@ div.navBulletsWrapper div.active {
 #wpjb-main .wpjb-table tbody {
   border-top: 1px solid #D9D9D9 !important;
 }
+thead.job-description div {
+  display: none;
+  padding: 20px 0;
+}
+a.jd {
+  cursor: pointer;
+}
 #entry-author-info {
   clear: both;
   margin: 40px 0 20px 0;

@@ -5,26 +5,25 @@
 // Allows you to use the $ shortcut.  Put all your code  inside this wrapper
 jQuery(document).ready(function($) {
 	
-	// Forces WordPress to place nice with dropdowns
- 	$("li.dropdown > a").addClass('dropdown-toggle');
-	$("li.dropdown > a").attr('data-toggle','dropdown');
-	$("a.dropdown-toggle").append('<b class="caret"></b>');
-
 	// Add .active to certain elements
 	$(".item:first-child").addClass("active");
 	$("#locations li:first-child").addClass("active");
 	$(".tab-pane:first-child").addClass("active");
 
 	// Company Info Bio
-	$(".full-bio span").click(function(){
-		$(this).parent(".full-bio").find("p").slideToggle('fast', function (){
-	      if ($(this).is(":visible")) {
-	        $(this).siblings("span").text("Read Less");
-	      } 
-	      else {
-	        $(this).siblings("span").text("Read More");     
-	      }
-	    });
+	// $(".full-bio span").click(function(){
+	// 	$(this).parent(".full-bio").find("p").slideToggle('fast', function (){
+	//       if ($(this).is(":visible")) {
+	//         $(this).siblings("span").text("Read Less");
+	//       } 
+	//       else {
+	//         $(this).siblings("span").text("Read More");     
+	//       }
+	//     });
+	// });
+
+	$("a.jd").click(function(){
+		$("thead.job-description div").slideToggle('fast');
 	});
 
 	$("#sls span, #ils span").click(function(){

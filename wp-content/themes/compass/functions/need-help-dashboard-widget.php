@@ -14,7 +14,6 @@ function help_dashboard_widget_function() {
 			<li><a href="http://wp.tutsplus.com/tutorials/wp-101-video-training-part-7-embedding-video/" target="_blank">How to Embed Video</a></li>
 			<li><a href="http://wp.tutsplus.com/tutorials/wp-101-video-training-part-8-media-library/" target="_blank">Using the Media Library</a></li>
 			<li><a href="http://wp.tutsplus.com/tutorials/wp-101-video-training-part-9-managing-comments/" target="_blank">Managing Comments</a></li> 
-			<li><a href="http://wp.tutsplus.com/tutorials/wp-101-video-training-part-10-creating-links/" target="_blank">Creating Links</a></li>
 			<li><a href="http://wp.tutsplus.com/tutorials/wp-101-video-training-part-12-widgets/" target="_blank">Adding Widgets</a></li>
 			<li><a href="http://wp.tutsplus.com/tutorials/wp-101-video-training-part-13-custom-menus/" target="_blank">Building Custom Menus</a></li>
 			<li><a href="http://wp.tutsplus.com/tutorials/wp-101-video-training-part-15-users/" target="_blank">Adding New Users</a></li>
@@ -23,8 +22,15 @@ function help_dashboard_widget_function() {
 		<ul style="width:40%;float:left;min-width:153px;">
 			<li style="color:#666;font-size:14px;border-bottom-style:solid;border-bottom-width:1px;border-bottom-color:#DFDFDF;padding-bottom:5px;margin-bottom:10px;">Videos Specific To Your Site:</li>
 			<li><a href="http://www.youtube.com/watch?v=IE_10_nwe0c" target="_blank">SEO Ultimate Tutorial</a></li>
-			<li><a href="#" target="_blank">Video</a></li>
-			<li><a href="#" target="_blank">Video</a></li>
+			<li><a href="#" target="_blank">Homepage Options</a></li>
+			<li><a href="#" target="_blank">Managing SLS/ILS Pages</a></li>
+			<li><a href="#" target="_blank">Managing Success Stories</a></li>
+			<li><a href="#" target="_blank">Managing Say Hello Page</a></li>
+			<li><a href="#" target="_blank">Managing Events</a></li>
+			<li><a href="#" target="_blank">Managing Company Info Page</a></li>
+			<li><a href="#" target="_blank">Managing Job Listings</a></li>
+			<li><a href="#" target="_blank">Managing the Photo Gallery</a></li>
+			<li><a href="#" target="_blank">Managing Newsletter Archive</a></li>
 		</ul>
 		
 		<p style="clear:both;padding-top:5px;margin-bottom:0.5em;color:#666;font-size:14px;">Helpful Quick Links:</p>

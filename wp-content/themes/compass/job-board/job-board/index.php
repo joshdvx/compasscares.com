@@ -20,6 +20,12 @@
 
 <div id="wpjb-main" class="wpjb-page-index">
 
+<?php if(get_field('jl_fun_photos')): ?>
+    <?php while (has_sub_field('jl_fun_photos')): ?>
+        <img src="<?php the_sub_field('jl_fun_photo_1') ?>" alt="Fun Photos">
+    <?php endwhile; ?>
+<?php endif; ?>
+
 <form action="http://localhost/compasscares.com/jobs/find/" method="get" class="wpjb-form">
     <div class="wpjb-field">
         <input id="query" name="query" type="text" class="regular-text wpjb-auto-clear" value="" placeholder="Search (city, title, etc.)" />

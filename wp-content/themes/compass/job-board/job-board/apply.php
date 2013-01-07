@@ -19,7 +19,7 @@
 
 
 <div id="wpjb-main" class="wpjb-page-apply">
-PPOOP
+
     <?php wpjb_flash(); ?>
     
     <?php if(isset($members_only) && $members_only): ?>

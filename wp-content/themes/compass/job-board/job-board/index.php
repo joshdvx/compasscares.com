@@ -19,7 +19,7 @@
 ?>
 
 <div id="wpjb-main" class="wpjb-page-index">
-
+<?php the_field('jl_intro_paragraph'); ?>
 <?php if(get_field('jl_fun_photos')): ?>
     <?php while (has_sub_field('jl_fun_photos')): ?>
         <img src="<?php the_sub_field('jl_fun_photo_1') ?>" alt="Fun Photos">
@@ -108,7 +108,7 @@ $jcounties = $query->execute();
                 <tr>
                     <th colspan="4">
                         <div>
-                            <?php esc_html_e($job->job_description) ?>
+                            <?php echo $job->getFieldValue('3')?>
                             <a href="<?php echo wpjb_link_to("job", $job) ?>" class="pull-right">More Info</a>
                         </div>
                     </th>
@@ -132,8 +132,12 @@ $jcounties = $query->execute();
     </table>
 
     <div class="wpjb-paginate-links">
+    
         <?php wpjb_paginate_links() ?>
+        
     </div>
+    
+    <p>Don’t see your desired position available?  <a href="<?php bloginfo('url'); ?>/jobs/apply/any-position/">Fill out an application anyway!</a></p>
 
     
 </div>

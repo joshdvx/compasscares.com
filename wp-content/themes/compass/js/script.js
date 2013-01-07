@@ -11,19 +11,23 @@ jQuery(document).ready(function($) {
 	$(".tab-pane:first-child").addClass("active");
 
 	// Company Info Bio
-	// $(".full-bio span").click(function(){
-	// 	$(this).parent(".full-bio").find("p").slideToggle('fast', function (){
-	//       if ($(this).is(":visible")) {
-	//         $(this).siblings("span").text("Read Less");
-	//       } 
-	//       else {
-	//         $(this).siblings("span").text("Read More");     
-	//       }
-	//     });
-	// });
+	$(".full-bio span").click(function(){
+		$(this).parent(".full-bio").find("p").slideToggle('fast', function (){
+	      if ($(this).is(":visible")) {
+	        $(this).siblings("span").text("Read Less");
+	      } 
+	      else {
+	        $(this).siblings("span").text("Read More");     
+	      }
+	    });
+	});
 
+	// $("a.jd").click(function(){
+	// 	$("thead.job-description div").slideToggle('fast');
+	// });
+	
 	$("a.jd").click(function(){
-		$("thead.job-description div").slideToggle('fast');
+		$("thead.job-description div").slideToggle("fast");
 	});
 
 	$("#sls span, #ils span").click(function(){

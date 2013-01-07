@@ -20,8 +20,13 @@
 
 <div id="wpjb-main" class="wpjb-page-index">
 
-
-
+<form action="http://localhost/compasscares.com/jobs/find/" method="get" class="wpjb-form">
+    <div class="wpjb-field">
+        <input id="query" name="query" type="text" class="regular-text wpjb-auto-clear" value="" placeholder="Search (city, title, etc.)" />
+        <input type="submit" name="wpjb_preview" id="wpjb_submit" value="Search" />
+    </div>
+</form>
+<div class="clearfix"></div>
 <?php 
 $query = new Daq_Db_Query();
 $query->select("*")->from("Wpjb_Model_Category t1");

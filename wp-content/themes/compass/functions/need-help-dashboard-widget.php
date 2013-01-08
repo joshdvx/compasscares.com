@@ -22,15 +22,16 @@ function help_dashboard_widget_function() {
 		<ul style="width:40%;float:left;min-width:153px;">
 			<li style="color:#666;font-size:14px;border-bottom-style:solid;border-bottom-width:1px;border-bottom-color:#DFDFDF;padding-bottom:5px;margin-bottom:10px;">Videos Specific To Your Site:</li>
 			<li><a href="http://www.youtube.com/watch?v=IE_10_nwe0c" target="_blank">SEO Ultimate Tutorial</a></li>
-			<li><a href="#" target="_blank">Homepage Options</a></li>
-			<li><a href="#" target="_blank">Managing SLS/ILS Pages</a></li>
-			<li><a href="#" target="_blank">Managing Success Stories</a></li>
-			<li><a href="#" target="_blank">Managing Say Hello Page</a></li>
-			<li><a href="#" target="_blank">Managing Events</a></li>
-			<li><a href="#" target="_blank">Managing Company Info Page</a></li>
-			<li><a href="#" target="_blank">Managing Job Listings</a></li>
-			<li><a href="#" target="_blank">Managing the Photo Gallery</a></li>
-			<li><a href="#" target="_blank">Managing Newsletter Archive</a></li>
+			<li><a href="http://youtu.be/jFdHqIwMvco" target="_blank">Homepage Options</a></li>
+			<li><a href="http://youtu.be/Mydd7f7_-s4" target="_blank">Managing SLS/ILS Pages</a></li>
+			<li><a href="http://youtu.be/PK2V32b1D7Y" target="_blank">Managing Success Stories</a></li>
+			<li><a href="http://youtu.be/XIKpfSNQa5Q" target="_blank">Managing Say Hello Page</a></li>
+			<li><a href="http://www.youtube.com/watch?v=XU5vZMjcFHo" target="_blank">Managing Events</a></li>
+			<li><a href="http://youtu.be/1GJsb3uKl7k" target="_blank">Managing Company Info Page</a></li>
+			<li><a href="http://youtu.be/T2BAMQBAIDQ" target="_blank">Managing the Photo Gallery</a></li>
+			<li><a href="http://youtu.be/-JGbTzmLWTI" target="_blank">Managing Job Listings</a></li>
+			<li><a href="http://youtu.be/EN6Sv39icKI" target="_blank">Managing the Careers &amp; Opportunities Page</a></li>
+			<li><a href="http://youtu.be/I3OzHqwGh5M" target="_blank">Managing Newsletter Archive</a></li>
 		</ul>
 		
 		<p style="clear:both;padding-top:5px;margin-bottom:0.5em;color:#666;font-size:14px;">Helpful Quick Links:</p>

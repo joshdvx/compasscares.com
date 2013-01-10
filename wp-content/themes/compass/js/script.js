@@ -10,6 +10,9 @@ jQuery(document).ready(function($) {
 	$("#locations li:first-child").addClass("active");
 	$(".tab-pane:first-child").addClass("active");
 
+	// Last word bold on section headings
+	$("h1.section-header .main-title").lettering('words');
+
 	// Company Info Bio
 	$(".full-bio span").click(function(){
 		$(this).parent(".full-bio").find("p").slideToggle('fast', function (){
@@ -21,10 +24,6 @@ jQuery(document).ready(function($) {
 	      }
 	    });
 	});
-
-	// $("a.jd").click(function(){
-	// 	$("thead.job-description div").slideToggle('fast');
-	// });
 	
 	$("a.jd").click(function(){
 		$("thead.job-description div").slideToggle("fast");
@@ -52,7 +51,7 @@ jQuery(document).ready(function($) {
 	// Job Listing Filters
 	 $('input[type="checkbox"]').click(function() {
         if ($('input[type="checkbox"]:checked').length > 0) {
-            $('table#wpjb-job-list tr.wpjb-new').hide();
+            $('table#wpjb-job-list tr.wpjb-free').hide();
             $('input[type="checkbox"]:checked').each(function() {
                 $('table#wpjb-job-list tr.wpjb-new[data-category=' + this.id + ']').show();
                 $('table#wpjb-job-list tr.wpjb-new[data-county=' + this.id + ']').show();
@@ -61,8 +60,6 @@ jQuery(document).ready(function($) {
             $('table#wpjb-job-list tr.wpjb-new').show();
         }
     })
-
-	
 
 	//Staff Success Stories Slider
 	var $panels = $('#staff-slider .scrollContainer > div');
@@ -169,22 +166,17 @@ jQuery(document).ready(function($) {
 	  scrollOptions.duration = 1;
 	  $.localScroll.hash(scrollOptions);
 
-	  // Filters
-	   // $("#filters :checkbox").click(function() {
+	  Filters
+	   $("#filters :checkbox").click(function() {
 
-    //    var re = new RegExp($("#filters :checkbox:checked").map(function() {
-    //                           return this.value;
-    //                        }).get().join("|") );
-    //    $("div").each(function() {
-    //       var $this = $(this);
-    //       $this[re.source!="" && re.test($this.attr("class")) ? "show" : "hide"]();
-    //    });
-    // });
-
-
-
-
-
+       var re = new RegExp($("#filters :checkbox:checked").map(function() {
+                              return this.value;
+                           }).get().join("|") );
+       $("div").each(function() {
+          var $this = $(this);
+          $this[re.source!="" && re.test($this.attr("class")) ? "show" : "hide"]();
+       });
+    });
 
 });
 

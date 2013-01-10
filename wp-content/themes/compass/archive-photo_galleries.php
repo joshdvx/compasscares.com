@@ -1,14 +1,14 @@
 <?php get_header(); ?>
 
 <section id="page" class="photo-gallery">
-
+	
 	<div class="heading">
 		<h1 class="section-header">
-			We Look Good and We Know It
-			<span class="subtitle">Photo Gallery</span>
+			<div class="main-title">We Look Good and We Know It</div>
+			<div class="subtitle">Photo Gallery</div>
 		</h1>
 		<div class="heading-arrow"></div>
-	</div><!-- .heading -->
+	</div>
 	
 	<ul class="nav nav-tabs gallery-filters">
 		<li class="filters">Filters:</li>

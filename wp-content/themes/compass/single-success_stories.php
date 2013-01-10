@@ -3,11 +3,13 @@
 <section id="page" class="single-success-story bg-<?php echo strip_tags (get_the_term_list( $post->ID, 'success_story_category' )); ?>">
 	
 	<div class="heading">
-		<h1 class="section-header">
-			We Are Amazing
-			<span class="subtitle">Success Stories</span>
-		</h1>
-		<div class="heading-arrow"></div>
+		<div class="heading">
+			<h1 class="section-header">
+				<div class="main-title">We Are Amazing</div>
+				<div class="subtitle">Success Stories</div>
+			</h1>
+			<div class="heading-arrow"></div>
+		</div>
 	</div><!-- .heading -->
 	
 	<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>

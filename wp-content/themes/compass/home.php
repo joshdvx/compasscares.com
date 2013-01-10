@@ -119,6 +119,8 @@
 	</div>
 	
 	<article id="latest-photos">
+	<div class="container">
+			<div class="row">
 		<div id="gallery" class="carousel slide" data-interval="false">
 			<div class="carousel-inner">
 				<?php get_template_part('home-gallery'); ?>
@@ -126,6 +128,8 @@
 				<a class="carousel-control left" href="#gallery" data-slide="prev">&lsaquo;</a>
 				<a class="carousel-control right" href="#gallery" data-slide="next">&rsaquo;</a>
 		</div><!-- #gallery .carousel-->
+		</div>
+		</div>
 	</article>
 	
 	<div class="heading">

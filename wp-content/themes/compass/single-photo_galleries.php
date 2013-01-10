@@ -4,11 +4,11 @@
 
 	<div class="heading">
 		<h1 class="section-header">
-			<?php the_title(); ?>
-			<span class="subtitle">Photo Gallery</span>
+			<div class="main-title"><?php the_title(); ?></div>
+			<div class="subtitle">Photo Gallery</div>
 		</h1>
 		<div class="heading-arrow"></div>
-	</div><!-- .heading -->
+	</div>
 	
 	<ul class="nav nav-tabs gallery-filters">
 		<li class="filters">Filters:</li>

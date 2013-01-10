@@ -5157,6 +5157,9 @@ header {
   -moz-box-shadow: 0 8px 20px -6px #000000;
   box-shadow: 0 8px 20px -6px #000000;
 }
+.section-header .main-title span:last-child {
+  font-weight: 700;
+}
 .section-header .bold {
   font-weight: 700;
 }

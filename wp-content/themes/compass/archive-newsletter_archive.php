@@ -4,10 +4,10 @@
 
 	<div class="heading">
 		<h1 class="section-header">
-			Newsletter Archive
+			<div class="main-title">Newsletter Archive</div>
 		</h1>
 		<div class="heading-arrow"></div>
-	</div><!-- .heading -->
+	</div>
 	
 	<div class="newsletter-archive">
 		<table class="table table-striped table-hover">

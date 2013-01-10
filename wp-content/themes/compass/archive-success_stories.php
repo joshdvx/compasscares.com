@@ -2,11 +2,13 @@
 
 <section id="page" class="all-success-stories bg-all">
 	<div class="heading">
-		<h1 class="section-header">
-			We Are Amazing
-			<span class="subtitle">Success Stories</span>
-		</h1>
-		<div class="heading-arrow"></div>
+		<div class="heading">
+			<h1 class="section-header">
+				<div class="main-title">We Are Amazing</div>
+				<div class="subtitle">Success Stories</div>
+			</h1>
+			<div class="heading-arrow"></div>
+		</div>
 	</div><!-- .heading -->
 	
 	<ul class="nav nav-tabs gallery-filters">

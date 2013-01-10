@@ -7,7 +7,10 @@ get_header(); ?>
 <section id="page">
 	<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 		<div class="heading">
-			<h1 class="section-header"><?php the_title(); ?><span class="subtitle"><?php the_field('subtitle') ?></span></h1>
+			<h1 class="section-header">
+				<div class="main-title"><?php the_title(); ?></div>
+				<div class="subtitle"><?php the_field('subtitle') ?></div>
+			</h1>
 			<div class="heading-arrow"></div>
 		</div>
 	<?php endwhile; endif; ?>

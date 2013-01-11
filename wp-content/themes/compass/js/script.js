@@ -38,26 +38,16 @@ jQuery(document).ready(function($) {
 	$(".show-comments").click(function(){
 		$("#disqus_thread").slideToggle();
 	});
-	
-	// $(".poop").click(function(){
-	// 	$(".service-copy").slideToggle();
-	// 	// $("#ils").html("<span class='poop'>Back</span>");
-	// });
-
-	// $("#sls span").hover(function(){
-	// 	$("#ils").html("poop");
-	// });
 
 	// Job Listing Filters
 	 $('input[type="checkbox"]').click(function() {
         if ($('input[type="checkbox"]:checked').length > 0) {
             $('table#wpjb-job-list tr.wpjb-free').hide();
             $('input[type="checkbox"]:checked').each(function() {
-                $('table#wpjb-job-list tr.wpjb-new[data-category=' + this.id + ']').show();
-                $('table#wpjb-job-list tr.wpjb-new[data-county=' + this.id + ']').show();
+                $('table#wpjb-job-list tr.wpjb-free[data-county=' + this.id + ']').show();
             });
         } else {
-            $('table#wpjb-job-list tr.wpjb-new').show();
+            $('table#wpjb-job-list tr.wpjb-free').show();
         }
     })
 

@@ -1,0 +1,309 @@
+<h3>A Day in the Life Of: [text* life-name]  As Told By: [text* your-name]</h3>
+<label>Email</label>
+[text* yourmail]
+<label>Phone</label>
+[text* phone]
+<p>Please help us get to know you better by answering the following questions. If you need help, it is okay to ask someone to ask someone to help you!  If something doesn’t apply to you, just leave it blank. </p>
+
+<fieldset>
+	<legend>Daily Schedule:</legend>
+	<label>What time do you get up in the morning? </label>
+	[radio daily-up use_label_element "5am" "6am" "7am" "8am" "9am" "10am" "Other"]
+	[text daily-up-other "If other, enter answer here"]
+
+	<label>What time do you usually shower/take a bath?</label>
+	[radio daily-shower use_label_element "Morning" "Afternoon" "Evening" "Before bed" "Other"]
+ 	[text daily-shower-other "If other, enter answer here"]
+
+	<label>When do you eat breakfast?</label>
+	[radio daily-breakfast use_label_element "5am" "6am" "7am" "8am" "9am" "10am" "Other"]
+	[text daily-breakfast-other "If other, enter answer here"]
+
+	<label>What time are your medications? </label>
+	[checkbox daily-meds use_label_element "Morning" "Afternoon" "Evening" "Before bed" "Other"]
+	[text daily-meds-other "If other, enter answer here"]
+
+	<label>What time do you go to program/school/work?</label>
+	[radio daily-school use_label_element "5am" "6am" "7am" "8am" "9am" "10am" "Other"]
+	[text daily-school-other "If other, enter answer here"]
+
+	<label>When do you eat lunch?</label>
+	[radio daily-lunch use_label_element "11am" "12pm" "1pm" "2pm" "Other"]
+	[text daily-lunch-other "If other, enter answer here"]
+
+	<label>When do you usually run errands or go shopping?</label>
+	[radio daily-errands use_label_element "Daily in AM" "Daily in PM" "Weekly" "Monthly" "Bi-Monthly" "Other"]
+	[text daily-errands-other "If other, enter answer here"]
+
+	<label>What time do you return from program/school/work?</label>
+	[radio daily-return-school use_label_element "12pm" "1pm" "2pm" "3pm" "4pm" "5pm" "Other"]
+	[text daily-return-school-other "If other, enter answer here"]
+
+	<label>When do you usually do laundry/dishes/housework?</label>
+	[radio daily-chores use_label_element "Morning" "Afternoon" "Evening" "Before bed" "Other" ]
+	[text daily-chores-other "If other, enter answer here"]
+
+	<label>When do you do your daily exercises?</label>
+	[radio daily-exercise use_label_element "Morning" "Afternoon" "Evening" "Before bed" "Other"]
+	[text daily-exercise-other "If other, enter answer here"]
+
+	<label>What time do you eat dinner?</label>
+	[radio daily-dinner use_label_element "4pm" "5pm" "6pm" "7pm" "8pm" "Other"]
+	[text daily-dinner-other "If other, enter answer here"]
+
+	<label>When do you start your usual nightly routine?</label>
+	[radio daily-nightly use_label_element "6pm" "7pm" "8pm" "9pm" "10pm" "Other"]
+	[text daily-nightly-other "If other, enter answer here"]
+
+	<label>When do you usually go to bed?</label>
+	[radio daily-bed use_label_element "6pm" "7pm" "8pm" "9pm" "10pm" "11pm" "Other"]
+	[text daily-bed-other "If other, enter answer here"]
+</fieldset>
+
+<fieldset>
+	<legend>Hygiene:</legend>
+	<label>How often do you prefer to bathe/shower?</label>
+	[radio hygiene-how-often use_label_element "More than once per day" "Daily" "Every other day" "Other"]
+	[text hygiene-how-often-other "If other, enter answer here"]
+	
+	<label>What hygiene tasks do you need extra help with?</label>
+ 	[checkbox hygiene-tasks use_label_element "Bathing" "Shaving" "Toileting" "Tooth brushing/Flossing" "Other"]
+ 	[text hygiene-tasks-other "If other, enter answer here"]
+
+<fieldset>
+	<legend>Meals:</legend>
+	<label>What is your favorite food to eat and beverage to drink?  </label>
+	[textarea meals-fav]
+
+	<label>What is your most favorite meal or food item to make?  </label>
+	[textarea meals-fav-make]
+
+	<label>What is your least favorite meal or food item to make?  </label>
+	[textarea meals-least-fav]
+
+	<label>Do you need assistance from your staff with eating meals? </label>
+	[radio meals-need-assistance use_label_element "All the time" "Sometimes" "Never"]
+
+</fieldset>
+
+<fieldset>
+	<legend>School/Day Program:</legend>
+	<label>What was the school/program that you remember being the most fun for you and what made it so much fun?  </label>
+	[textarea school-remember]
+	
+	<label>Name a school/program experience that you didn’t like very much:</label>
+	[textarea school-dislike]
+</fieldset>
+
+<fieldset>	
+	<legend>Staff:</legend>
+	<label>Who is/was your favorite staff and what made him/her so wonderful for you? </label>
+	[textarea staff-favorite]
+
+	<label>What quality do you most dislike in a staff?</label>
+	[textarea staff-dislike]
+
+	<label>Some things I would like my staff to know about me:</label>
+	[textarea staff-about-me]
+</fieldset>
+
+<fieldset>
+	<legend>Housekeeping:</legend>
+	<label>Do you like to keep your home neat/tidy or do you require a lot of assistance keeping organized?</label>
+	[textarea housekeeping-tidyness]
+
+	<label>What household chores do you like to do yourself?</label>
+	[textarea housekeeping-chores]
+
+	<label>What household chores do you want/need help with?</label>
+	[textarea housekeeping-help-chores]
+
+	<label>Are there places or things in your home that are off limits to others?</label>
+	[textarea housekeeping-off-limits]
+</fieldset>
+
+<fieldset>
+	<legend>Medical</legend>
+	<label>Do you prefer a lot of support during appointments?</label>
+	[radio medical-support use_label_element "All the time" "Sometimes" "Never"]
+
+	<label>Who do you like to have with you at medical appointments?</label>
+	[textarea medical-go-with]
+</fieldset>
+
+<fieldset>
+	<legend>Medications:</legend>
+	<label>Have you needed staff guidance with filling pill boxes? </label>
+	[radio meds-filling-pills use_label_element "All the time" "Sometimes" "Never"] 
+
+	<label>Do you go to the pharmacy to pick up medications or does someone do it for you?</label>
+	[radio meds-pickup use_label_element "I go myself" " Someone helps me" "Other"]
+	[text meds-pickup-other "If other, enter answer here"]
+
+	<label>How do you remember to take your medications each day?</label>
+	[textarea meds-remember]
+
+	<label>Do you drink alcohol?</label>
+	[radio meds-use-booze use_label_element "Yes" "No"]
+	
+	<label>If so, how ofter</label>
+	[textarea meds-drink-how-often]
+	
+	<label>Do you smoke cigarettes?</label>
+	[radio meds-use-cigs use_label_element "Yes" "No"]
+	
+	<label>If so, how many per day?</label>
+	[textarea meds-smoke-how-often]
+</fieldset>
+
+<fieldset>
+	<legend>Shopping:</legend>
+	<label>How often do you like to go shopping for groceries or other items? </label>
+ 	[radio shopping-how-often use_label_element "More than once a week" "Weekly" "Two times a month" "Monthly" "As Needed"]
+
+	<label>What stores do you like to shop at?</label>
+	[textarea shopping-stores]
+</fieldset>
+
+<fieldset>
+	<legend>Financial:</legend>
+	<label>Can you manage your own money, or do you need help?</label>
+	[textarea financial-manage]
+	
+	<label>Have you ever had problems with over-spending?  If so, tell us about it.</label>
+	[textarea financial-overspending]
+	
+	<label>Do you like to save money?   </label>
+	[radio save-money use_label_element "Yes" "No"]
+
+	<label>Do you ever run out of money?   </label>
+	[radio save-runout use_label_element "Yes" "No"]
+</fieldset>
+
+<fieldset>
+	<legend>Social/Recreational:</legend>
+	<label>What is your favorite activity to do on the weekends? </label>
+	[textarea social-weekend-activity]
+	
+	<label>Who do you enjoy spending time with outside your home?</label>
+	[textarea social-outside]
+	
+	<label>Who is your best friend?  </label>
+	[textarea social-best-friend]
+	
+	<label>What qualities do you seek in a friend?  </label>
+	[textarea social-friend-qualities]
+	
+	<label>Do you have any regular weekly activities that you participate in? (Things like: Church, Special Olympics, People First, etc.)</label>
+	[textarea social-weekly-activities]
+</fieldset>
+
+<fieldset>
+	<legend>Entertainment:</legend>
+	<label>What is your favorite TV show?</label>
+	[textarea entertainment-tv ]
+	
+	<label>What is your favorite movie?</label>
+	[textarea entertainment-movie ]
+	
+	<label>What kind of movie do you like to watch?</label>
+	[radio type-of-movies use_label_element "Comedy" "Drama" "Animation" "Horror" "Other"]
+	[text type-of-moveis-other "If other, enter answer here"]
+
+	<label>What type of books do you enjoy reading?</label>
+	[textarea entertainment-reading ]
+	
+	<label>What kind of music do you like listening to?</label>
+	[textarea entertainment-music ]
+	
+</fieldset>
+
+<fieldset>
+	<legend>Exercise:</legend>
+	<label>What kind of physical activity do you like to do?</label>
+	[textarea exercise-like]
+
+	<label>How often do you exercise?</label>
+	[radio how-often use_label_element "More than once per day" "Daily" "Every other day" "Other"]
+	[text how-often-other "If other, enter answer here"]
+
+	<label>Do you have a favorite sport or physical activity?</label>
+	[textarea exercise-sport]
+</fieldset>
+
+<fieldset>
+	<legend>Family:</legend>
+	<label>Name a favorite childhood memory:</label>
+	[textarea family-childhood-memory]
+	
+	<label>What made it such a fond memory for you?</label>
+	[textarea family-fond-because]
+	
+	<label>Who are you closest to in your family and how often are you in touch?</label>
+	[textarea family-closest]
+</fieldset>
+
+<fieldset>
+	<legend>Emotional:</legend>
+
+	<label>Happiness:  Think of something that makes you feel very happy.</label>
+	[textarea happiness]
+
+	<label>What does being happy look like for you?</label>
+	[textarea happiness-to-me]
+
+	<label>Sadness:  What is something that makes you feel very sad?</label>
+	[textarea sadness]
+
+	<label>What do you do when you feel sad? </label>
+	[textarea sadness-to-me]
+
+	<label>What helps you when you feel sad? </label>
+	[textarea helps-when-sad]
+
+	<label>Anger:  Name something that makes you feel very angry:</label>
+	[textarea anger]
+
+	<label>What does being angry look like for you?</label>
+	[textarea anger-to-me]
+
+	<label>What helps you to calm down when you feel angry? </label>
+	[textarea calming-when-angry]
+
+	<label>Fear:  What is something that makes you feel very scared?</label>
+	[textarea scared]
+
+	<label>What helps you when you feel afraid? </label>
+	[textarea helps-when-scared]
+
+	<label>Excitement: What is something that makes you feel excited?</label>
+	[textarea excitment]
+
+	<label>What does being excited look like for you? </label>
+	[textarea excitement-to-me]
+</fieldse>
+
+<fieldset>
+	<legend>Miscellaneous:</legend>
+	<label>What is your favorite color?</label>
+	[textarea favorite-color]
+
+	<label>If you could take a trip anywhere in the whole world, where would you go?</label>
+	[textarea trip]
+
+	<label>What do you feel has been your biggest accomplishment of the past year?</label>
+	[textarea biggest-accomplishment]
+
+	<label>What are your goals for the next year? </label>
+	[textarea years-goals]
+
+	<label>What is something that you would like Compass to know about you?</label>
+	[textarea know-about-me]
+
+	<label>What is the number one thing you would like Compass to help you with? </label>
+	[textarea help-me-with]
+
+	<label>Use this box for anything you want.  You could write a poem or story.  It's up to you!</label>
+	[textarea fun-area]
+</fieldset>
+[submit "Send"]

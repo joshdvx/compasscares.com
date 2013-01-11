@@ -17,54 +17,37 @@
  */
 
 ?>
+<?php $query = new Daq_Db_Query(); $query->select("*")->from("Wpjb_Model_Category t1"); $query; $jcats = $query->execute(); ?>
+<?php $query = new Daq_Db_Query(); $query->select("*")->from("Wpjb_Model_FieldOption t1"); $query; $jcounties = $query->execute(); ?>
 
 <div id="wpjb-main" class="wpjb-page-index">
-<?php the_field('jl_intro_paragraph'); ?>
-<?php if(get_field('jl_fun_photos')): ?>
-    <?php while (has_sub_field('jl_fun_photos')): ?>
-        <img src="<?php the_sub_field('jl_fun_photo_1') ?>" alt="Fun Photos">
-    <?php endwhile; ?>
-<?php endif; ?>
 
-<form action="http://localhost/compasscares.com/jobs/find/" method="get" class="wpjb-form">
-    <div class="wpjb-field">
-        <input id="query" name="query" type="text" class="regular-text wpjb-auto-clear" value="" placeholder="Search (city, title, etc.)" />
-        <input type="submit" name="wpjb_preview" id="wpjb_submit" value="Search" />
-    </div>
-</form>
-<div class="clearfix"></div>
-<?php 
-$query = new Daq_Db_Query();
-$query->select("*")->from("Wpjb_Model_Category t1");
- $query;
-// echo: SELECT * FROM wpjb_job AS t1
-$jcats = $query->execute(); ?>
-
- <?php $query = new Daq_Db_Query(); $query->select("*")->from("Wpjb_Model_Category t1"); $query; $jcats = $query->execute(); ?>
- <hr>
- <ul class="unstyled">
- 
- 
-
-<?php 
-$query = new Daq_Db_Query();
-$query->select("*")->from("Wpjb_Model_FieldOption t1");
- $query;
-// echo: SELECT * FROM wpjb_job AS t1
-$jcounties = $query->execute(); 
- ?>
- 
-  <?php foreach($jcounties as $jcounty): ?>
-    <li><input type='checkbox' id='<?php echo $jcounty->value; ?>' value='<?php echo $jcounty->value; ?>' /> <?php echo $jcounty->value; ?></li>
- <?php endforeach; ?>
- </ul>
- 
-  <ul class="unstyled">
- <?php foreach($jcats as $jcat): ?>
-    <li><input type='checkbox' id='jcat-<?php echo $jcat->id; ?>' value='<?php echo $jcat->slug; ?>' /> <?php echo $jcat->title; ?></li>
- <?php endforeach; ?>
- </ul>
-<hr>
+    <?php the_field('jl_intro_paragraph'); ?>
+    <?php if(get_field('jl_fun_photos')): ?>
+        <?php while (has_sub_field('jl_fun_photos')): ?>
+            <img src="<?php the_sub_field('jl_fun_photo_1') ?>" alt="Fun Photos">
+        <?php endwhile; ?>
+    <?php endif; ?>
+    <div class="clearfix"></div>
+    <form action="http://localhost/compasscares.com/jobs/find/" method="get" class="wpjb-form" id="searchjobs">
+        <div class="wpjb-field">
+            <input id="query" name="query" type="text" class="regular-text wpjb-auto-clear" value="" placeholder="Search (city, title, etc.)" />
+            <input type="submit" name="wpjb_preview" id="wpjb_submit" value="" />
+        </div>
+    </form>
+    <div class="clearfix"></div>
+    
+    <ul class="unstyled">
+        <?php foreach($jcats as $jcat): ?>
+            <li><a href="<?php bloginfo('url'); ?>/jobs/category/<?php echo $jcat->slug; ?>"><?php echo $jcat->title; ?></a></li>
+        <?php endforeach; ?>
+    </ul>
+     
+    <ul class="unstyled">
+        <?php foreach($jcounties as $jcounty): ?>
+            <li><input type='checkbox' id='<?php echo $jcounty->value; ?>' value='<?php echo $jcounty->value; ?>' /> <?php echo $jcounty->value; ?></li>
+        <?php endforeach; ?>
+    </ul>
 
     <?php wpjb_flash(); ?>
 
@@ -90,7 +73,6 @@ $jcounties = $query->execute();
             <tr class="<?php wpjb_job_features($job); ?>" data-category="jcat-<?php echo $job->job_category; ?>" data-county="<?php echo $job->getFieldValue('2')?>">
                 <td class="wpjb-column-title" colspan="1">
                     <a class="jd"><?php esc_html_e($job->job_title) ?></a>
-                    <?php if($job->isNew()): ?><img src="<?php wpjb_new_img() ?>" alt="" class="wpjb-inline-img" /><?php endif; ?>
                 </td>
                 <td class="wpjb-column-ft_pt" colspan="1">
                    <?php esc_html_e($job->getType()->title) ?>
@@ -116,10 +98,6 @@ $jcounties = $query->execute();
             </thead>
           </div>
                   
-                      
-                  
-            
-            
             <?php endforeach; else :?>
             
             <tr>

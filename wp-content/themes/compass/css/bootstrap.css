@@ -6549,8 +6549,6 @@ div.navBulletsWrapper div.active {
   border-radius: 3px;
 }
 .company-jobs form#searchjobs input[type="submit"] {
-  position: relative;
-  top: 1px;
   width: 45px;
   height: 30px;
   margin-left: -7px;
@@ -6558,15 +6556,49 @@ div.navBulletsWrapper div.active {
   border-color: #CCC;
   border-left: none;
 }
+.job-filters {
+  float: left;
+  margin: 0 50px 40px 0;
+  color: #414042;
+  font-size: 16px;
+}
+.job-filters li {
+  line-height: 1.5;
+  font-weight: 300;
+}
+.job-filters p {
+  font-weight: 400;
+}
+#wpjb-main th {
+  padding-bottom: 20px !important;
+  font-size: 24px;
+}
+#wpjb-main .wpjb-table thead tr th {
+  border-bottom: 1px solid #20445d !important;
+}
 #wpjb-main .wpjb-table tbody tr td {
   border-bottom: none !important;
 }
 #wpjb-main .wpjb-table tbody {
   border-top: 1px solid #D9D9D9 !important;
 }
+thead.job-description th {
+  font-size: 14px !important;
+  font-weight: 400 !important;
+  padding: 0 !important;
+}
 thead.job-description div {
   display: none;
-  padding: 20px 0;
+  width: 780px;
+  padding: 20px 0 0 0;
+}
+thead.job-description div p {
+  width: 590px;
+  margin-bottom: 0;
+}
+thead.job-description div a {
+  display: block;
+  text-align: right;
 }
 a.jd {
   cursor: pointer;

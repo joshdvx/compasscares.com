@@ -37,13 +37,15 @@
     </form>
     <div class="clearfix"></div>
     
-    <ul class="unstyled">
+    <ul class="unstyled job-filters">
+        <p>Filter by Postion:</p>
         <?php foreach($jcats as $jcat): ?>
             <li><a href="<?php bloginfo('url'); ?>/jobs/category/<?php echo $jcat->slug; ?>"><?php echo $jcat->title; ?></a></li>
         <?php endforeach; ?>
     </ul>
      
-    <ul class="unstyled">
+    <ul class="unstyled job-filters">
+        <p>Filter by County:</p>
         <?php foreach($jcounties as $jcounty): ?>
             <li><input type='checkbox' id='<?php echo $jcounty->value; ?>' value='<?php echo $jcounty->value; ?>' /> <?php echo $jcounty->value; ?></li>
         <?php endforeach; ?>
@@ -90,8 +92,8 @@
                 <tr>
                     <th colspan="4">
                         <div>
-                            <?php echo $job->getFieldValue('3')?>
-                            <a href="<?php echo wpjb_link_to("job", $job) ?>" class="pull-right">More Info</a>
+                            <p><?php echo $job->getFieldValue('3')?></p>
+                            <a href="<?php echo wpjb_link_to("job", $job) ?>">More Info</a>
                         </div>
                     </th>
                 </tr>

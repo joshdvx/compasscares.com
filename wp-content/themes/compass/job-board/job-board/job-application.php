@@ -1,17 +1,3 @@
-<?php
-
-/**
- * Job application details
- *
- * @author Greg Winiarski
- * @package Templates
- * @subpackage JobBoard
- * 
- /* @var $job Wpjb_Model_Job */
- /* @var $application Wpjb_Model_Application */
-
-?>
-
 <div id="wpjb-main" class="wpjb-page-job-application">
 
     <?php wpjb_flash(); ?>
@@ -26,6 +12,45 @@
     
     
     <table class="wpjb-info">
+    <h3>Personal Info:</h3>
+        <tbody>
+            <tr>
+                <td><?php _e("Applicant Name", WPJB_DOMAIN) ?></td>
+                <td><?php echo $application->applicant_name ?></td>
+            </tr>
+            <tr>
+                <td><?php _e("Applicant E-mail", WPJB_DOMAIN) ?></td>
+                <td><?php echo $application->email ?></td>
+            </tr>
+            <tr>
+                <td><?php _e("Date Sent", WPJB_DOMAIN) ?></td>
+                <td><?php echo wpjb_date("d M, Y", $application->applied_at) ?></td>
+            </tr>
+            <?php foreach($application->getNonEmptyFields() as $field): ?>
+            <tr>
+                <td><?php echo esc_html($field->getField()->label) ?></td>
+                <td><?php echo esc_html($field->value) ?></td>
+            </tr>
+            <?php endforeach; ?>
+            
+            <?php if(count($application->getFiles())): ?>
+            <tr>
+                <td><?php _e("Attached Files", WPJB_DOMAIN) ?></td>
+                <td>
+                    <?php foreach($application->getFiles() as $file): ?>
+                    <a href="<?php echo esc_attr($file->url) ?>"><?php echo esc_html($file->basename) ?></a>
+                    ~ <?php echo esc_html(wpjb_format_bytes($file->size)) ?>
+                    <br/>
+                    <?php endforeach; ?>
+                </td>
+            </tr>
+            <?php endif; ?>
+        </tbody>
+    </table>
+    
+    <table class="wpjb-info">
+    <h3>Education:</h3>
+    <h4>High School</h4>
         <tbody>
             <tr>
                 <td><?php _e("Application Status", WPJB_DOMAIN) ?></td>
@@ -74,10 +99,8 @@
     </table>
 
     <div class="wpjb-job-content">
-        <h3><?php _e("Message", WPJB_DOMAIN) ?></h3>
-        <div class="wpjb-job-text">
-            <?php echo $application->resume ?>
-        </div>
+        <h3><?php _e("Message", WPJB_DOMAIN) ?>POOP</h3>
+       
 
         <?php foreach($application->getNonEmptyTextareas() as $field): ?>
         <h3><?php echo esc_html($field->getField()->label) ?></h3>

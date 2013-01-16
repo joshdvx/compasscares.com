@@ -39,6 +39,7 @@
     
     <ul class="unstyled job-filters">
         <p>Filter by Postion:</p>
+        <li><a href="<?php bloginfo('url'); ?>/jobs/">All Positions</a></li>
         <?php foreach($jcats as $jcat): ?>
             <li><a href="<?php bloginfo('url'); ?>/jobs/category/<?php echo $jcat->slug; ?>"><?php echo $jcat->title; ?></a></li>
         <?php endforeach; ?>

@@ -6573,6 +6573,11 @@ div.navBulletsWrapper div.active {
   padding-bottom: 20px !important;
   font-size: 24px;
 }
+#wpjb-main td.wpjb-column-title a.jd {
+  padding-left: 30px;
+  padding-bottom: 5px;
+  background: url(../img/small-star.png) no-repeat !important;
+}
 #wpjb-main .wpjb-table thead tr th {
   border-bottom: 1px solid #20445d !important;
 }
@@ -6602,6 +6607,33 @@ thead.job-description div a {
 }
 a.jd {
   cursor: pointer;
+}
+.wpjb-job-content h3 {
+  font-weight: 300;
+}
+.wpjb-job-content ul {
+  list-style: none;
+  margin-left: 0;
+}
+.wpjb-job-content .wpjb-job-text {
+  width: 590px;
+}
+.wpjb-job-content .wpjb-job-text p {
+  width: 590px;
+}
+.wpjb-page-apply h3 {
+  font-weight: 300;
+  border-bottom: 1px solid #20445d;
+}
+.wpjb-page-apply h3:first-child {
+  text-align: center;
+  border: 1px solid #20445d;
+}
+.wpjb-page-apply h3 span {
+  font-weight: 400;
+}
+.wpjb-form fieldset {
+  border: none !important;
 }
 #entry-author-info {
   clear: both;

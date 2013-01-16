@@ -49,7 +49,35 @@ jQuery(document).ready(function($) {
         } else {
             $('table#wpjb-job-list tr.wpjb-free').show();
         }
-    })
+    });
+
+	 // Job Application 
+	 $('.wpjb-element-name-applicant_name').before('<h3>Personal Information</h3>');
+	 $('.wpjb-element-name-field_14').after('<h3 class="ha1">Education</h3>');
+	 $('.ha1').after('<h4>High School</h4>');
+	 $('.wpjb-element-name-field_20').after('<h4>College</h4>');
+	 $('.wpjb-element-name-field_25').after('<h4>Graduate School</h4>');
+	 $('.wpjb-element-name-field_30').after('<h4>Other</h4>');
+	 $('.wpjb-element-name-field_35').after('<h3>U.S. Military Service</h3>');
+	 $('.wpjb-element-name-field_38').after('<h3>Special Skills</h3>');
+	 $('.wpjb-element-name-field_40').after('<h3>Legal</h3><p>Identity and employment eligibility of all new hires will be verified as required by the immigration reform and control act of 1986.</p>');
+	 $('.wpjb-element-name-field_43').after('<h3 class="ha2">Please indicate in the space below times that you be available to work</h3>');
+	 $('.ha2').after('<h4>Monday</h4>');
+	 $('.wpjb-element-name-field_45').after('<h4>Tuesday</h4>');
+	 $('.wpjb-element-name-field_47').after('<h4>Wednesday</h4>');
+	 $('.wpjb-element-name-field_49').after('<h4>Thursday</h4>');
+	 $('.wpjb-element-name-field_51').after('<h4>Friday</h4>');
+	 $('.wpjb-element-name-field_53').after('<h4>Saturday</h4>');
+	 $('.wpjb-element-name-field_55').after('<h4>Sunday</h4>');
+	 $('.wpjb-element-name-field_57').after('<h3>Employment History</h3><p class="ha3">Please list your last three (3) employers, assignments, volunteer activities, starting with the most recent, including military experience.  Please explain any gaps in employment in the comments section below.</p>');
+	 $('.ha3').after('<h4>Recent Employer 1</h4>');
+	 $('.wpjb-element-name-field_69').after('<h4>Recent Employer 2</h4>');
+	 $('.wpjb-element-name-field_81').after('<h4>Recent Employer 3</h4>');
+	 $('.wpjb-element-name-field_94').after('<h3>References</h3><p class="ha4">Give below the names of three persons not related to you whom you have known atleast one year</p>');
+	 $('.ha4').after('<h4>Reference 1</h4>');
+	 $('.wpjb-element-name-field_99').after('<h4>Reference 2</h4>');
+	 $('.wpjb-element-name-field_104').after('<h4>Reference 3</h4>');
+
 
 	//Staff Success Stories Slider
 	var $panels = $('#staff-slider .scrollContainer > div');

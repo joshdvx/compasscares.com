@@ -17,6 +17,7 @@
 ?>
 
     <?php $job = wpjb_view("job") ?>
+    <h3><?php esc_html_e($job->job_title) ?></h3>
     <table class="wpjb-info">
         <tbody>
             <?php if($job->company_name): ?>
@@ -66,8 +67,6 @@
         </tbody>
     </table>
 
-
-
     <div class="wpjb-job-content">
 
         <h3><?php _e("Description", WPJB_DOMAIN) ?></h3>
@@ -81,9 +80,9 @@
             
         </div>
 
-        <?php foreach($job->getNonEmptyTextareas() as $field): ?>
-        <h3><?php esc_html_e($field->getLabel()) ?></h3>
-        <div class="wpjb-job-text"><?php wpjb_field_value($field) ?></div>
-        <?php endforeach; ?>
+        <?php // foreach($job->getNonEmptyTextareas() as $field): ?>
+        <!-- <h3><?php // esc_html_e($field->getLabel()) ?></h3>
+        <div class="wpjb-job-text"><?php // wpjb_field_value($field) ?></div> -->
+        <?php // endforeach; ?>
 
     </div>

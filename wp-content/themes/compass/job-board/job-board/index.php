@@ -18,7 +18,7 @@
 
 ?>
 <?php $query = new Daq_Db_Query(); $query->select("*")->from("Wpjb_Model_Category t1"); $query; $jcats = $query->execute(); ?>
-<?php $query = new Daq_Db_Query(); $query->select("*")->from("Wpjb_Model_FieldOption t1"); $query; $jcounties = $query->execute(); ?>
+<?php $query = new Daq_Db_Query(); $query->select("*")->from("Wpjb_Model_FieldOption t1")->where("field_id=2"); $query; $jcounties = $query->execute(); ?>
 
 <div id="wpjb-main" class="wpjb-page-index">
 

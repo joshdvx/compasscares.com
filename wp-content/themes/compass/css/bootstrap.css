@@ -6635,6 +6635,67 @@ a.jd {
 .wpjb-form fieldset {
   border: none !important;
 }
+/*..................................the client forms */
+.page-id-33 h3,
+.page-id-35 h3 {
+  font-size: 20px;
+  font-weight: 300;
+}
+.page-id-33 h3 input,
+.page-id-35 h3 input {
+  position: relative;
+  top: 8px;
+}
+.page-id-33 .entry-content,
+.page-id-35 .entry-content {
+  padding: 20px;
+}
+.page-id-33 br,
+.page-id-35 br {
+  display: none;
+}
+.page-id-33 .wpcf7-list-item,
+.page-id-35 .wpcf7-list-item {
+  margin-left: 0;
+  padding-bottom: 10px;
+}
+.page-id-33 .wpcf7-list-item .wpcf7-list-item-label,
+.page-id-35 .wpcf7-list-item .wpcf7-list-item-label {
+  position: relative;
+  top: 4px;
+  font-weight: 400;
+  margin-right: 20px;
+}
+.page-id-33 .wpcf7-radio,
+.page-id-35 .wpcf7-radio,
+.page-id-33 .wpcf7-checkbox,
+.page-id-35 .wpcf7-checkbox {
+  display: block;
+  margin-bottom: 20px;
+}
+.page-id-33 legend,
+.page-id-35 legend {
+  font-weight: 300;
+}
+.page-id-33 label,
+.page-id-35 label {
+  font-weight: bold;
+}
+.page-id-33 label.sub-label,
+.page-id-35 label.sub-label {
+  margin-bottom: 10px;
+  font-size: 16px;
+  font-weight: 300;
+}
+.page-id-33 textarea,
+.page-id-35 textarea {
+  width: 50%;
+  height: 150px;
+}
+.page-id-33 input[type="file"],
+.page-id-35 input[type="file"] {
+  display: block;
+}
 #entry-author-info {
   clear: both;
   margin: 40px 0 20px 0;

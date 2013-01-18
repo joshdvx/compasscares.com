@@ -1,165 +1,282 @@
 <p>Parents/Caregivers: Please fill out this portion as completely as possible and return to the assessment facilitator at your next appointment.  Feel free to attach documents if necessary.</p>
 
-IDENTIFYING INFORMATION
-Name:
-Birth date:
-Phone Number:
-Mobile Number: 
-Address:
+<fieldset>
+	<legend>Identifying Information</legend>
+	<label>Name:</label>
+	[text* id-name]
+	<label>Birth date:</label>
+	[text* id-bd]
+	<label>Phone Number:</label>
+	[text* id-phone]
+	<label>Mobile Number:</label>
+	[text id-mobile]
+	<label>Email:</label>
+	[email* id-email]
+	<label>Address:</label>
+	[text* id-address]
 
-Sex:   Male             Female            
+	<label>Sex:</label>
+	[radio id-sex "Male" "Female"]           
 
-Height:                           Current Weight:
-Hair Color:                              Eye Color:
+	<label>Height:</label>
+	[text* id-height]                           
 
-Social Security #: 
-Medi-Cal #:
-Medicare#:
-CA ID #:
-UCI#:
+	<label>Current Weight:</label>
+	[text* id-weight]
 
+	<label>Hair Color:</label>
+	[text* id-hair]
 
-Conserved?  No       Yes   
-Conservator Name: ________________________
+	<label>Eye Color:</label>
+	[text* id-eyes]
 
-Rep Payee?   No       Yes
-Rep-Payee Name:__________________________
+	<label>Social Security#:</label>
+	[text* id-ssn] 
 
-MEDICAL INFORMATION & CONTACTS
+	<label>Medi-Cal#:</label>
+	[text* id-mcn]
 
+	<label>Medicare#:</label>
+	[text* id-]
 
-Allergies:
+	<label>CA ID#:</label>
+	[text* id-caidn]
 
+	<label>UCI#:</label>
+	[text* id-ucin]
 
+	<label>Conserved?</label>
+	[radio id-conserved "No" "Yes"]  
 
+	<label>Conservator Name:</label>
+	[text id-conservator]
 
+	<label>Rep Payee?</label>
+	[radio id-payee "No" "Yes"]
 
-Medical & Psychological Diagnoses (list all):
+	<label>Rep-Payee Name:</label>
+	[text id-payee-name]
 
+</fieldset>
 
-
-
-
-
-
-
-List of Current Medications (attach sheet if necessary):
-
-
-
-
-
-
-
-
-
-Primary Care Physician:
-Phone Number:
-Address:
-
-Dentist:
-Phone Number:
-Address:
-
-Psychiatrist/Psychologist:
-Phone Number:
-E-mail:
-Address:
-
-Neurologist:
-Phone Number:
-Address:
-
-Ophthalmologist:
-Phone Number:
-Address:
-
-Other Medical Provider:  
-Relationship:          
-Phone Number:
-Address:
-
-Other Medical Provider:
-Relationship:          
-Phone Number:
-Address:
-
-Other Medical Provider:
-Relationship:
-Phone Number:
-Address:
-
-Pharmacy:
-Phone Number:
-Address:
-
-Pharmacy #2:
-Phone Number:
-Address: 
-
-IMPORTANT CONTACTS
-IMPORTANT CONTACTS
-
-Landlord/Apartment Manager:
-Phone Number:
-E-mail:
-Address:
+<fieldset>
+<legend>Information &amp; Contacts</legend>
 
 
-Regional Center Case Manager:
-Phone Number:
-Fax Number:
-E-Mail:
-Address:
+	<label>Allergies:</label>
+	[textarea contacts-allergies]
 
-Day Program/Employer:
-Phone Number:
-Address:
-Contact Name:
-E-mail:
+	<label>Medical &amp; Psychological Diagnoses (list all):</label>
+	[textarea contacts-diagnoses]
 
-IHSS Social Worker:
-Phone Number:
-County:
+	<label>List of Current Medications (attach file if necessary):</label>
+	[textarea contacts-meds]
+	[file contacts-meds-attachment]
 
-Additional Contact Name:
-Relationship:
-Phone Number:
-E-mail:
+	<label class="sub-label">Primary Care Physician</label>
+	<label>Phone Number:</label>
+	[text contacts-primdoc-phone]
+	
+	<label>Address:</label>
+	[text contacts-primdoc-address]
+	
+	<label class="sub-label">Dentist:</label>
+	<label>Phone Number:</label>
+	[text contacts-dentist-phone]
+	
+	<label>Address:</label>
+	[text contacts-dentist-address]
 
+	<label class="sub-label">Psychiatrist/Psychologist</label>
+	<label>Phone Number:</label>
+	[text contacts-psyc-phone]
+	
+	<label>E-mail:</label>
+	[email contacts-psyc-email]
+	
+	<label>Address:</label>
+	[text contacts-psyc-address]
+	
+	<label class="sub-label">Neurologist</label>
+	<label>Phone Number:</label>
+	[text contacts-neur-phone]
+	
+	<label>Address:</label>
+	[text contacts-neur-address]
 
-FAMILY CONTACTS
-FAMILY CONTACTS
+	<label class="sub-label">Ophthalmologist</label>
+	<label>Phone Number:</label>
+	[text contacts-opth-phone]
+	
+	<label>Address:</label>
+	[text contacts-opth-address]
+	
+	<label class="sub-label">Other Medical Provider</label>  
+	<label>Relationship: </label>         
+	[text contacts-other-relationship]
+	
+	<label>Phone Number:</label>
+	[text contacts-other-phone]
+	
+	<label>Address:</label>
+	[text contacts-other-address]
+	
+	<label class="sub-label">Other Medical Provider</label>
+	<label>Relationship:</label>          
+	[text contacts-other2-relationship]
+	
+	<label>Phone Number:</label>
+	[text contacts-other2-phone]
+	
+	<label>Address:</label>
+	[text contacts-other2-address]
+	
+	<label class="sub-label">Other Medical Provider</label>
+	<label>Relationship:</label>
+	[text contacts-other3-relationship]
+	
+	<label>Phone Number:</label>
+	[text contacts-other3-phone]
+	
+	<label>Address:</label>
+	[text contacts-other3-address]
+	
+	<label class="sub-label">Pharmacy</label>
+	<label>Phone Number:</label>
+	[text contacts-pharm1-phone]
+	
+	<label>Address:</label>
+	[text contacts-pharm1-address]
 
-Primary Family Contact Name:
-Relationship:
-Phone Number:
-Phone Number:
-E-mail:
+	<label class="sub-label">Pharmacy #2</label>
+	<label>Phone Number:</label>
+	[text contacts-pharm2-phone]
+	
+	<label>Address:</label> 
+	[text contacts-pharm2-address]
+	
+</fieldset>
 
+<fieldset>
+	<legend>Important Contacts</legend>
 
-Secondary Family Contact Name:
-Relationship:
-Phone Number:
-Phone Number:
-E-mail:
+	<label class="sub-label">Landlord/Apartment Manager</label>
+	<label>Phone Number:</label>
+	[text vic-landlord-phone]
+	
+	<label>E-mail:</label>
+	[email vic-landlord-email]
+	
+	<label>Address:</label>
+	[text vic-landlord-address]
 
-Additional Family Contact Name:
-Relationship:
-Phone Number:
-Phone Number:
-E-mail:
+	<label class="sub-label">Regional Center Case Manager</label>
+	<label>Phone Number:</label>
+	[text vic-rccm-phone]
+	
+	<label>Fax Number:</label>
+	[text vic-rccm-fax]
+	
+	<label>E-Mail:</label>
+	[email vic-rccm-email]
+	
+	<label>Address:</label>
+	[text vic-rccm-address]
 
-Additional Family Contact Name:
-Relationship:
-Phone Number:
-Phone Number:
-E-mail:
+	<label class="sub-label">Day Program/Employer</label>
+	<label>Phone Number:</label>
+	[text vic-dpe-phone]
+	
+	<label>Address:</label>
+	[text vic-dpe-address]
+	
+	<label>Contact Name:</label>
+	[text vic-dpe-name]
+	
+	<label>E-mail:</label>
+	[email vic-dpe-email]
+	
+	<label class="sub-label">IHSS Social Worker</label>
+	<label>Phone Number:</label>
+	[text ssworker-phone]
+	
+	<label>County:</label>
+	[text ssworker-county]
+	
+	<label class="sub-label">Additional Contact Name</label>
+	<label>Relationship:</label>
+	[text ssworker-name]
+	
+	<label>Phone Number:</label>
+	[text ssworker-phone]
+	
+	<label>E-mail:</label>
+	[email ssworker-email]
+	
+</fieldset>
+<fieldset>
 
-ADDITIONAL INFORMATION:
+<legend>Family Contacts</legend>
 
+	<label class="sub-label">Primary Family Contact Name</label>
+	<label>Relationship:</label>
+	[text fc1-relationshio]
+	
+	<label>Phone Number:</label>
+	[text fc1-phone1]
+	
+	<label>Phone Number:</label>
+	[text fc1-phone2]
+	
+	<label>E-mail:</label>
+	[email fc1-email]
 
+	<label class="sub-label">Secondary Family Contact Name</label>
+	<label>Relationship:</label>
+	[text fc2-relationshio]
+	
+	<label>Phone Number:</label>
+	[text fc2-phone1]
+	
+	<label>Phone Number:</label>
+	[text fc2-phone2]
+	
+	<label>E-mail:</label>
+	[email fc2-email]
 
+	<label class="sub-label">Additional Family Contact Name</label>
+	<label>Relationship:</label>
+	[text fc3-relationshio]
+	
+	<label>Phone Number:</label>
+	[text fc3-phone1]
+	
+	<label>Phone Number:</label>
+	[text fc3-phone2]
+	
+	<label>E-mail:</label>
+	[email fc3-email]
+
+	<label class="sub-label">Additional Family Contact Name</label>
+	<label>Relationship:</label>
+	[text fc4-relationshio]
+	
+	<label>Phone Number:</label>
+	[text fc4-phone1]
+	
+	<label>Phone Number:</label>
+	[text fc4-phone2]
+	
+	<label>E-mail:</label>
+	[email fc4-email]
+</fieldset>
+
+<fieldset>
+<legend>Additional Information</legend>
+	[textarea additional-info]
+</fieldset>
+
+[submit "Send"]
 
 
 

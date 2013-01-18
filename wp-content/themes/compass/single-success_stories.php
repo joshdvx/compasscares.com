@@ -15,7 +15,10 @@
 	<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 	<div class="story-unit">
 		<img src="<?php the_field('single_story_hero') ?>" alt="<?php the_title(); ?>'s Story">
+		<div id="left-grad"></div>
+		<div id="right-grad"></div>
 	</div>	
+	
 	<div class="story">
 		<h2><strong><?php the_title(); ?>'s </strong> Story</h2>
 		

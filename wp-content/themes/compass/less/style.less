@@ -582,11 +582,6 @@ img.aligncenter {
 		margin: 0 auto 20px auto;
 		text-align: justify;
 	}
-
-	// .poop {
-	// 	font-size: 34px !important;
-	// 	text-transform: uppercase;
-	// }
 }
 
 #success-stories {
@@ -1123,6 +1118,7 @@ table.em-tickets {
 }
 
 .story-unit {
+	position: relative;
 	height: 300px;
 	border-bottom: 2px solid @white;
 
@@ -1134,6 +1130,47 @@ table.em-tickets {
 		margin: 0 auto;
 	}
 }
+
+.bg-SLS {
+	#left-grad {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 50%;
+		height: 300px;
+		#gradient > .horizontal-left-grad(@teal, rgba(0,0,0,0));
+	}
+
+	#right-grad {
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: 50%;
+		height: 300px;
+		#gradient > .horizontal-right-grad(rgba(0,0,0,0), @teal);
+	}
+}
+
+.bg-ILS {
+	#left-grad {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 50%;
+		height: 300px;
+		#gradient > .horizontal-left-grad(@blueDark, rgba(0,0,0,0));
+	}
+
+	#right-grad {
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: 50%;
+		height: 300px;
+		#gradient > .horizontal-right-grad(rgba(0,0,0,0), @blueDark);
+	}
+}
+
 
 .story {
 	padding: 25px 20px;

@@ -5960,6 +5960,7 @@ table.em-tickets select {
   margin-left: 30px;
 }
 .story-unit {
+  position: relative;
   height: 300px;
   border-bottom: 2px solid #ffffff;
 }
@@ -5968,6 +5969,66 @@ table.em-tickets select {
   width: 640px;
   height: 300px;
   margin: 0 auto;
+}
+.bg-SLS #left-grad {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 300px;
+  background-color: rgba(0, 0, 0, 0);
+  background-image: -moz-linear-gradient(left, #15a89c 33%, rgba(0, 0, 0, 0) 70%);
+  background-image: -webkit-gradient(linear, 0 0, 100% 0, from(#15a89c), to(rgba(0, 0, 0, 0)));
+  background-image: -webkit-linear-gradient(left, #15a89c 33%, rgba(0, 0, 0, 0) 70%);
+  background-image: -o-linear-gradient(left, #15a89c 33%, rgba(0, 0, 0, 0) 70%);
+  background-image: linear-gradient(to left, #15a89c 33%, rgba(0, 0, 0, 0) 70%);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff15a89c', endColorstr='#00000000', GradientType=1);
+}
+.bg-SLS #right-grad {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 300px;
+  background-color: rgba(0, 0, 0, 0);
+  background-image: -moz-linear-gradient(left, rgba(0, 0, 0, 0) 30%, #15a89c 66%);
+  background-image: -webkit-gradient(linear, 0 0, 100% 0, from(rgba(0, 0, 0, 0)), to(#15a89c));
+  background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0) 30%, #15a89c 66%);
+  background-image: -o-linear-gradient(left, rgba(0, 0, 0, 0) 30%, #15a89c 66%);
+  background-image: linear-gradient(to left, rgba(0, 0, 0, 0) 30%, #15a89c 66%);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#ff15a89c', GradientType=1);
+}
+.bg-ILS #left-grad {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 300px;
+  background-color: rgba(0, 0, 0, 0);
+  background-image: -moz-linear-gradient(left, #20445d 33%, rgba(0, 0, 0, 0) 70%);
+  background-image: -webkit-gradient(linear, 0 0, 100% 0, from(#20445d), to(rgba(0, 0, 0, 0)));
+  background-image: -webkit-linear-gradient(left, #20445d 33%, rgba(0, 0, 0, 0) 70%);
+  background-image: -o-linear-gradient(left, #20445d 33%, rgba(0, 0, 0, 0) 70%);
+  background-image: linear-gradient(to left, #20445d 33%, rgba(0, 0, 0, 0) 70%);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff20445d', endColorstr='#00000000', GradientType=1);
+}
+.bg-ILS #right-grad {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 300px;
+  background-color: rgba(0, 0, 0, 0);
+  background-image: -moz-linear-gradient(left, rgba(0, 0, 0, 0) 30%, #20445d 66%);
+  background-image: -webkit-gradient(linear, 0 0, 100% 0, from(rgba(0, 0, 0, 0)), to(#20445d));
+  background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0) 30%, #20445d 66%);
+  background-image: -o-linear-gradient(left, rgba(0, 0, 0, 0) 30%, #20445d 66%);
+  background-image: linear-gradient(to left, rgba(0, 0, 0, 0) 30%, #20445d 66%);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#ff20445d', GradientType=1);
 }
 .story {
   padding: 25px 20px;

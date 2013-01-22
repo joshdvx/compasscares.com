@@ -34,11 +34,12 @@
     	<link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,900' rel='stylesheet' type='text/css'>
     	<link href="<?php bloginfo('template_directory'); ?>/css/bootstrap.css" rel="stylesheet">
     	<link href="<?php bloginfo('template_directory'); ?>/css/print.css" rel="stylesheet" media="print">
+
 		<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 
     	<!-- Le fav and touch icons -->
     	<link rel="shortcut icon" href="<?php bloginfo('template_directory'); ?>/img/favicon.ico">
-
+            
 		<script src="<?php bloginfo('template_directory'); ?>/js/modernizr-1.7.min.js"></script>
 		<!--[if lte IE 8]><script src="<?php bloginfo('template_directory'); ?>/js/selectivizr-min.js"></script><![endif]-->
 	
@@ -47,15 +48,18 @@
 				wp_enqueue_script( 'comment-reply' );
 			wp_head();
 		?>
-		
-		<!--<script src="http://code.jquery.com/jquery.min.js"></script>
+
 	    <script src="<?php bloginfo('template_directory'); ?>/js/stickyheaders.js"></script>
 	    <script>
 			jQuery(document).ready(function($) {
 			    // Sticky headings for homepage
-				$('#sticky-list').stickySectionHeaders();
+				$(window).stickySectionHeaders({
+					headlineSelector: '.heading',
+					headlineHeight: 100,
+					topPadding: 114
+				});
 			});
-	    </script>-->
+	    </script>
 	</head>
 
 	<body <?php body_class(); ?>>

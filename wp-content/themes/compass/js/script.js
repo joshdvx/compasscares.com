@@ -32,20 +32,24 @@ jQuery(document).ready(function($) {
 	// Service sliders on home page
 	$('#sls span.service-label').click(function() {
 		$('.service-copy.service-sls').slideDown();
+		$('#sls').addClass('show-text');
 		$('#ils').addClass('show-back');
 	});
 	$('#sls span.service-back').click(function() {
 		$('.service-copy.service-ils').slideUp(400, function() {
 			$('#sls').removeClass('show-back');
+			$('#ils').removeClass('show-text');
 		});
 	});
 	$('#ils span.service-label').click(function() {
 		$('.service-copy.service-ils').slideDown();
 		$('#sls').addClass('show-back');
+		$('#ils').addClass('show-text');
 	});
 	$('#ils span.service-back').click(function() {
 		$('.service-copy.service-sls').slideUp(400, function() {
 			$('#ils').removeClass('show-back');
+			$('#sls').removeClass('show-text');
 		});
 	})
 
@@ -58,16 +62,16 @@ jQuery(document).ready(function($) {
         $('input[type="checkbox"]').click(function() {
             var any = false;
             if ($('input[type="checkbox"]:checked').length > 0) {
-                $('table#wpjb-job-list tr.wpjb-free').hide();
+                $('table#wpjb-job-list tr.wpjb-free').hide().parent().next('thead.job-description').hide();
                 $('input[type="checkbox"]:checked').each(function() {
                     $('table#wpjb-job-list tr.wpjb-free[data-county=' + this.id + ']').each(function() {
-                        $(this).show();
+                        $(this).show().parent().next('thead.job-description').show();
                         any = true;
                     });
                 });
             } else {
                 $('table#wpjb-job-list tr.wpjb-free').each(function() {
-                    $(this).show();
+                    $(this).show().parent().next('thead.job-description').show();
                     any = true;
                 });
             }

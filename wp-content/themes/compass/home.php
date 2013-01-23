@@ -22,14 +22,23 @@
 		<article id="services">
 			<div id="sls-ils">
 				<div id="sls">
-					<span>SLS</span>
+					<span class="service-label">SLS</span>
+					<span class="service-back">Back</span>
 				</div>
 				<div id="ils">
-					<span>ILS</span>
+					<span class="service-label">ILS</span>
+					<span class="service-back">Back</span>
 				</div>
 			</div>
-			<div class="service-copy">
+			<div class="service-copy service-sls">
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam neque obcaecati perspiciatis sint nobis? Pariatur tenetur error ab explicabo unde animi sunt dignissimos nesciunt natus quia ipsam mollitia ducimus odio vero voluptatibus perferendis qui maiores excepturi quas autem. Quis numquam soluta repudiandae eveniet! Ducimus facilis maiores natus quis illo voluptatibus.</p>
+				
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam neque obcaecati perspiciatis sint nobis? Pariatur tenetur error ab explicabo unde animi sunt dignissimos nesciunt natus quia ipsam mollitia ducimus odio vero voluptatibus perferendis qui maiores excepturi quas autem. Quis numquam soluta repudiandae eveniet! Ducimus facilis maiores natus quis illo voluptatibus.</p>
+				
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam neque obcaecati perspiciatis sint nobis? Pariatur tenetur error ab explicabo unde animi sunt dignissimos nesciunt natus quia ipsam mollitia ducimus odio vero voluptatibus perferendis qui maiores excepturi quas autem. Quis numquam soluta repudiandae eveniet! Ducimus facilis maiores natus quis illo voluptatibus.</p>
+			</div>
+			<div class="service-copy service-ils">
+				<p>Lorem ipsum test content this text is differentus dolor sit amet, consectetur adipisicing elit. Nam neque obcaecati perspiciatis sint nobis? Pariatur tenetur error ab explicabo unde animi sunt dignissimos nesciunt natus quia ipsam mollitia ducimus odio vero voluptatibus perferendis qui maiores excepturi quas autem. Quis numquam soluta repudiandae eveniet! Ducimus facilis maiores natus quis illo voluptatibus.</p>
 				
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam neque obcaecati perspiciatis sint nobis? Pariatur tenetur error ab explicabo unde animi sunt dignissimos nesciunt natus quia ipsam mollitia ducimus odio vero voluptatibus perferendis qui maiores excepturi quas autem. Quis numquam soluta repudiandae eveniet! Ducimus facilis maiores natus quis illo voluptatibus.</p>
 				

@@ -40,16 +40,24 @@ jQuery(document).ready(function($) {
 	});
 
 	// Job Listing Filters
-	 $('input[type="checkbox"]').click(function() {
-        if ($('input[type="checkbox"]:checked').length > 0) {
-            $('table#wpjb-job-list tr.wpjb-free').hide();
-            $('input[type="checkbox"]:checked').each(function() {
-                $('table#wpjb-job-list tr.wpjb-free[data-county=' + this.id + ']').show();
-            });
-        } else {
-            $('table#wpjb-job-list tr.wpjb-free').show();
-        }
-    });
+        $('input[type="checkbox"]').click(function() {
+            var any = false;
+            if ($('input[type="checkbox"]:checked').length > 0) {
+                $('table#wpjb-job-list tr.wpjb-free').hide();
+                $('input[type="checkbox"]:checked').each(function() {
+                    $('table#wpjb-job-list tr.wpjb-free[data-county=' + this.id + ']').each(function() {
+                        $(this).show();
+                        any = true;
+                    });
+                });
+            } else {
+                $('table#wpjb-job-list tr.wpjb-free').each(function() {
+                    $(this).show();
+                    any = true;
+                });
+            }
+            $('.no-jobs-row').toggle(!any);
+        });
 
 	 // Job Application 
 	 $('.wpjb-element-name-applicant_name').before('<h3>Personal Information</h3>');

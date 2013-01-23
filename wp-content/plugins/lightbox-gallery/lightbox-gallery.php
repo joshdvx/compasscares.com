@@ -1,11 +1,9 @@
 <?php
 /*
-Plugin Name: Lightbox Gallery
-Plugin URI: http://wpgogo.com/development/lightbox-gallery.html
+Plugin Name: Lightbox Gallery Modified
 Description: The Lightbox Gallery plugin changes the view of galleries to the lightbox.
-Author: Hiroaki Miyashita
+Author: Hiroaki Miyashita / Jonah Dahlquist
 Version: 0.7.3
-Author URI: http://wpgogo.com/
 */
 
 /*  Copyright 2009 -2012 Hiroaki Miyashita
@@ -175,7 +173,7 @@ function lightbox_gallery_wp_print_scripts() {
 			elseif ( file_exists(TEMPLATEPATH.'/jquery.lightbox.js') ) :
 				wp_enqueue_script( 'lightbox', WP_CONTENT_DIR . '/themes/' . $template . '/jquery.lightbox.js', array('jquery'), '', $in_footer );
 			endif;
-			wp_enqueue_script( 'dimensions', '/' . PLUGINDIR . '/' . $plugin_dir . '/js/jquery.dimensions.js', array('jquery'), '', $in_footer );
+			//wp_enqueue_script( 'dimensions', '/' . PLUGINDIR . '/' . $plugin_dir . '/js/jquery.dimensions.js', array('jquery'), '', $in_footer );
 			wp_enqueue_script( 'bgiframe', '/' . PLUGINDIR . '/' . $plugin_dir . '/js/jquery.bgiframe.js', array('jquery'), '', $in_footer ) ;
 		else :
 			wp_enqueue_script( 'colorbox', '/' . PLUGINDIR . '/' . $plugin_dir . '/js/jquery.colorbox.js', array('jquery'), '', $in_footer );

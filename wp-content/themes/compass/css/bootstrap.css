@@ -5515,6 +5515,18 @@ img.aligncenter {
   font-size: 84px;
   cursor: pointer;
 }
+#services #sls span.service-back,
+#services #ils span.service-back {
+  display: none;
+}
+#services #sls.show-back span.service-label,
+#services #ils.show-back span.service-label {
+  display: none;
+}
+#services #sls.show-back span.service-back,
+#services #ils.show-back span.service-back {
+  display: block;
+}
 #services #sls {
   width: 480px;
   border-right: 2px solid #ffffff;
@@ -6811,6 +6823,11 @@ a.jd {
 }
 body.logged-in .navbar {
   margin-top: 25px;
+}
+.sticky .heading {
+  position: fixed;
+  top: 0;
+  width: 960px;
 }
 /* Hash Grid - Remove before moving to production
 -------------------------------------------------------------- */

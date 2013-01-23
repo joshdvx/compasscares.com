@@ -11,6 +11,11 @@
  *   stickyClass      : 'sticky',
  *   headlineSelector : 'strong'
  * });
+ * 
+ * CHANGELOG
+ * 
+ * 2013-01-22: Jonah Dahlquist customized to match current markup, and added
+ * settings topPadding and headlineHeight to accomidate needed functionality
  *
  */
 
@@ -19,27 +24,32 @@
 
     var settings = $.extend({
       stickyClass     : 'sticky',
-      headlineSelector: 'strong'
+      headlineSelector: 'strong',
+      topPadding      : 0
     }, options);
 
     return $(this).each(function() {
-      var $this = $(this);
-      $(this).find('ul:first').bind('scroll.sticky', function(e) {
-        $(this).find('> li').each(function() {
-          var $this      = $(this),
-              top        = $this.position().top,
-              height     = $this.outerHeight(),
-              $head      = $this.find(settings.headlineSelector),
-              headHeight = $head.outerHeight();
+      $(this).bind('scroll.sticky', function(e) {
+        var scroll = $(window).scrollTop();
+        $('.home-section').each(function() {
+          var $this      = $(this);
+          var top        = $this.position().top - scroll - settings.topPadding;
+          var height     = $this.outerHeight();
+          var $head      = $this.find(settings.headlineSelector);
+          var headHeight = settings.headlineHeight ? settings.headlineHeight : $head.outerHeight();
 
           if (top < 0) {
             $this.addClass(settings.stickyClass).css('paddingTop', headHeight);
             $head.css({
-              'top'  : (height + top < headHeight) ? (headHeight - (top + height)) * -1 : '',
+              'top'  : (height + top < headHeight) ? ((headHeight - (top + height)) * -1) + settings.topPadding : settings.topPadding,
               'width': $this.outerWidth() - $head.cssSum('paddingLeft', 'paddingRight')
             });
           } else {
             $this.removeClass(settings.stickyClass).css('paddingTop', '');
+	    $head.css({
+	      'top':   '',
+	      'width': ''
+            });
           }
         });
       });

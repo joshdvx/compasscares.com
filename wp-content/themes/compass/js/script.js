@@ -29,10 +29,25 @@ jQuery(document).ready(function($) {
 		$("thead.job-description div").slideToggle("fast");
 	});
 
-	$("#sls span, #ils span").click(function(){
-		$(".service-copy").slideToggle();
-		$("#ils").html("<span class='poop'>Back</span>");
+	// Service sliders on home page
+	$('#sls span.service-label').click(function() {
+		$('.service-copy.service-sls').slideDown();
+		$('#ils').addClass('show-back');
 	});
+	$('#sls span.service-back').click(function() {
+		$('.service-copy.service-ils').slideUp(400, function() {
+			$('#sls').removeClass('show-back');
+		});
+	});
+	$('#ils span.service-label').click(function() {
+		$('.service-copy.service-ils').slideDown();
+		$('#sls').addClass('show-back');
+	});
+	$('#ils span.service-back').click(function() {
+		$('.service-copy.service-sls').slideUp(400, function() {
+			$('#ils').removeClass('show-back');
+		});
+	})
 
 	// Show Comments 
 	$(".show-comments").click(function(){

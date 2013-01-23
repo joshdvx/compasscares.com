@@ -70,6 +70,12 @@
             </tr>
         </thead>
         <tbody>
+
+            <tr class="no-jobs-row" style="display: none;">
+                <td colspan="3" class="wpjb-table-empty">
+		    <?php _e("No job listings found.", WPJB_DOMAIN); ?>
+                </td>
+            </tr>
          
         <?php if (!empty($jobList)) : foreach($jobList as $job): ?>
         <?php /* @var $job Wpjb_Model_Job */ ?>

@@ -72,6 +72,7 @@
 	    <script src="<?php bloginfo('template_directory'); ?>/js/localscroll.js"></script>
 	    <script src="<?php bloginfo('template_directory'); ?>/js/serialscroll.js"></script>
 	    <script src="<?php bloginfo('template_directory'); ?>/js/lettering.js"></script>
+	    <script src="<?php bloginfo('template_directory'); ?>/js/ie-placeholder.js"></script>
 
 		<!-- scripts concatenated and minified via ant build script-->
 		<script src="<?php bloginfo ('template_directory'); ?>/js/plugins.js"></script>

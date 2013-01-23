@@ -425,7 +425,7 @@
     background-image: -webkit-gradient(linear, 0 0, 100% 0, from(@startColor), to(@endColor)); // Safari 4+, Chrome 2+
     background-image: -webkit-linear-gradient(left, @startColor 33%, @endColor 70%); // Safari 5.1+, Chrome 10+
     background-image: -o-linear-gradient(left, @startColor 33%, @endColor 70%); // Opera 11.10
-    background-image: linear-gradient(to left, @startColor 33%, @endColor 70%); // Standard, IE10
+    background-image: linear-gradient(to right, @startColor 33%, @endColor 70%); // Standard, IE10
     background-repeat: repeat-x;
     filter: e(%("progid:DXImageTransform.Microsoft.gradient(startColorstr='%d', endColorstr='%d', GradientType=1)",argb(@startColor),argb(@endColor))); // IE9 and down
   }
@@ -435,7 +435,7 @@
     background-image: -webkit-gradient(linear, 0 0, 100% 0, from(@startColor), to(@endColor)); // Safari 4+, Chrome 2+
     background-image: -webkit-linear-gradient(left, @startColor 30%, @endColor 66%); // Safari 5.1+, Chrome 10+
     background-image: -o-linear-gradient(left, @startColor 30%, @endColor 66%); // Opera 11.10
-    background-image: linear-gradient(to left, @startColor 30%, @endColor 66%); // Standard, IE10
+    background-image: linear-gradient(to right, @startColor 30%, @endColor 66%); // Standard, IE10
     background-repeat: repeat-x;
     filter: e(%("progid:DXImageTransform.Microsoft.gradient(startColorstr='%d', endColorstr='%d', GradientType=1)",argb(@startColor),argb(@endColor))); // IE9 and down
   }

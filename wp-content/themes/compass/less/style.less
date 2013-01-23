@@ -140,6 +140,7 @@ header {
 	background: @white;
 	.box-shadow(0 8px 20px -6px @black);
 
+
 	.main-title span:last-child {
 		font-weight: 700;
 	}
@@ -596,6 +597,7 @@ img.aligncenter {
 		color: @white;
 		font-size: 23px;
 		text-align: center;
+		text-decoration: none;
 
 		&:hover {
 			.content {
@@ -723,19 +725,16 @@ img.aligncenter {
 			line-height: 1.5;
 		}
 	}
-}
-
-.info-block {
 
 	&:nth-child(even) {
-		.service-descriptions {
+		.inner-service-descriptions {
 			width: 245px;
 			padding: 0 45px 0 80px;
 		}
 	}
 
 	&:nth-child(odd) {
-		.service-descriptions {
+		.inner-service-descriptions {
 			width: 265px;
 			padding: 0 45px 0 60px;
 		}
@@ -962,8 +961,12 @@ img.aligncenter {
 table.em-tickets {
 	width: 295px;
 	float: left;
-	font-size: 22px;
+	font-size: 20px;
 	font-weight: 300;
+
+	.ticket-desc {
+		font-size: 14px;
+	}
 
 	th {
 		padding-bottom: 20px;
@@ -990,6 +993,10 @@ table.em-tickets {
 	float: left;
 	width: 295px;
 	margin-left: 195px;
+}
+
+.em-booking-submit {
+	height: 27px;
 }
 
 /*..................................the success stories */
@@ -1691,7 +1698,7 @@ table.em-tickets {
 
 form#searchform {
 	input[type="text"] {
-		width: 185px;
+		width: 184px;
 		.border-radius(3px);
 	}
 

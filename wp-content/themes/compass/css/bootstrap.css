@@ -5549,6 +5549,7 @@ img.aligncenter {
   color: #ffffff;
   font-size: 23px;
   text-align: center;
+  text-decoration: none;
 }
 #success-stories a.ss-hover:hover .content {
   display: block;
@@ -5650,11 +5651,11 @@ img.aligncenter {
   margin-bottom: 0;
   line-height: 1.5;
 }
-.info-block:nth-child(even) .service-descriptions {
+.service-descriptions:nth-child(even) .inner-service-descriptions {
   width: 245px;
   padding: 0 45px 0 80px;
 }
-.info-block:nth-child(odd) .service-descriptions {
+.service-descriptions:nth-child(odd) .inner-service-descriptions {
   width: 265px;
   padding: 0 45px 0 60px;
 }
@@ -5825,8 +5826,11 @@ img.aligncenter {
 table.em-tickets {
   width: 295px;
   float: left;
-  font-size: 22px;
+  font-size: 20px;
   font-weight: 300;
+}
+table.em-tickets .ticket-desc {
+  font-size: 14px;
 }
 table.em-tickets th {
   padding-bottom: 20px;
@@ -5847,6 +5851,9 @@ table.em-tickets select {
   float: left;
   width: 295px;
   margin-left: 195px;
+}
+.em-booking-submit {
+  height: 27px;
 }
 /*..................................the success stories */
 .all-success-stories #success-stories {
@@ -5981,7 +5988,7 @@ table.em-tickets select {
   background-image: -webkit-gradient(linear, 0 0, 100% 0, from(#15a89c), to(rgba(0, 0, 0, 0)));
   background-image: -webkit-linear-gradient(left, #15a89c 33%, rgba(0, 0, 0, 0) 70%);
   background-image: -o-linear-gradient(left, #15a89c 33%, rgba(0, 0, 0, 0) 70%);
-  background-image: linear-gradient(to left, #15a89c 33%, rgba(0, 0, 0, 0) 70%);
+  background-image: linear-gradient(to right, #15a89c 33%, rgba(0, 0, 0, 0) 70%);
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff15a89c', endColorstr='#00000000', GradientType=1);
 }
@@ -5996,7 +6003,7 @@ table.em-tickets select {
   background-image: -webkit-gradient(linear, 0 0, 100% 0, from(rgba(0, 0, 0, 0)), to(#15a89c));
   background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0) 30%, #15a89c 66%);
   background-image: -o-linear-gradient(left, rgba(0, 0, 0, 0) 30%, #15a89c 66%);
-  background-image: linear-gradient(to left, rgba(0, 0, 0, 0) 30%, #15a89c 66%);
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0) 30%, #15a89c 66%);
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#ff15a89c', GradientType=1);
 }
@@ -6011,7 +6018,7 @@ table.em-tickets select {
   background-image: -webkit-gradient(linear, 0 0, 100% 0, from(#20445d), to(rgba(0, 0, 0, 0)));
   background-image: -webkit-linear-gradient(left, #20445d 33%, rgba(0, 0, 0, 0) 70%);
   background-image: -o-linear-gradient(left, #20445d 33%, rgba(0, 0, 0, 0) 70%);
-  background-image: linear-gradient(to left, #20445d 33%, rgba(0, 0, 0, 0) 70%);
+  background-image: linear-gradient(to right, #20445d 33%, rgba(0, 0, 0, 0) 70%);
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff20445d', endColorstr='#00000000', GradientType=1);
 }
@@ -6026,7 +6033,7 @@ table.em-tickets select {
   background-image: -webkit-gradient(linear, 0 0, 100% 0, from(rgba(0, 0, 0, 0)), to(#20445d));
   background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0) 30%, #20445d 66%);
   background-image: -o-linear-gradient(left, rgba(0, 0, 0, 0) 30%, #20445d 66%);
-  background-image: linear-gradient(to left, rgba(0, 0, 0, 0) 30%, #20445d 66%);
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0) 30%, #20445d 66%);
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#ff20445d', GradientType=1);
 }
@@ -6428,7 +6435,7 @@ table.em-tickets select {
   padding-right: 10px;
 }
 form#searchform input[type="text"] {
-  width: 185px;
+  width: 184px;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   border-radius: 3px;

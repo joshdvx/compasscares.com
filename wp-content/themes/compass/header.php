@@ -57,7 +57,7 @@
 				$(window).stickySectionHeaders({
 					headlineSelector: '.heading',
 					headlineHeight: 100,
-					topPadding: 114
+					topPadding: 113
 				});
 			});
 	    </script>

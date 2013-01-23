@@ -5518,6 +5518,8 @@ img.aligncenter {
 #services #sls span.service-back,
 #services #ils span.service-back {
   display: none;
+  font-size: 34px;
+  text-transform: uppercase;
 }
 #services #sls.show-back span.service-label,
 #services #ils.show-back span.service-label {

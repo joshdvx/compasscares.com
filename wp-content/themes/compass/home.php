@@ -31,18 +31,10 @@
 				</div>
 			</div>
 			<div class="service-copy service-sls">
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam neque obcaecati perspiciatis sint nobis? Pariatur tenetur error ab explicabo unde animi sunt dignissimos nesciunt natus quia ipsam mollitia ducimus odio vero voluptatibus perferendis qui maiores excepturi quas autem. Quis numquam soluta repudiandae eveniet! Ducimus facilis maiores natus quis illo voluptatibus.</p>
-				
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam neque obcaecati perspiciatis sint nobis? Pariatur tenetur error ab explicabo unde animi sunt dignissimos nesciunt natus quia ipsam mollitia ducimus odio vero voluptatibus perferendis qui maiores excepturi quas autem. Quis numquam soluta repudiandae eveniet! Ducimus facilis maiores natus quis illo voluptatibus.</p>
-				
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam neque obcaecati perspiciatis sint nobis? Pariatur tenetur error ab explicabo unde animi sunt dignissimos nesciunt natus quia ipsam mollitia ducimus odio vero voluptatibus perferendis qui maiores excepturi quas autem. Quis numquam soluta repudiandae eveniet! Ducimus facilis maiores natus quis illo voluptatibus.</p>
+				<?php the_field('hp_sls', 'option'); ?>
 			</div>
 			<div class="service-copy service-ils">
-				<p>Lorem ipsum test content this text is differentus dolor sit amet, consectetur adipisicing elit. Nam neque obcaecati perspiciatis sint nobis? Pariatur tenetur error ab explicabo unde animi sunt dignissimos nesciunt natus quia ipsam mollitia ducimus odio vero voluptatibus perferendis qui maiores excepturi quas autem. Quis numquam soluta repudiandae eveniet! Ducimus facilis maiores natus quis illo voluptatibus.</p>
-				
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam neque obcaecati perspiciatis sint nobis? Pariatur tenetur error ab explicabo unde animi sunt dignissimos nesciunt natus quia ipsam mollitia ducimus odio vero voluptatibus perferendis qui maiores excepturi quas autem. Quis numquam soluta repudiandae eveniet! Ducimus facilis maiores natus quis illo voluptatibus.</p>
-				
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam neque obcaecati perspiciatis sint nobis? Pariatur tenetur error ab explicabo unde animi sunt dignissimos nesciunt natus quia ipsam mollitia ducimus odio vero voluptatibus perferendis qui maiores excepturi quas autem. Quis numquam soluta repudiandae eveniet! Ducimus facilis maiores natus quis illo voluptatibus.</p>
+				<?php the_field('hp_ils', 'option'); ?>
 			</div>
 		</article><!-- #services -->
 

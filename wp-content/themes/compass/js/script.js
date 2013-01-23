@@ -26,7 +26,7 @@ jQuery(document).ready(function($) {
 	});
 	
 	$("a.jd").click(function(){
-		$("thead.job-description div").slideToggle("fast");
+		$(this).parent().parent().parent().next('thead.job-description').find('div').slideToggle('fast');
 	});
 
 	$("#sls span, #ils span").click(function(){

@@ -55,6 +55,7 @@ jQuery(document).ready(function($) {
 
 	// Show Comments 
 	$(".show-comments").click(function(){
+		$('#dsq1').css('height', 327);
 		$("#disqus_thread").slideToggle();
 	});
 

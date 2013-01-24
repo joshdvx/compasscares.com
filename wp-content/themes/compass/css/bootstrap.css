@@ -2442,7 +2442,7 @@ table th[class*="span"],
 .open {
   *z-index: 1000;
 }
-.open  > .dropdown-menu {
+.open > .dropdown-menu {
   display: block;
 }
 .pull-right > .dropdown-menu {
@@ -5189,15 +5189,15 @@ header {
   background-color: #15a89c;
   border: none;
 }
-#locations-listing .nav-tabs  > li {
+#locations-listing .nav-tabs > li {
   height: 115px;
   background-color: #20445d;
   border-bottom: 2px solid #6D6E71;
 }
-#locations-listing .nav-tabs  > li:last-child {
+#locations-listing .nav-tabs > li:last-child {
   border-bottom: none;
 }
-#locations-listing .nav-tabs  > li  > a {
+#locations-listing .nav-tabs > li > a {
   height: 87px;
   padding-top: 20px;
   padding-left: 80px;
@@ -5206,7 +5206,7 @@ header {
   font-weight: 300;
   background: url(../img/star.png) no-repeat 20px center;
 }
-#locations-listing .nav-tabs  > li  > a:hover {
+#locations-listing .nav-tabs > li > a:hover {
   margin-bottom: 0;
   background-color: #9ab9de;
   border: none;
@@ -5515,21 +5515,20 @@ img.aligncenter {
   font-size: 84px;
   cursor: pointer;
 }
+#services #sls span.service-text,
+#services #ils span.service-text,
 #services #sls span.service-back,
 #services #ils span.service-back {
   display: none;
-  font-size: 84px;
+  font-size: 28pt;
+  line-height: 28pt;
   text-transform: uppercase;
 }
 #services #sls span.service-text,
 #services #ils span.service-text {
-  display: none;
   margin-top: 40px;
   padding-right: 60px;
   padding-left: 60px;
-  font-size: 28pt;
-  line-height: 28pt;
-  text-transform: uppercase;
 }
 #services #sls.show-back span.service-label,
 #services #ils.show-back span.service-label {
@@ -5980,8 +5979,8 @@ table.em-tickets select {
   -moz-box-shadow: none;
   box-shadow: none;
 }
-.cta .pagination ul  > li > a,
-.cta .pagination ul  > li > span {
+.cta .pagination ul > li > a,
+.cta .pagination ul > li > span {
   padding: 1px 12px;
   background-color: transparent;
   -webkit-border-radius: 0;
@@ -5992,10 +5991,10 @@ table.em-tickets select {
   border-bottom: 0;
   border-left: 0;
 }
-.cta .pagination ul  > li > a.next {
+.cta .pagination ul > li > a.next {
   border-right: 0;
 }
-.cta .pagination ul  > li > span.current {
+.cta .pagination ul > li > span.current {
   color: #20445d;
 }
 .cta .cta-links {
@@ -6195,15 +6194,15 @@ table.em-tickets select {
   font-weight: 300;
   background-color: #ffffff;
 }
-.gallery-filters  > li {
+.gallery-filters > li {
   margin-bottom: -3px;
   border-right: 1px solid #20445d;
 }
-.gallery-filters  > li  > a {
+.gallery-filters > li > a {
   padding: 10px 30px;
   color: #20445d;
 }
-.gallery-filters  > li  > a:hover {
+.gallery-filters > li > a:hover {
   border-color: transparent;
   background-color: transparent;
 }
@@ -6297,10 +6296,8 @@ table.em-tickets select {
   position: relative;
 }
 #staff-slider ul.navigation {
-  width: 100%;
-  width: auto;
-  margin-top: 90px;
-  padding-left: 33%;
+  width: 645px;
+  margin: 90px auto 0 auto;
 }
 #staff-slider ul.navigation li {
   display: block;
@@ -6326,10 +6323,10 @@ table.em-tickets select {
   font-weight: 300;
 }
 #staff-slider span.left {
-  left: 30%;
+  left: 9%;
 }
 #staff-slider span.right {
-  right: 30%;
+  right: 9%;
 }
 .staff-info {
   float: left;
@@ -6567,6 +6564,7 @@ div.mc-caption {
   font-weight: 900;
   text-align: center;
   text-transform: uppercase;
+  text-shadow: 1px 1px 1px #000000;
   opacity: 0.8;
 }
 div.navBulletsWrapper {

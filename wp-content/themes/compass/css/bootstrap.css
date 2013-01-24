@@ -5889,9 +5889,12 @@ table.em-tickets select {
   margin-top: 10px;
 }
 .em-booking-form-details {
-  float: left;
-  width: 295px;
+  float: right !important;
+  width: 295px !important;
   margin-left: 195px;
+}
+.em-ticket-select {
+  width: 50px;
 }
 .em-booking-submit {
   height: 27px;

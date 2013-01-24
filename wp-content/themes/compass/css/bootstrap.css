@@ -5518,7 +5518,7 @@ img.aligncenter {
 #services #sls span.service-back,
 #services #ils span.service-back {
   display: none;
-  font-size: 34px;
+  font-size: 84px;
   text-transform: uppercase;
 }
 #services #sls span.service-text,
@@ -5540,12 +5540,22 @@ img.aligncenter {
   display: block;
 }
 #services #sls.show-text span.service-label,
-#services #ils.show-text span.service-label {
+#services #ils.show-text span.service-label,
+#services #sls.collapsed:hover span.service-label,
+#services #ils.collapsed:hover span.service-label {
   display: none;
 }
 #services #sls.show-text span.service-text,
-#services #ils.show-text span.service-text {
+#services #ils.show-text span.service-text,
+#services #sls.collapsed:hover span.service-text,
+#services #ils.collapsed:hover span.service-text {
   display: block;
+}
+#services #sls.show-text span.service-back,
+#services #ils.show-text span.service-back,
+#services #sls.collapsed:hover span.service-back,
+#services #ils.collapsed:hover span.service-back {
+  display: none;
 }
 #services #sls {
   width: 480px;

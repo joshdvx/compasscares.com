@@ -30,26 +30,26 @@ jQuery(document).ready(function($) {
 	});
 
 	// Service sliders on home page
-	$('#sls span.service-label').click(function() {
+	$('#sls span.service-label, #sls span.service-text').click(function() {
 		$('.service-copy.service-sls').slideDown();
-		$('#sls').addClass('show-text');
-		$('#ils').addClass('show-back');
+		$('#sls').addClass('show-text').removeClass('collapsed');
+		$('#ils').addClass('show-back').removeClass('collapsed');
 	});
 	$('#sls span.service-back').click(function() {
 		$('.service-copy.service-ils').slideUp(400, function() {
-			$('#sls').removeClass('show-back');
-			$('#ils').removeClass('show-text');
+			$('#sls').removeClass('show-back').addClass('collapsed');
+			$('#ils').removeClass('show-text').addClass('collapsed');
 		});
 	});
-	$('#ils span.service-label').click(function() {
+	$('#ils span.service-label, #ils span.service-text').click(function() {
 		$('.service-copy.service-ils').slideDown();
-		$('#sls').addClass('show-back');
-		$('#ils').addClass('show-text');
+		$('#sls').addClass('show-back').removeClass('collapsed');
+		$('#ils').addClass('show-text').removeClass('collapsed');
 	});
 	$('#ils span.service-back').click(function() {
 		$('.service-copy.service-sls').slideUp(400, function() {
-			$('#ils').removeClass('show-back');
-			$('#sls').removeClass('show-text');
+			$('#ils').removeClass('show-back').addClass('collapsed');
+			$('#sls').removeClass('show-text').addClass('collapsed');
 		});
 	})
 

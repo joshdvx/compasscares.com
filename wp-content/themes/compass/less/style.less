@@ -557,7 +557,7 @@ img.aligncenter {
 
 		span.service-back {
 			display: none;
-			font-size: 34px;
+			font-size: 84px;
 			text-transform: uppercase;
 		}
 
@@ -585,7 +585,7 @@ img.aligncenter {
 			}
 		}
 
-		&.show-text {
+		&.show-text, &.collapsed:hover {
 
 			span.service-label {
 				display: none;
@@ -593,6 +593,10 @@ img.aligncenter {
 
 			span.service-text {
 				display: block;
+			}
+
+			span.service-back {
+				display: none;
 			}
 		}
 	}

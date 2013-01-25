@@ -56,23 +56,16 @@
 	    ================================================== -->
 	    <!-- Placed at the end of the document so the pages load faster -->
 	    <script src="<?php bloginfo('template_directory'); ?>/js/bootstrap-transition.js"></script>
-	    <script src="<?php bloginfo('template_directory'); ?>/js/bootstrap-alert.js"></script>
-	    <script src="<?php bloginfo('template_directory'); ?>/js/bootstrap-modal.js"></script>
-	    <script src="<?php bloginfo('template_directory'); ?>/js/bootstrap-dropdown.js"></script>
-	    <script src="<?php bloginfo('template_directory'); ?>/js/bootstrap-scrollspy.js"></script>
 	    <script src="<?php bloginfo('template_directory'); ?>/js/bootstrap-tab.js"></script>
-	    <script src="<?php bloginfo('template_directory'); ?>/js/bootstrap-tooltip.js"></script>
-	    <script src="<?php bloginfo('template_directory'); ?>/js/bootstrap-popover.js"></script>
 	    <script src="<?php bloginfo('template_directory'); ?>/js/bootstrap-button.js"></script>
-	    <script src="<?php bloginfo('template_directory'); ?>/js/bootstrap-collapse.js"></script>
 	    <script src="<?php bloginfo('template_directory'); ?>/js/bootstrap-carousel.js"></script>
-	    <script src="<?php bloginfo('template_directory'); ?>/js/bootstrap-typeahead.js"></script>
 	    <script src="<?php bloginfo('template_directory'); ?>/js/slider.js"></script>
 	    <script src="<?php bloginfo('template_directory'); ?>/js/scrollto.js"></script>
 	    <script src="<?php bloginfo('template_directory'); ?>/js/localscroll.js"></script>
 	    <script src="<?php bloginfo('template_directory'); ?>/js/serialscroll.js"></script>
 	    <script src="<?php bloginfo('template_directory'); ?>/js/lettering.js"></script>
 	    <script src="<?php bloginfo('template_directory'); ?>/js/ie-placeholder.js"></script>
+	    <script src="<?php bloginfo('template_directory'); ?>/js/stickyheaders.js"></script>
 
 		<!-- scripts concatenated and minified via ant build script-->
 		<script src="<?php bloginfo ('template_directory'); ?>/js/plugins.js"></script>

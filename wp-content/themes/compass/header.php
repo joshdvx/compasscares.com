@@ -50,17 +50,6 @@
 			wp_head();
 		?>
 
-	    <script src="<?php bloginfo('template_directory'); ?>/js/stickyheaders.js"></script>
-	    <script>
-			jQuery(document).ready(function($) {
-			    // Sticky headings for homepage
-				$(window).stickySectionHeaders({
-					headlineSelector: '.heading',
-					headlineHeight: 100,
-					topPadding: 113
-				});
-			});
-	    </script>
 	</head>
 
 	<body <?php body_class(); ?>>

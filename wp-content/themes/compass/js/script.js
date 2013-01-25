@@ -30,31 +30,54 @@ jQuery(document).ready(function($) {
 	});
 
 	// Service sliders on home page
-	$('#sls span.service-label').click(function() {
-		$('.service-copy.service-sls').slideDown();
-		$('#sls').addClass('show-text');
-		$('#ils').addClass('show-back');
+	$('#sls span.service-label, #sls span.service-text').click(function() {
+		var sls = $(this).parent();
+		if (sls.hasClass('collapsed')) {
+			$('.service-copy.service-sls').slideDown();
+			sls.addClass('show-back').removeClass('collapsed');
+			$('#ils').addClass('show-text').removeClass('collapsed');
+		}
 	});
 	$('#sls span.service-back').click(function() {
-		$('.service-copy.service-ils').slideUp(400, function() {
-			$('#sls').removeClass('show-back');
-			$('#ils').removeClass('show-text');
+		$('.service-copy.service-sls').slideUp(400, function() {
+			$('#sls').removeClass('show-back').addClass('collapsed');
+			$('#ils').removeClass('show-text').addClass('collapsed');
 		});
 	});
-	$('#ils span.service-label').click(function() {
-		$('.service-copy.service-ils').slideDown();
-		$('#sls').addClass('show-back');
-		$('#ils').addClass('show-text');
+	$('#ils span.service-label, #ils span.service-text').click(function() {
+		var ils = $(this).parent();
+		if (ils.hasClass('collapsed')) {
+			$('.service-copy.service-ils').slideDown();
+			$('#sls').addClass('show-text').removeClass('collapsed');
+			ils.addClass('show-back').removeClass('collapsed');
+		}
 	});
 	$('#ils span.service-back').click(function() {
-		$('.service-copy.service-sls').slideUp(400, function() {
-			$('#ils').removeClass('show-back');
-			$('#sls').removeClass('show-text');
+		$('.service-copy.service-ils').slideUp(400, function() {
+			$('#ils').removeClass('show-back').addClass('collapsed');
+			$('#sls').removeClass('show-text').addClass('collapsed');
 		});
+	})
+	$('#sls').mouseover(function() {
+		if ($(this).hasClass('collapsed'))
+			$('#ils').addClass('show-text');
+	});
+	$('#sls').mouseout(function() {
+		if ($(this).hasClass('collapsed'))
+			$('#ils').removeClass('show-text');
+	})
+	$('#ils').mouseover(function() {
+		if ($(this).hasClass('collapsed'))
+			$('#sls').addClass('show-text');
+	});
+	$('#ils').mouseout(function() {
+		if ($(this).hasClass('collapsed'))
+			$('#sls').removeClass('show-text');
 	})
 
 	// Show Comments 
 	$(".show-comments").click(function(){
+		$('#dsq1').css('height', 327);
 		$("#disqus_thread").slideToggle();
 	});
 

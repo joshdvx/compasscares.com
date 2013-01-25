@@ -555,23 +555,18 @@ img.aligncenter {
 			cursor: pointer;
 		}
 
+		span.service-text,
 		span.service-back {
 			display: none;
-			font-size: 34px;
-			text-transform: uppercase;
-		}
-
-		span.service-text {
-			display: none;
-
-			margin-top: 40px;
-
-			padding-right: 60px;
-			padding-left: 60px;
-
 			font-size: 28pt;
 			line-height: 28pt;
 			text-transform: uppercase
+		}
+
+		span.service-text {
+			margin-top: 40px;
+			padding-right: 60px;
+			padding-left: 60px;
 		}
 
 		&.show-back {
@@ -593,6 +588,10 @@ img.aligncenter {
 
 			span.service-text {
 				display: block;
+			}
+
+			span.service-back {
+				display: none;
 			}
 		}
 	}
@@ -1039,9 +1038,13 @@ table.em-tickets {
 }
 
 .em-booking-form-details {
-	float: left;
-	width: 295px;
+	float: right !important;
+	width: 295px !important;
 	margin-left: 195px;
+}
+
+.em-ticket-select {
+	width: 50px;
 }
 
 .em-booking-submit {
@@ -1512,10 +1515,10 @@ table.em-tickets {
 	position: relative;
 
   	ul.navigation {
-	  	width: 100%;
-	  	width: auto;
-	  	margin-top: 90px;
-	  	padding-left: 33%;
+	  	width: 645px;
+	  	// margin-top: 90px;
+	  	margin: 90px auto 0 auto;
+	  	// padding-left: 33%;
 
 	  	li {
 	  		display: block;
@@ -1545,11 +1548,11 @@ table.em-tickets {
 	}
 
 	span.left {
-		left: 30%;
+		left: 9%;
 	}
 
 	span.right {
-		right: 30%;
+		right: 9%;
 	}
 }
 
@@ -1848,6 +1851,7 @@ div.mc-caption {
 	font-weight: 900;
 	text-align: center;
 	text-transform: uppercase;
+	text-shadow: 1px 1px 1px @black;
 	opacity: 0.8;
 }
 

@@ -5515,21 +5515,20 @@ img.aligncenter {
   font-size: 84px;
   cursor: pointer;
 }
+#services #sls span.service-text,
+#services #ils span.service-text,
 #services #sls span.service-back,
 #services #ils span.service-back {
   display: none;
-  font-size: 34px;
+  font-size: 28pt;
+  line-height: 28pt;
   text-transform: uppercase;
 }
 #services #sls span.service-text,
 #services #ils span.service-text {
-  display: none;
   margin-top: 40px;
   padding-right: 60px;
   padding-left: 60px;
-  font-size: 28pt;
-  line-height: 28pt;
-  text-transform: uppercase;
 }
 #services #sls.show-back span.service-label,
 #services #ils.show-back span.service-label {
@@ -5546,6 +5545,10 @@ img.aligncenter {
 #services #sls.show-text span.service-text,
 #services #ils.show-text span.service-text {
   display: block;
+}
+#services #sls.show-text span.service-back,
+#services #ils.show-text span.service-back {
+  display: none;
 }
 #services #sls {
   width: 480px;
@@ -5886,9 +5889,12 @@ table.em-tickets select {
   margin-top: 10px;
 }
 .em-booking-form-details {
-  float: left;
-  width: 295px;
+  float: right !important;
+  width: 295px !important;
   margin-left: 195px;
+}
+.em-ticket-select {
+  width: 50px;
 }
 .em-booking-submit {
   height: 27px;
@@ -6293,10 +6299,8 @@ table.em-tickets select {
   position: relative;
 }
 #staff-slider ul.navigation {
-  width: 100%;
-  width: auto;
-  margin-top: 90px;
-  padding-left: 33%;
+  width: 645px;
+  margin: 90px auto 0 auto;
 }
 #staff-slider ul.navigation li {
   display: block;
@@ -6322,10 +6326,10 @@ table.em-tickets select {
   font-weight: 300;
 }
 #staff-slider span.left {
-  left: 30%;
+  left: 9%;
 }
 #staff-slider span.right {
-  right: 30%;
+  right: 9%;
 }
 .staff-info {
   float: left;
@@ -6563,6 +6567,7 @@ div.mc-caption {
   font-weight: 900;
   text-align: center;
   text-transform: uppercase;
+  text-shadow: 1px 1px 1px #000000;
   opacity: 0.8;
 }
 div.navBulletsWrapper {

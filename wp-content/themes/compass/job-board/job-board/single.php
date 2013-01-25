@@ -30,7 +30,6 @@
     <?php /* @var $relatedJob Wpjb_Model_Job */ ?>
         <li class="<?php wpjb_job_features($relatedJob); ?>">
 
-            <?php if($relatedJob->isNew()): ?><img src="<?php wpjb_new_img() ?>" alt="" class="wpjb-inline-img" /><?php endif; ?>
             <a href="<?php echo wpjb_link_to("job", $relatedJob); ?>"><?php esc_html_e($relatedJob->job_title) ?></a>
             <?php wpjb_job_created_time_ago(__("posted {time_ago} ago.", WPJB_DOMAIN), $relatedJob) ?>
          </li>

@@ -29,8 +29,8 @@
 	
 	<div class="cta bg-<?php echo strip_tags (get_the_term_list( $post->ID, 'success_story_category' )); ?>">
 		<div class="pagi-navi">
-			<div class="nav-previous"><?php previous_post_link( '%link', '<span class="meta-nav">' . _x( '&#x25B8;', 'Previous post link', 'twentyten' ) . '</span> %title&apos;s Story' ); ?>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;</div>
-			<div class="back-to-all"><a href="<?php bloginfo('url'); ?>/success-stories">back to all</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;</div>
+			<div class="nav-previous"><?php previous_post_link( '%link', '<span class="meta-nav">' . _x( '&#x25B8;', 'Previous post link', 'twentyten' ) . '</span> %title&apos;s Story' ); ?></div>
+			<div class="back-to-all">&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;<a href="<?php bloginfo('url'); ?>/success-stories">back to all</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;</div>
 			<div class="nav-next tar"><?php next_post_link( '%link', '%title&apos;s Story <span class="meta-nav">' . _x( '&#x25B8;', 'Next post link', 'twentyten' ) . '</span>' ); ?></div>
 		</div>
 		

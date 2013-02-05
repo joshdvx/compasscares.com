@@ -4,6 +4,12 @@
 
 // Allows you to use the $ shortcut.  Put all your code  inside this wrapper
 jQuery(document).ready(function($) {
+
+	$(window).stickySectionHeaders({
+		headlineSelector: '.heading',
+		headlineHeight: 100,
+		topPadding: 113
+	});
 	
 	// Add .active to certain elements
 	$(".item:first-child").addClass("active");

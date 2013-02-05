@@ -23,7 +23,7 @@
 			<div id="sls-ils">
 				<div id="sls" class="collapsed">
 					<span class="service-label">SLS</span>
-					<span class="service-text">Independant Living</span>
+					<span class="service-text">Independent Living</span>
 					<span class="service-back">Back</span>
 				</div>
 				<div id="ils" class="collapsed">

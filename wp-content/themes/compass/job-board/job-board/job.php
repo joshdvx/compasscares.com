@@ -77,12 +77,5 @@
             <?php endif; ?>
 
             <?php wpjb_job_description($job) ?>
-            
         </div>
-
-        <?php // foreach($job->getNonEmptyTextareas() as $field): ?>
-        <!-- <h3><?php // esc_html_e($field->getLabel()) ?></h3>
-        <div class="wpjb-job-text"><?php // wpjb_field_value($field) ?></div> -->
-        <?php // endforeach; ?>
-
     </div>

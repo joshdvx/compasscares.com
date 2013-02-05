@@ -40,7 +40,10 @@
 				    <p><?php echo get_the_term_list( $post->ID, 'regions', '', ', ', '' ); ?> - <?php echo count($images); ?> photos</p>
 				<?php endif; ?>
 			</div><!-- .single-photos -->
-		<?php endwhile; endif; ?>
+		<?php endwhile; ?> 
+		<?php else: ?>
+		<p style="text-align: center;">Sorry, there are no albums for this region.</p>
+		<?php endif; ?>
 	</div><!-- .row -->
 	
 </section><!-- #page -->

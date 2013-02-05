@@ -77,8 +77,9 @@ jQuery(document).ready(function($) {
 
 	// Show Comments 
 	$(".show-comments").click(function(){
-		$('#dsq1').css('height', 327);
+		$('#dsq1').css('height', 700);
 		$("#disqus_thread").slideToggle();
+		$('#disqus_thread iframe').attr('src', function(i, val){ return val; });
 	});
 
 	// Job Listing Filters

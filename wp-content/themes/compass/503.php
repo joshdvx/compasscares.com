@@ -29,7 +29,7 @@
 <body>
 		
 	<div id="logo">
-		<img src="http://compasscares.com/wp-content/themes/compass/img/login-logo.png" width="320" height="129" alt="Logo">
+		<img src="http://site.compasscares.com/wp-content/themes/compass/img/login-logo.png" width="320" height="129" alt="Logo">
 		<p>We are currently undergoing routine maintenance.  Please check back soon.</p>
 	</div>
 		

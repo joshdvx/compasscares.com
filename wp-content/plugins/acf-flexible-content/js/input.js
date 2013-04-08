@@ -8,6 +8,22 @@
 
 (function($){
 	
+	/*
+	*  Vars
+	*
+	*  @description: 
+	*  @since: 3.6
+	*  @created: 30/01/13
+	*/
+	
+	acf.fields.flexible_content = {
+		add_sortable : function(){},
+		update_order : function(){},
+		add_layout : function(){},
+		remove_layout : function(){}
+	}
+	
+	
 	var _flex = acf.fields.flexible_content;
 	
 	

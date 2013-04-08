@@ -1,173 +1,116 @@
 <?php
 
-/*
-*  Gallery Field
-*
-*  @description: 
-*  @created: 28/06/12
-*/
-
-class acf_Gallery extends acf_Field
+class acf_field_gallery extends acf_field
 {
 
-	/*
-	*  Constructer
-	*
-	*  @description: 
-	*  @created: 5/07/12
-	*/
+	var $settings;
 	
-	function __construct($parent)
-	{
-    	parent::__construct($parent);
-    	
-    	$this->name = 'gallery';
-		$this->title = __("Gallery",'acf');
-		
-		
-		// actions
-		add_action('admin_head-media-upload-popup', array($this, 'popup_head'));
-		add_action('acf_head-update_attachment-gallery', array($this, 'acf_head_update_attachment'));
-		add_action('wp_ajax_acf/fields/gallery/get_image', array($this, 'get_image'));
-   	}
-
 	
 	/*
-	*  get_image
+	*  __construct
 	*
-	*  @description: 
-	*  @since: 3.5.8
-	*  @created: 18/01/13
+	*  Set name / label needed for actions / filters
+	*
+	*  @since	3.6
+	*  @date	23/01/13
 	*/
 	
-   	function get_image()
-   	{
-   		
-   		// vars
-		$options = array(
-			'nonce' => '',
-			'id' => '',
-			'preview_size' => 'full'
-		);
-		$return = array();
-		
-		
-		// load post options
-		$options = array_merge($options, $_POST);
-
-		
-		// verify nonce
-		if( ! wp_verify_nonce($options['nonce'], 'acf_nonce') )
-		{
-			die(0);
-		}
-		
-		
-		// get attachment object
-		$attachment = get_post( $options['id'] );
-		
-		$src = wp_get_attachment_image_src( $attachment->ID, $options['preview_size'] );
-		
-		$return = array(
-			'id' => $attachment->ID,
-			'src' => $src[0],
-			'title'=> $attachment->post_title,
-			'caption'=> $attachment->post_excerpt,
-			'alt'=> get_post_meta($attachment->ID, '_wp_attachment_image_alt', true),
-			'description'=> $attachment->post_content,
-		);
-		
-		
-		echo json_encode($return);
-		die;
-   	}
-   	
-   	
-	/*--------------------------------------------------------------------------------------
-	*
-	*	create_options
-	*	- this function is called from core/field_meta_box.php to create extra options
-	*	for your field
-	*
-	*	@params
-	*	- $key (int) - the $_POST obejct key required to save the options to the field
-	*	- $field (array) - the field object
-	*
-	*	@author Elliot Condon
-	*	@since 2.2.0
-	* 
-	*-------------------------------------------------------------------------------------*/
-	
-	function create_options($key, $field)
+	function __construct()
 	{
 		// vars
-		$defaults = array(
-			'preview_size'	=>	'thumbnail',
+		$this->name = 'gallery';
+		$this->label = __("Gallery",'acf');
+		$this->category = __("Content",'acf');
+		
+		
+		// do not delete!
+    	parent::__construct();
+    	
+    	
+    	// extra
+		add_action('acf_head-update_attachment-' . $this->name, array($this, 'acf_head_update_attachment'));
+		add_action('wp_ajax_acf/fields/gallery/get_image', array($this, 'get_image'));
+		add_action('admin_head-media-upload-popup', array($this, 'popup_head'));
+		
+		
+    	// settings
+    	// settings
+		$this->settings = array(
+			'path' => apply_filters('acf/helpers/get_path', __FILE__),
+			'dir' => apply_filters('acf/helpers/get_dir', __FILE__),
+			'version' => '1.0.0'
 		);
+	}
+	
+	
+	/*
+	*  input_admin_enqueue_scripts()
+	*
+	*  This action is called in the admin_enqueue_scripts action on the edit screen where your field is created.
+	*  Use this action to add css + javascript to assist your create_field() action.
+	*
+	*  $info	http://codex.wordpress.org/Plugin_API/Action_Reference/admin_enqueue_scripts
+	*  @type	action
+	*  @since	3.6
+	*  @date	23/01/13
+	*/
+
+	function input_admin_enqueue_scripts()
+	{
+		// register acf scripts
+		wp_register_script( 'acf-input-gallery', $this->settings['dir'] . 'js/input.js', array('acf-input'), $this->settings['version'] );
+		wp_register_style( 'acf-input-gallery', $this->settings['dir'] . 'css/input.css', array('acf-input'), $this->settings['version'] ); 
 		
-		$field = array_merge($defaults, $field);
 		
-?>
-<tr class="field_option field_option_<?php echo $this->name; ?>">
-	<td class="label">
-		<label><?php _e("Preview Size",'acf'); ?></label>
-		<p class="description"><?php _e("Thumbnail is advised",'acf'); ?></p>
-	</td>
-	<td>
-		<?php
-		
-		$image_sizes = $this->parent->get_all_image_sizes();
-		
-		do_action('acf/create_field', array(
-			'type'		=>	'radio',
-			'name'		=>	'fields['.$key.'][preview_size]',
-			'value'		=>	$field['preview_size'],
-			'layout'	=>	'horizontal',
-			'choices'	=>	$image_sizes
+		// scripts
+		wp_enqueue_script(array(
+			'acf-input-gallery',	
+		));
+
+		// styles
+		wp_enqueue_style(array(
+			'acf-input-gallery',	
 		));
 		
-		?>
-	</td>
-</tr>
-<?php
-		
 	}
-
 	
-	function acf_head_update_attachment()
+	
+	/*
+	*  input_admin_head()
+	*
+	*  This action is called in the admin_head action on the edit screen where your field is created.
+	*  Use this action to add css and javascript to assist your create_field() action.
+	*
+	*  @info	http://codex.wordpress.org/Plugin_API/Action_Reference/admin_head
+	*  @type	action
+	*  @since	3.6
+	*  @date	23/01/13
+	*/
+
+	function input_admin_head()
 	{
-		?>
+?>
 <script type="text/javascript">
-(function($){
-
-	// vars
-	var div = self.parent.acf.media.div;
-	
-	
-	self.parent.acf.fields.gallery.update_image();
-	
-	
-	// add message
-	self.parent.acf.helpers.add_message('<?php _e("Image Updated",'acf'); ?>.', div);
-	
-		
-})(jQuery);
+acf.fields.gallery.title_add = "<?php _e("Add Image to Gallery",'acf'); ?>";
+acf.fields.gallery.title_edit = "<?php _e("Edit Image",'acf'); ?>";
 </script>
-		<?php
+<?php
 	}
 	
 	
-	/*--------------------------------------------------------------------------------------
+	/*
+	*  create_field()
 	*
-	*	create_field
-	*	- this function is called on edit screens to produce the html for this field
+	*  Create the HTML interface for your field
 	*
-	*	@author Elliot Condon
-	*	@since 2.2.0
-	* 
-	*-------------------------------------------------------------------------------------*/
+	*  @param	$field - an array holding all the field's data
+	*
+	*  @type	action
+	*  @since	3.6
+	*  @date	23/01/13
+	*/
 	
-	function create_field($field)
+	function create_field( $field )
 	{
 		// vars
 		$defaults = array(
@@ -199,19 +142,19 @@ class acf_Gallery extends acf_Field
 							<tbody>
 							<tr>
 								<th><label><?php _e("Title",'acf'); ?>:</label></th>
-								<td><?php echo $attachment['title']; ?></td>
+								<td class="td-title"><?php echo $attachment['title']; ?></td>
 							</tr>
 							<tr>
 								<th><label><?php _e("Alternate Text",'acf'); ?>:</label></th>
-								<td><?php echo $attachment['alt']; ?></td>
+								<td class="td-alt"><?php echo $attachment['alt']; ?></td>
 							</tr>
 							<tr>
 								<th><label><?php _e("Caption",'acf'); ?>:</label></th>
-								<td><?php echo $attachment['caption']; ?></td>
+								<td class="td-caption"><?php echo $attachment['caption']; ?></td>
 							</tr>
 							<tr>
 								<th><label><?php _e("Description",'acf'); ?>:</label></th>
-								<td><?php echo $attachment['description']; ?></td>
+								<td class="td-description"><?php echo $attachment['description']; ?></td>
 							</tr>
 							</tbody>
 						</table>
@@ -281,27 +224,74 @@ class acf_Gallery extends acf_Field
 </div>
 		<?php
 	}
-
 	
-	/*--------------------------------------------------------------------------------------
-	*
-	*	get_value
-	*	- called from the edit page to get the value of your field. This function is useful
-	*	if your field needs to collect extra data for your create_field() function.
-	*
-	*	@params
-	*	- $post_id (int) - the post ID which your value is attached to
-	*	- $field (array) - the field object.
-	*
-	*	@author Elliot Condon
-	*	@since 2.2.0
-	* 
-	*-------------------------------------------------------------------------------------*/
 	
-	function get_value($post_id, $field)
+	/*
+	*  create_options()
+	*
+	*  Create extra options for your field. This is rendered when editing a field.
+	*  The value of $field['name'] can be used (like bellow) to save extra data to the $field
+	*
+	*  @type	action
+	*  @since	3.6
+	*  @date	23/01/13
+	*
+	*  @param	$field	- an array holding all the field's data
+	*/
+	
+	function create_options( $field )
 	{
-		// get value
-		$value = parent::get_value($post_id, $field);
+		// vars
+		$defaults = array(
+			'preview_size'	=>	'thumbnail',
+		);
+		
+		$field = array_merge($defaults, $field);
+		$key = $field['name'];
+		
+?>
+<tr class="field_option field_option_<?php echo $this->name; ?>">
+	<td class="label">
+		<label><?php _e("Preview Size",'acf'); ?></label>
+		<p class="description"><?php _e("Thumbnail is advised",'acf'); ?></p>
+	</td>
+	<td>
+		<?php
+		
+		do_action('acf/create_field', array(
+			'type'		=>	'radio',
+			'name'		=>	'fields['.$key.'][preview_size]',
+			'value'		=>	$field['preview_size'],
+			'layout'	=>	'horizontal',
+			'choices'	=>	apply_filters('acf/get_image_sizes', array())
+		));
+		
+		?>
+	</td>
+</tr>
+		<?php
+		
+	}
+	
+	
+	/*
+	*  format_value()
+	*
+	*  This filter is appied to the $value after it is loaded from the db and before it is passed to the create_field action
+	*
+	*  @type	filter
+	*  @since	3.6
+	*  @date	23/01/13
+	*
+	*  @param	$value	- the value which was loaded from the database
+	*  @param	$post_id - the $post_id from which the value was loaded
+	*  @param	$field	- the field array holding all the field options
+	*
+	*  @return	$value	- the modified value
+	*/
+	
+	function format_value( $value, $post_id, $field )
+	{
 		$new_value = array();
 		
 		
@@ -344,58 +334,30 @@ class acf_Gallery extends acf_Field
 		}
 		
 		
-		/*
-		// format attachments
-		$ordered_attachments = array();
-		foreach( $attachments as $attachment )
-		{
-			$ordered_attachments[ $attachment->ID ] = $attachment;
-		}
-		
-		
-		// update value with corisponding attachments
-		foreach( $value as $k => $v)
-		{
-			// get the attachment onject for this value (attachment id)
-			$attachment = $ordered_attachments[ $v ];
-			
-			// create array to hold value data
-			$value[ $k ] = array(
-				'id' => $attachment->ID,
-				'alt' => get_post_meta($attachment->ID, '_wp_attachment_image_alt', true),
-				'title' => $attachment->post_title,
-				'caption' => $attachment->post_excerpt,
-				'description' => $attachment->post_content,
-			);
-		}
-		
-		*/
-		
 		// return value
 		return $new_value;	
 	}
 	
 	
-	/*--------------------------------------------------------------------------------------
+	/*
+	*  format_value_for_api()
 	*
-	*	get_value_for_api
-	*	- called from your template file when using the API functions (get_field, etc). 
-	*	This function is useful if your field needs to format the returned value
+	*  This filter is appied to the $value after it is loaded from the db and before it is passed back to the api functions such as the_field
 	*
-	*	@params
-	*	- $post_id (int) - the post ID which your value is attached to
-	*	- $field (array) - the field object.
+	*  @type	filter
+	*  @since	3.6
+	*  @date	23/01/13
 	*
-	*	@author Elliot Condon
-	*	@since 3.0.0
-	* 
-	*-------------------------------------------------------------------------------------*/
+	*  @param	$value	- the value which was loaded from the database
+	*  @param	$post_id - the $post_id from which the value was loaded
+	*  @param	$field	- the field array holding all the field options
+	*
+	*  @return	$value	- the modified value
+	*/
 	
-	function get_value_for_api($post_id, $field)
+	function format_value_for_api( $value, $post_id, $field )
 	{
-		// get value
-		$value = $this->get_value($post_id, $field);
-		
+		$value = $this->format_value( $value, $post_id, $field );
 		
 		// find all image sizes
 		$image_sizes = get_intermediate_image_sizes();
@@ -406,7 +368,11 @@ class acf_Gallery extends acf_Field
 			foreach( $value as $k => $v )
 			{
 				// full url
-				$value[$k]['url'] = wp_get_attachment_url( $v['id'] );
+				$src = wp_get_attachment_image_src( $v['id'], 'full' );
+				
+				$value[ $k ]['url'] = $src[0];
+				$value[ $k ]['width'] = $src[1];
+				$value[ $k ]['height'] = $src[2];
 				
 				// sizes
 				if( $image_sizes )
@@ -419,7 +385,9 @@ class acf_Gallery extends acf_Field
 						$src = wp_get_attachment_image_src( $v['id'], $image_size );
 						
 						// add src
-						$value[$k]['sizes'][$image_size] = $src[0];
+						$value[ $k ]['sizes'][ $image_size ] = $src[0];
+						$value[ $k ]['sizes'][ $image_size . '-width' ] = $src[1];
+						$value[ $k ]['sizes'][ $image_size . '-height' ] = $src[2];
 					}
 					// foreach( $image_sizes as $image_size )
 				}
@@ -432,20 +400,101 @@ class acf_Gallery extends acf_Field
 		
 		// return value
 		return $value;
-
 	}
 	
 	
 	/*
-	*  popup_head
+   	*  acf_head_update_attachment
+   	*
+   	*  @description: 
+   	*  @since: 3.2.7
+   	*  @created: 4/07/12
+   	*/
+   	
+   	function acf_head_update_attachment()
+	{
+		?>
+<script type="text/javascript">
+(function($){
+
+	// vars
+	var div = self.parent.acf.media.div;
+	
+	
+	self.parent.acf.fields.gallery.update_image();
+	
+	
+	// add message
+	self.parent.acf.helpers.add_message('<?php _e("Image Updated",'acf'); ?>.', div);
+	
+		
+})(jQuery);
+</script>
+		<?php
+	}
+   	
+   	
+   	/*
+	*  get_image
 	*
 	*  @description: 
-	*  @since 3.2.8
-	*  @created: 6/07/12
+	*  @since: 3.5.8
+	*  @created: 18/01/13
+	*/
+	
+   	function get_image()
+   	{
+   		
+   		// vars
+		$options = array(
+			'nonce' => '',
+			'id' => '',
+			'preview_size' => 'full'
+		);
+		$return = array();
+		
+		
+		// load post options
+		$options = array_merge($options, $_POST);
+
+		
+		// verify nonce
+		if( ! wp_verify_nonce($options['nonce'], 'acf_nonce') )
+		{
+			die(0);
+		}
+		
+		
+		// get attachment object
+		$attachment = get_post( $options['id'] );
+		
+		$src = wp_get_attachment_image_src( $attachment->ID, $options['preview_size'] );
+		
+		$return = array(
+			'id' => $attachment->ID,
+			'src' => $src[0],
+			'title'=> $attachment->post_title,
+			'caption'=> $attachment->post_excerpt,
+			'alt'=> get_post_meta($attachment->ID, '_wp_attachment_image_alt', true),
+			'description'=> $attachment->post_content,
+		);
+		
+		
+		echo json_encode($return);
+		die;
+   	}
+   	
+   	
+   	/*
+	*  popup_head
+	*
+	*  @description: css + js for thickbox
+	*  @since: 1.1.4
+	*  @created: 7/12/12
 	*/
 	
 	function popup_head()
-	{	
+	{
 		// options
 		$defaults = array(
 			'acf_type' => '',
@@ -784,7 +833,8 @@ class acf_Gallery extends acf_Field
 </script><?php
 
 	}
-	
 }
+
+new acf_field_gallery();
 
 ?>

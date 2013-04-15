@@ -7,7 +7,7 @@ Requires at least: 3.0
 Tested up to: 3.5.1
 Stable tag: trunk
 Homepage: http://www.advancedcustomfields.com/add-ons/options-page/
-Version: 1.0.0
+Version: 1.0.1
 
 
 == Copyright ==
@@ -51,6 +51,9 @@ include_once('acf-options-page/acf-options-page.php');
 
 
 == Changelog ==
+
+= 1.0.1 =
+* wrapped the register_options_page function in an if statement to prevent error when activation this add-on with ACF v3
 
 = 1.0.0 =
 * [Updated] Updated update_field parameters

@@ -3,7 +3,7 @@
 Plugin Name: Advanced Custom Fields: Options Page
 Plugin URI: http://www.advancedcustomfields.com/
 Description: Adds the options page
-Version: 1.0.0
+Version: 1.0.1
 Author: Elliot Condon
 Author URI: http://www.elliotcondon.com/
 License: GPL
@@ -37,7 +37,7 @@ class acf_options_page_plugin
 		if( is_admin() )
 		{
 			$update_settings = array(
-				'version' => '1.0.0',
+				'version' => '1.0.1',
 				'remote' => 'http://download.advancedcustomfields.com/OPN8-FA4J-Y2LW-81LS/info/',
 				'basename' => plugin_basename(__FILE__),
 			);
@@ -439,11 +439,18 @@ new acf_options_page_plugin();
 *  @return
 */
 
+
+if( !function_exists('register_options_page') )
+{
+
 $GLOBALS['acf_options_pages'] = array();
 
 function register_options_page( $title = "" )
 {
 	$GLOBALS['acf_options_pages'][] = $title;
 }
+
+}
+
 
 ?>

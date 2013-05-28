@@ -110,7 +110,7 @@ jQuery(document).ready(function($) {
 
 	 // Job Application 
 	 $('.wpjb-element-name-applicant_name').before('<h3>Personal Information</h3>');
-	 $('.wpjb-element-name-field_14').after('<h3 class="ha1">Education</h3>');
+	 $('.wpjb-element-name-field_118').after('<h3 class="ha1">Education</h3>');
 	 $('.ha1').after('<h4>High School</h4>');
 	 $('.wpjb-element-name-field_20').after('<h4>College</h4>');
 	 $('.wpjb-element-name-field_25').after('<h4>Graduate School</h4>');

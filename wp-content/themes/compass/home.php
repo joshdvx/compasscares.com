@@ -122,7 +122,7 @@
 					<div class="info-block-details event-details">
 						<h3 class="event-title">#_EVENTNAME</h3>
 						<span class="event-date">#_EVENTDATES</span>
-						<p class="event-description">#_EVENTEXCERPT</p>
+						<span class="event-description">#_EVENTEXCERPT</span>
 						<a href="#_EVENTURL">More Info...</a>
 					</div>
 					#_EVENTIMAGE{590,255}

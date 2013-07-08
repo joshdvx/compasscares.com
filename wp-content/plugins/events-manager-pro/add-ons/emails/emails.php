@@ -4,6 +4,11 @@ class EM_Emails {
 	 * Sets up email cron and filters/actions
 	 */
 	function init() {
+		//enable custom emails
+		if( get_option('dbem_custom_emails') ){
+			include('custom-emails.php');
+		}
+	    //email reminders
 	    add_action('update_option_dbem_emp_emails_reminder_time', array('EM_Emails','clear_crons'));
 		if( get_option('dbem_cron_emails', 1) ) {
 			//set up cron for addint to email queue
@@ -37,8 +42,9 @@ class EM_Emails {
 			wp_clear_scheduled_hook('emp_cron_emails_queue');
 			wp_clear_scheduled_hook('emp_cron_emails_ical_cleanup');
 		}
+		//admin area
 		if( is_admin() ){
-		    add_action('em_options_page_footer_emails', array('EM_Emails','options'));
+		    include('emails-admin.php');
 		}
 	}
 	
@@ -162,46 +168,6 @@ class EM_Emails {
 	function em_mailer_mod_cleanup($mail){
 	    $mail->SmtpClose();
 	}
-	
-	/**
-	 * Generates meta box for settings page 
-	 */
-	function options(){
-	    global $save_button;
-	    ?>
-		<div  class="postbox " id="em-opt-email-reminders" >
-		<div class="handlediv" title="<?php __('Click to toggle', 'dbem'); ?>"><br /></div><h3><?php _e ( 'Event Email Reminders', 'em-pro' ); ?></h3>
-		<div class="inside">
-			<table class='form-table'>
-				<tr><td colspan='2'>
-					<p>
-						<?php _e( 'Events Manager can send people that booked a place at your events a reminder email before it starts.', 'em-pro' );  ?>
-						<?php echo sprintf(__('We use <a href="%s">WP Cron</a> for scheduling checks for future events, which relies on site visits to trigger these tasks to run. If you have low levels of site traffic, this may not happen frequently enough, so you may want to consider forcing WP-Cron to run every few minutes. For more information, <a href="%s">read this tutorial</a> on setting up WP Cron.','em-pro'),'#emails','#emails'); ?>
-					</p>
-					<p><?php _e('<strong>Important!</strong>, you should use SMTP as your email setup if you are sending automated emails in this way for optimal performance. Other methods are not suited to sending mass emails.', 'em-pro'); ?>
-				</td></tr>
-				<?php
-				em_options_radio_binary ( __( 'Enable Email Reminders?', 'dbem' ), 'dbem_cron_emails','');
-				em_options_input_text ( __( 'Days before reminder', 'dbem' ), 'dbem_emp_emails_reminder_days',__('You can choose to send people attending your event x days before the event starts. Minimum is one day.'), 1);
-				em_options_radio_binary ( __( 'Attach ical invite?', 'dbem' ), 'dbem_emp_emails_reminder_ical',__('If using SMTP in your email settings. You can automatically attach an ical file which some email clients (e.g. gmail) will render as an invitation they can add to their calendar.'));
-				$days = get_option('dbem_emp_emails_reminder_days',1);
-				?>
-				<tr>
-					<td><?php _e('WP Cron Time','em-pro'); ?></td>
-					<td>
-						<input class="em-time-input em-time-start" type="text" name="dbem_emp_emails_reminder_time" value="<?php echo get_option('dbem_emp_emails_reminder_time','12:00 AM'); ?>" /><br />
-						<em><?php _e('Every day Events Manager automatically checks upcoming events in order to generate emails. You can choose at what time of day to run this check, if your site has a lot of traffic, it may help having this run at times of lower server loads.','em-pro'); ?></em>
-					</td>
-				</tr>
-				<?php
-				em_options_input_text ( __( 'Reminder subject', 'dbem' ), 'dbem_emp_emails_reminder_subject','');
-				em_options_textarea ( __( 'Approved email', 'dbem' ), 'dbem_emp_emails_reminder_body','');
-				?>
-				<?php echo $save_button; ?>
-			</table>
-		</div> <!-- . inside -->
-		</div> <!-- .postbox -->
-	    <?php
-	}
+
 }
 add_action('init',array('EM_Emails','init'));

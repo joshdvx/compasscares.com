@@ -29,7 +29,7 @@
         <?php endwhile; ?>
     <?php endif; ?>
     <div class="clearfix"></div>
-    <form action="http://localhost/compasscares.com/jobs/find/" method="get" class="wpjb-form" id="searchjobs">
+    <form action="<?php bloginfo( 'url' ) ?>/jobs/find/" method="get" class="wpjb-form" id="searchjobs">
         <div class="wpjb-field">
             <input id="query" name="query" type="text" class="regular-text wpjb-auto-clear" value="" placeholder="Search (city, title, etc.)" />
             <input type="submit" name="wpjb_preview" id="wpjb_submit" value="" />

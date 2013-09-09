@@ -48,11 +48,13 @@ get_header(); ?>
 				<p><?php the_field('pull_quote_quote'); ?></p>
 			</div>
 		</div>
-		<?php if(is_page('sls')): ?>
-			<a href="<?php bloginfo('url'); ?>/success-stories/sls">Read more SLS Success Stories like this one.</a>
-		<?php else: ?>
-			<a href="<?php bloginfo('url'); ?>/success-stories/ils">Read more ILS Success Stories like this one.</a>
-		<?php endif; ?>
+		<div class="service-contact">
+			<?php if(is_page('sls')): ?>
+				<a href="<?php bloginfo('url'); ?>/success-stories/sls">Read more SLS Success Stories</a> like this one, or <a href="mailto:info@compasscares.com">contact us about SLS</a>
+			<?php else: ?>
+				<a href="<?php bloginfo('url'); ?>/success-stories/ils">Read more ILS Success Stories</a> like this one, or <a href="mailto:info@compasscares.com">contact us about ILS</a>
+			<?php endif; ?>
+		</div>
 	</article>
 	
 	

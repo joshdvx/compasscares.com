@@ -429,7 +429,7 @@ return array(
 	'browsercache.other.etag' => false,
 	'browsercache.other.w3tc' => false,
 	'browsercache.other.replace' => false,
-	'browsercache.timestamp' => '1378765731',
+	'browsercache.timestamp' => '1381773851',
 	'mobile.enabled' => false,
 	'mobile.rgroups' => array(
 		'high' => array(
@@ -667,4 +667,5 @@ return array(
 	'newrelic.enable_xmit' => false,
 	'newrelic.use_network_wide_id' => false,
 	'pgcache.late_init' => false,
+	'plugin.type' => '',
 );

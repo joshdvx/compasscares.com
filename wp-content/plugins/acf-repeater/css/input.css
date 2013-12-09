@@ -4,7 +4,6 @@
 
 .repeater > table {
 	margin: 0 0 8px;
-	table-layout: fixed;
 }
 
 .repeater > table.acf-input-table > tbody > tr > td.field {
@@ -13,6 +12,23 @@
 
 .repeater > table > thead > tr > th:last-child {
 	border-right: 0 none;
+}
+
+.repeater > table > tbody > tr > td.remove > a.acf-button-add,
+.repeater > table > tbody > tr > td.remove > a.acf-button-remove {
+	position: absolute;
+	
+	-webkit-transition: opacity 0.25s 0s ease-in-out, visibility 0s linear 0.25s;
+	-moz-transition: opacity 0.25s 0s ease-in-out, visibility 0s linear 0.25s;
+	-o-transition: opacity 0.25s 0s ease-in-out, visibility 0s linear 0.25s; 	
+	transition: opacity 0.25s 0s ease-in-out, visibility 0s linear 0.25s; 
+	
+	visibility: hidden;
+	opacity: 0;
+}
+
+.repeater > table > tbody > tr > td.remove > a.acf-button-remove {
+	position: relative;
 }
 
 .repeater > table > tbody > tr:hover > td.remove > a.acf-button-add,
@@ -29,23 +45,6 @@
 
 .repeater.disabled > table > tbody > tr:hover > td.remove > a.acf-button-add {
 	visibility: hidden !important;
-}
-
-.repeater a.acf-button-add,
-.repeater a.acf-button-remove {
-	position: absolute;
-	
-	-webkit-transition: opacity 0.25s 0s ease-in-out, visibility 0s linear 0.25s;
-	-moz-transition: opacity 0.25s 0s ease-in-out, visibility 0s linear 0.25s;
-	-o-transition: opacity 0.25s 0s ease-in-out, visibility 0s linear 0.25s; 	
-	transition: opacity 0.25s 0s ease-in-out, visibility 0s linear 0.25s; 
-	
-	visibility: hidden;
-	opacity: 0;
-}
-
-.repeater a.acf-button-remove {
-	position: relative;
 }
 
 .repeater > table > thead > tr > th.order,

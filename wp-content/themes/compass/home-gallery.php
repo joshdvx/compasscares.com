@@ -21,17 +21,17 @@
 	foreach( $all_images as $image ):
 		$x++;
 		if( $i == 0 ) {
-			echo '<div class="item">';
+			echo '<section class="item">';
 		}
 
 		echo $image;
 
 		if( $x == $display_count) {
-			echo '</div>';
+			echo '</section>';
 			break;
 		}
 		else if( $i == 2) {
-			echo '</div>';
+			echo '</section>';
 			$i = 0;
 		} else {
 			$i++;

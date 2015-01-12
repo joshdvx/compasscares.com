@@ -1,0 +1,9 @@
+12-12-2013
+	1. Merged MM's branch
+	2. Added OS clause for Directory Separator Constant
+	3. Fixed bug with Create Directory Methods in main class.. 
+	4. Created, registered and moved appropriate methods to a activate method
+  5. Assets Dir created and related directories moved there all references updated to ESIG_ASSETS_DIR_URI
+  6. Views Dir created
+  7. Vendors Dir created; phpdocx and pdfdownload moved there; updated reference for pdfdownolaod no reference for phpdocx yet found
+  8. Added Changelog
